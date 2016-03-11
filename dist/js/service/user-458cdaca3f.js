@@ -1,0 +1,1 @@
+angular.module("userMod",[]).provider("User",{_apiUrl:"",setApiUrl:function(i){this._apiUrl=i},$get:["$http",function(i){var n=this;return{login:function(o){var r=n._apiUrl+"/login";i.post(r,o).success(function(i){console.log(i)})}}}]});

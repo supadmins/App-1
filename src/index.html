@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="indexApp" ng-controller="indexCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/base.js" type="text/javascript" inline></script>
+    <link rel="stylesheet" href="css/base.css" type="text/css" inline/>
+    <link rel="stylesheet" href="css/swipeSlide.css" type="text/css" inline/>
+    <link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline/>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+</head>
+<body>
+    <yyz-banner data-api="../json/banner.json"></yyz-banner>
+    <div class="adArea">
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_2.png" alt=""/>
+            e家店
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_3.png" alt=""/>
+            周边小店
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_4.png" alt=""/>
+            生活服务
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_5.png" alt=""/>
+            我的积分
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_6.png" alt=""/>
+            e超市
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_7.png" alt=""/>
+            跨境商品
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_8.png" alt=""/>
+            代劳跑腿
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_1.png" alt=""/>
+            优惠券
+        </a>
+    </div>
+    <div class="elife">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/ad_lf.png">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/ad_rt_tp.png">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/ad_rt_bt.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <yyz-dropload id="scroller" data-api="../json/shopList.json">
+        <div class="business" >
+            <h2 class="title">常用商家</h2>
+            <div class="listItem" ng-repeat="item in shopList">
+                <div class="desc">
+                    <a href="#">
+                        <img ng-src="{{item.src}}" style="width: 72px; height: 50px;">
+                        <span ng-bind="item.content+$index"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </yyz-dropload>
+
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_1_1.png" alt=""/>
+                    首页
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_2.png" alt=""/>
+                    e家店
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_3.png" alt=""/>
+                    订单
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_4.png" alt=""/>
+                    我的
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="lib/zepto/zepto.min.js" type="text/javascript"></script>
+    <script src="lib/angular/angular.js" type="text/javascript"></script>
+    <script src="lib/swipeSlide/swipeSlide.min.js" type="text/javascript" inline></script>
+    <script src="js/directive/yyzBanner.js" type="text/javascript" inline></script>
+    <script src="js/service/user.js" type="text/javascript" inline></script>
+    <script src="lib/dropload/dist/dropload.js" type="text/javascript" inline></script>
+    <script src="js/directive/yyzDropload.js" type="text/javascript" inline></script>
+    <script src="js/index.js" type="text/javascript" inline></script>
+</body>
+</html>

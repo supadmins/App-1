@@ -1,0 +1,14 @@
+{
+  "name": "adaptive",
+  "homepage": "https://github.com/finance-sh/adaptive",
+  "_release": "f57d692f91",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f57d692f91cb3a4e89e876bdff0526ede7d0d271"
+  },
+  "_source": "https://github.com/finance-sh/adaptive.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/finance-sh/adaptive.git",
+  "_direct": true
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="indexApp" ng-controller="indexCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript">function setRem(){var e=Math.min(docEl.getBoundingClientRect().width,540);newBase=100*e/750,docEl.style.fontSize=newBase+"px"}var docEl=document.documentElement,tid;window.addEventListener("resize",function(){clearTimeout(tid),tid=setTimeout(setRem,300)}),window.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(tid),tid=setTimeout(setRem,300))}),setRem();</script>
+    <style type="text/css">fieldset,hr,img{border:0}blockquote,body,button,dd,dl,dt,fieldset,figcaption,figure,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}body,button,input,select,textarea{font:12px/1 Lucida Grande,'Microsoft YaHei',"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif}h1,h2,h3,h4,h5,h6{font-weight:400}h1{font-size:18px}h2{font-size:16px}h3{font-size:14px}h4,h5,h6{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp,tt{font-family:"Courier New",Courier,monospace}small{font-size:12px}li,ol,ul{list-style:none}a{text-decoration:none}abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}q:after,q:before{content:''}legend{color:#000}table{border-collapse:collapse;border-spacing:0}hr{height:1px}*{-ms-word-break:break-all;word-break:break-all;-ms-word-wrap:break-word;word-wrap:break-word;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:none}</style>
+    <style type="text/css">.slide li,.slide li img,.slide ul{left:0;top:0;width:100%;height:100%}.slide{position:relative;max-width:640px;overflow:hidden;margin:0 auto}.slide .dot,.slide li,.slide li img,.slide ul{position:absolute}.slide:after{content:'';display:block;width:100%;padding-top:50%}.slide li{list-style:none}.slide li:first-child{z-index:1}.slide li img{border:none}.slide .dot{bottom:10px;z-index:5;font-size:0;left:50%;transform:translateX(-50%)}.slide .dot span{display:inline-block;width:5px;height:5px;margin-left:5px;border:1px solid #fff;border-radius:50%}.slide .dot .cur{background-color:#fff}</style>
+    <style>.dropload-up,.dropload-down{position:relative;height:0;overflow:hidden;font-size:12px;-webkit-transform:translateZ(0);transform:translateZ(0)}.dropload-down{height:50px}.dropload-refresh,.dropload-update,.dropload-load,.dropload-noData{height:50px;line-height:50px;text-align:center}.dropload-load .loading{display:inline-block;height:15px;width:15px;border-radius:100%;margin:6px;border:2px solid #666;border-bottom-color:transparent;vertical-align:middle;-webkit-animation:rotate .75s linear infinite;animation:rotate .75s linear infinite}@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0)}50%{-webkit-transform:rotate(180deg)}100%{-webkit-transform:rotate(360deg)}}@keyframes rotate{0%{transform:rotate(0)}50%{transform:rotate(180deg)}100%{transform:rotate(360deg)}}</style>
+    <link rel="stylesheet" href="css/index-82f7af4a52.css" type="text/css" />
+</head>
+<body>
+    <yyz-banner data-api="../json/banner.json"></yyz-banner>
+    <div class="adArea">
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_2.png" alt=""/>
+            e家店
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_3.png" alt=""/>
+            周边小店
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_4.png" alt=""/>
+            生活服务
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_5.png" alt=""/>
+            我的积分
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_6.png" alt=""/>
+            e超市
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_7.png" alt=""/>
+            跨境商品
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_8.png" alt=""/>
+            代劳跑腿
+        </a>
+        <a href="#" class="adItem">
+            <img src="imgs/index/add_1.png" alt=""/>
+            优惠券
+        </a>
+    </div>
+    <div class="elife">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/ad_lf.png">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/ad_rt_tp.png">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/ad_rt_bt.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <yyz-dropload id="scroller" data-api="../json/shopList.json">
+        <div class="business" >
+            <h2 class="title">常用商家</h2>
+            <div class="listItem" ng-repeat="item in shopList">
+                <div class="desc">
+                    <a href="#">
+                        <img ng-src="{{item.src}}" style="width: 72px; height: 50px;">
+                        <span ng-bind="item.content+$index"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </yyz-dropload>
+
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_1_1.png" alt=""/>
+                    首页
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_2.png" alt=""/>
+                    e家店
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_3.png" alt=""/>
+                    订单
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="imgs/index/footer_4.png" alt=""/>
+                    我的
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="lib/zepto/zepto.min.js" type="text/javascript"></script>
+    <script src="lib/angular/angular.js" type="text/javascript"></script>
+    <script type="text/javascript">!function(t,n){"use strict";function e(t,n,e){n.css({"-webkit-transition":"all "+e+"s "+t.opts.transitionType,transition:"all "+e+"s "+t.opts.transitionType})}function i(t,n,e){var i=t.opts.axisX?e+"px,0,0":"0,"+e+"px,0";n.css({"-webkit-transform":"translate3d("+i+")",transform:"translate3d("+i+")"})}function o(t,e){var i=t.opts.ul.children(),o=i.eq(e).find("[data-src]");o&&o.each(function(){var t=n(this);t.is("img")?(t.attr("src",t.data("src")),t.removeAttr("data-src")):(t.css({"background-image":"url("+t.data("src")+")"}),t.removeAttr("data-src"))})}function s(t){f.touch&&!t.touches&&(t.touches=t.originalEvent.touches)}function c(t,n){n.isScrolling=void 0,n._moveDistance=n._moveDistanceIE=0,n._startX=f.touch?t.touches[0].pageX:t.pageX||t.clientX,n._startY=f.touch?t.touches[0].pageY:t.pageY||t.clientY}function a(t,n){n.opts.autoSwipe&&r(n),n.allowSlideClick=!1,n._curX=f.touch?t.touches[0].pageX:t.pageX||t.clientX,n._curY=f.touch?t.touches[0].pageY:t.pageY||t.clientY,n._moveX=n._curX-n._startX,n._moveY=n._curY-n._startY,"undefined"==typeof n.isScrolling&&(n.isScrolling=n.opts.axisX?!!(Math.abs(n._moveX)>=Math.abs(n._moveY)):!!(Math.abs(n._moveY)>=Math.abs(n._moveX))),n.isScrolling&&(t.preventDefault?t.preventDefault():t.returnValue=!1,e(n,n.opts.ul,0),n._moveDistance=n._moveDistanceIE=n.opts.axisX?n._moveX:n._moveY),n.opts.continuousScroll||(0==n._index&&n._moveDistance>0||n._index+1>=n._liLength&&n._moveDistance<0)&&(n._moveDistance=0),i(n,n.opts.ul,-(n._slideDistance*n._index-n._moveDistance))}function l(t){t.isScrolling||u(t),(x.ie10||x.ie11)&&(Math.abs(t._moveDistanceIE)<5&&(t.allowSlideClick=!0),setTimeout(function(){t.allowSlideClick=!0},100)),Math.abs(t._moveDistance)<=t._distance?d(t,"",".3"):t._moveDistance>t._distance?d(t,"prev",".3"):Math.abs(t._moveDistance)>t._distance&&d(t,"next",".3"),t._moveDistance=t._moveDistanceIE=0}function u(t){t.opts.autoSwipe&&(r(t),t.autoSlide=setInterval(function(){d(t,"next",".3")},t.opts.speed))}function r(t){clearInterval(t.autoSlide)}function d(t,n,e){"number"==typeof n?(t._index=n,t.opts.lazyLoad&&(t.opts.continuousScroll?(o(t,t._index),o(t,t._index+1),o(t,t._index+2)):(o(t,t._index-1),o(t,t._index),o(t,t._index+1)))):"next"==n?(t._index++,t.opts.lazyLoad&&(t.opts.continuousScroll?(o(t,t._index+2),t._index+1==t._liLength?o(t,1):t._index==t._liLength&&o(t,0)):o(t,t._index+1))):"prev"==n&&(t._index--,t.opts.lazyLoad&&(t.opts.continuousScroll?(o(t,t._index),0==t._index?o(t,t._liLength):t._index<0&&o(t,t._liLength-1)):o(t,t._index-1))),t.opts.continuousScroll?t._index>=t._liLength?(_(t,e),t._index=0,setTimeout(function(){_(t,0)},300)):t._index<0?(_(t,e),t._index=t._liLength-1,setTimeout(function(){_(t,0)},300)):_(t,e):(t._index>=t._liLength?t._index=0:t._index<0&&(t._index=t._liLength-1),_(t,e)),""!==arguments[1]&&t.opts.callback(t._index,t._liLength,t.$el)}function _(t,n){e(t,t.opts.ul,n),i(t,t.opts.ul,-t._index*t._slideDistance)}var p,h,x={ie10:t.navigator.msPointerEnabled,ie11:t.navigator.pointerEnabled},v=["touchstart","touchmove","touchend"],f={touch:t.Modernizr&&Modernizr.touch===!0||function(){return!!("ontouchstart"in t||t.DocumentTouch&&document instanceof DocumentTouch)}()};x.ie10&&(v=["MSPointerDown","MSPointerMove","MSPointerUp"]),x.ie11&&(v=["pointerdown","pointermove","pointerup"]),p={touchStart:v[0],touchMove:v[1],touchEnd:v[2]},n.fn.swipeSlide=function(t){var n=[];return this.each(function(e,i){n.push(new h(i,t))}),n},h=function(t,e){var i=this;i.$el=n(t),i._distance=50,i.allowSlideClick=!0,i.init(e)},h.prototype.init=function(r){function d(){var t,o=h.opts.ul.children();h._slideDistance=h.opts.axisX?h.opts.ul.width():h.opts.ul.height(),e(h,h.opts.ul,0),i(h,h.opts.ul,-h._slideDistance*h._index),e(h,o,0),t=h.opts.continuousScroll?-1:0,o.each(function(e){i(h,n(this),h._slideDistance*(e+t))})}var _,h=this;return h.opts=n.extend({},{ul:h.$el.children("ul"),li:h.$el.children().children("li"),index:0,continuousScroll:!1,autoSwipe:!0,speed:4e3,axisX:!0,transitionType:"ease",lazyLoad:!1,firstCallback:function(){},callback:function(){}},r),h._index=h.opts.index,h._liLength=h.opts.li.length,h.isScrolling,h.opts.firstCallback(h._index,h._liLength,h.$el),h._liLength<=1?(h.opts.lazyLoad&&o(h,0),!1):(h.opts.continuousScroll&&h.opts.ul.prepend(h.opts.li.last().clone()).append(h.opts.li.first().clone()),h.opts.lazyLoad&&(o(h,h._index),h.opts.continuousScroll?(o(h,h._index+1),o(h,h._index+2),0==h._index?o(h,h._liLength):h._index+1==h._liLength&&o(h,1)):0==h._index?o(h,h._index+1):h._index+1==h._liLength?o(h,h._index-1):(o(h,h._index+1),o(h,h._index-1))),d(),(x.ie10||x.ie11)&&(_="",_=h.opts.axisX?"pan-y":"none",h.$el.css({"-ms-touch-action":_,"touch-action":_}),h.$el.on("click",function(){return h.allowSlideClick})),u(h),h.$el.on(p.touchStart,function(t){s(t),c(t,h)}),h.$el.on(p.touchMove,function(t){s(t),a(t,h)}),h.$el.on(p.touchEnd,function(){l(h)}),h.opts.ul.on("webkitTransitionEnd MSTransitionEnd transitionend",function(){u(h)}),void n(t).on("onorientationchange"in t?"orientationchange":"resize",function(){clearTimeout(h.timer),h.timer=setTimeout(d,150)}))},h.prototype.goTo=function(t){var n=this;d(n,t,".3")}}(window,window.Zepto||window.jQuery);</script>
+    <script type="text/javascript">angular.module("yyzBannerMod",[]).directive("yyzBanner",["$http","$timeout",function(n,e){return{restrict:"E",scope:!0,template:'<div class="slide" id="slide"><ul><li ng-repeat="banner in banners"><a ng-href="{{banner.link}}"><img ng-src="{{banner.imgSrc}}" alt=""></a></li></ul><div class="dot"><span ng-repeat="banner in banners"></span></div></div>',replace:!0,link:function(i,a,r){var s=r.api;n.get(s).success(function(n){n.length>0&&(i.banners=n)}),e(function(){$("#slide").swipeSlide({continuousScroll:!0,speed:3e3,transitionType:"cubic-bezier(0.22, 0.69, 0.72, 0.88)",firstCallback:function(n,e,i){i.find(".dot").children().first().addClass("cur")},callback:function(n,e,i){i.find(".dot").children().eq(n).addClass("cur").siblings().removeClass("cur")}})},300)}}}]);</script>
+    <script type="text/javascript">angular.module("userMod",[]).provider("User",{_apiUrl:"",setApiUrl:function(i){this._apiUrl=i},$get:["$http",function(i){var n=this;return{login:function(o){var r=n._apiUrl+"/login";i.post(r,o).success(function(i){console.log(i)})}}}]});</script>
+    <script type="text/javascript">!function(o){"use strict";function t(o){o.touches||(o.touches=o.originalEvent.touches)}function n(o,t){t._startY=o.touches[0].pageY,t.touchScrollTop=t.$scrollArea.scrollTop()}function s(t,n){n._curY=t.touches[0].pageY,n._moveY=n._curY-n._startY,n._moveY>0?n.direction="down":n._moveY<0&&(n.direction="up");var s=Math.abs(n._moveY);""!=n.opts.loadUpFn&&n.touchScrollTop<=0&&"down"==n.direction&&!n.isLockUp&&(t.preventDefault(),n.$domUp=o("."+n.opts.domUp.domClass),n.upInsertDOM||(n.$element.prepend('<div class="'+n.opts.domUp.domClass+'"></div>'),n.upInsertDOM=!0),a(n.$domUp,0),s<=n.opts.distance?(n._offsetY=s,n.$domUp.html(n.opts.domUp.domRefresh)):s>n.opts.distance&&s<=2*n.opts.distance?(n._offsetY=n.opts.distance+.5*(s-n.opts.distance),n.$domUp.html(n.opts.domUp.domUpdate)):n._offsetY=n.opts.distance+.5*n.opts.distance+.2*(s-2*n.opts.distance),n.$domUp.css({height:n._offsetY}))}function e(t){var n=Math.abs(t._moveY);""!=t.opts.loadUpFn&&t.touchScrollTop<=0&&"down"==t.direction&&!t.isLockUp&&(a(t.$domUp,300),n>t.opts.distance?(t.$domUp.css({height:t.$domUp.children().height()}),t.$domUp.html(t.opts.domUp.domLoad),t.loading=!0,t.opts.loadUpFn(t)):t.$domUp.css({height:"0"}).on("webkitTransitionEnd mozTransitionEnd transitionend",function(){t.upInsertDOM=!1,o(this).remove()}),t._moveY=0)}function i(o){o.opts.autoLoad&&o._scrollContentHeight-o._threshold<=o._scrollWindowHeight&&l(o)}function d(o){o.opts.scrollArea==r?o._scrollContentHeight=h.height():o._scrollContentHeight=o.$element[0].scrollHeight}function l(o){o.direction="up",o.$domDown.html(o.opts.domDown.domLoad),o.loading=!0,o.opts.loadDownFn(o)}function a(o,t){o.css({"-webkit-transition":"all "+t+"ms",transition:"all "+t+"ms"})}var r=window,c=document,p=o(r),h=o(c);o.fn.dropload=function(o){return new m(this,o)};var m=function(o,t){var n=this;n.$element=o,n.upInsertDOM=!1,n.loading=!1,n.isLockUp=!1,n.isLockDown=!1,n.isData=!0,n._scrollTop=0,n._threshold=0,n.init(t)};m.prototype.init=function(d){var a=this;a.opts=o.extend(!0,{},{scrollArea:a.$element,domUp:{domClass:"dropload-up",domRefresh:'<div class="dropload-refresh">↓下拉刷新</div>',domUpdate:'<div class="dropload-update">↑释放更新</div>',domLoad:'<div class="dropload-load"><span class="loading"></span>加载中...</div>'},domDown:{domClass:"dropload-down",domRefresh:'<div class="dropload-refresh">↑上拉加载更多</div>',domLoad:'<div class="dropload-load"><span class="loading"></span>加载中...</div>',domNoData:'<div class="dropload-noData">暂无数据</div>'},autoLoad:!0,distance:50,threshold:"",loadUpFn:"",loadDownFn:""},d),""!=a.opts.loadDownFn&&(a.$element.append('<div class="'+a.opts.domDown.domClass+'">'+a.opts.domDown.domRefresh+"</div>"),a.$domDown=o("."+a.opts.domDown.domClass)),a.$domDown&&""===a.opts.threshold?a._threshold=Math.floor(1*a.$domDown.height()/3):a._threshold=a.opts.threshold,a.opts.scrollArea==r?(a.$scrollArea=p,a._scrollContentHeight=h.height(),a._scrollWindowHeight=c.documentElement.clientHeight):(a.$scrollArea=a.opts.scrollArea,a._scrollContentHeight=a.$element[0].scrollHeight,a._scrollWindowHeight=a.$element.height()),i(a),p.on("resize",function(){a.opts.scrollArea==r?a._scrollWindowHeight=r.innerHeight:a._scrollWindowHeight=a.$element.height()}),a.$element.on("touchstart",function(o){a.loading||(t(o),n(o,a))}),a.$element.on("touchmove",function(o){a.loading||(t(o,a),s(o,a))}),a.$element.on("touchend",function(){a.loading||e(a)}),a.$scrollArea.on("scroll",function(){a._scrollTop=a.$scrollArea.scrollTop(),""!=a.opts.loadDownFn&&!a.loading&&!a.isLockDown&&a._scrollContentHeight-a._threshold<=a._scrollWindowHeight+a._scrollTop&&l(a)})},m.prototype.lock=function(o){var t=this;void 0===o?"up"==t.direction?t.isLockDown=!0:"down"==t.direction?t.isLockUp=!0:(t.isLockUp=!0,t.isLockDown=!0):"up"==o?t.isLockUp=!0:"down"==o&&(t.isLockDown=!0,t.direction="up")},m.prototype.unlock=function(){var o=this;o.isLockUp=!1,o.isLockDown=!1,o.direction="up"},m.prototype.noData=function(o){var t=this;void 0===o||1==o?t.isData=!1:0==o&&(t.isData=!0)},m.prototype.resetload=function(){var t=this;"down"==t.direction&&t.upInsertDOM?t.$domUp.css({height:"0"}).on("webkitTransitionEnd mozTransitionEnd transitionend",function(){t.loading=!1,t.upInsertDOM=!1,o(this).remove(),d(t)}):"up"==t.direction&&(t.loading=!1,t.isData?(t.$domDown.html(t.opts.domDown.domRefresh),d(t),i(t)):t.$domDown.html(t.opts.domDown.domNoData))}}(window.Zepto||window.jQuery);</script>
+    <script type="text/javascript">angular.module("yyzDroploadMod",[]).directive("yyzDropload",["$http",function(o){return{restrict:"E",template:"<div ng-transclude></div>",transclude:!0,replace:!0,link:function(o,r,t){$("#"+t.id).dropload({scrollArea:window,loadDownFn:function(r){$.ajax({type:"GET",url:t.api,dataType:"json",success:function(t){o.shopList=[].concat(o.shopList,t),o.$apply(),r.resetload()},error:function(o,t){alert("Ajax error!"),r.resetload()}})}})}}}]);</script>
+    <script type="text/javascript">angular.module("indexApp",["yyzBannerMod","userMod","yyzDroploadMod"]).config(["UserProvider",function(n){n._apiUrl="http://www.xxx.com"}]).controller("indexCtrl",["$scope","$http","User",function(n,f,o){n.shopList=[{src:"imgs/index/7b633bf4-f94a-43ff-86a2-15f0d83f5c80.jpg",content:"angular组件测试"},{src:"imgs/index/7b633bf4-f94a-43ff-86a2-15f0d83f5c80.jpg",content:"angular组件测试"},{src:"imgs/index/7b633bf4-f94a-43ff-86a2-15f0d83f5c80.jpg",content:"angular组件测试"}]}]);</script>
+</body>
+</html>
