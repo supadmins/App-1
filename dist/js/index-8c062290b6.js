@@ -1,0 +1,1 @@
+angular.module("yyzWebApp",["ui.router","oc.lazyLoad","yyzDirectiveMod","yyzServiceMod"]).config(["$stateProvider","$urlRouterProvider",function(e,o){o.otherwise("/"),e.state("index",{url:"/",views:{lazyLoadView:{controller:"homeCtrl",templateUrl:"partials/home.html"}},resolve:{loadMyCtrl:["$ocLazyLoad",function(e){return e.load("js/controllers/homeCtrl.js")}]}})}]);

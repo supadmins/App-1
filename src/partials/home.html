@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="css/swipeSlide.css" type="text/css" inline/>
+<link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline/>
+<link rel="stylesheet" href="css/home.css" type="text/css" />
+
+<yyz-banner data-api="../json/banner.json"></yyz-banner>
+<div class="adArea">
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_2.png" alt=""/>
+        e家店
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_3.png" alt=""/>
+        周边小店
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_4.png" alt=""/>
+        生活服务
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_5.png" alt=""/>
+        我的积分
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_6.png" alt=""/>
+        e超市
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_7.png" alt=""/>
+        跨境商品
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_8.png" alt=""/>
+        代劳跑腿
+    </a>
+    <a href="#" class="adItem">
+        <img src="imgs/home/add_1.png" alt=""/>
+        优惠券
+    </a>
+</div>
+<div class="elife">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="imgs/home/ad_lf.png">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="imgs/home/ad_rt_tp.png">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="imgs/home/ad_rt_bt.png">
+            </a>
+        </li>
+    </ul>
+</div>
+<yyz-dropload id="scroller" data-api="../json/shopList.json">
+    <div class="business" >
+        <h2 class="title">常用商家</h2>
+        <div class="listItem" ng-repeat="item in shopList">
+            <div class="desc">
+                <a href="#">
+                    <img ng-src="{{item.src}}" style="width: 72px; height: 50px;">
+                    <span ng-bind="item.content+$index"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</yyz-dropload>
+<div class="footer">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="imgs/home/footer_1_1.png" alt=""/>
+                首页
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="imgs/home/footer_2.png" alt=""/>
+                e家店
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="imgs/home/footer_3.png" alt=""/>
+                订单
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="imgs/home/footer_4.png" alt=""/>
+                我的
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script src="lib/swipeSlide/swipeSlide.min.js" type="text/javascript" inline></script>
+<script src="lib/dropload/dist/dropload.min.js" type="text/javascript" inline></script>

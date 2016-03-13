@@ -1,7 +1,6 @@
 {
-  "base.js": "base-8c7f178874.js",
-  "directive/yyzBanner.js": "directive/yyzBanner-f14cd1a8cb.js",
-  "directive/yyzDropload.js": "directive/yyzDropload-3385320a0b.js",
-  "index.js": "index-427f0a4279.js",
-  "service/user.js": "service/user-458cdaca3f.js"
+  "base.js": "base-4fd4161dc2.js",
+  "directives/yyzDirective.js": "directives/yyzDirective-4e48276866.js",
+  "index.js": "index-8c062290b6.js",
+  "services/yyzService.js": "services/yyzService-f39faf5f1a.js"
 }
