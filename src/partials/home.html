@@ -59,7 +59,7 @@
 <yyz-dropload id="scroller" data-api="../json/shopList.json">
     <div class="business" >
         <h2 class="title">常用商家</h2>
-        <div class="listItem" ng-repeat="item in shopList">
+        <div class="listItem" ng-repeat="item in scrollList">
             <div class="desc">
                 <a href="#">
                     <img ng-src="{{item.src}}" style="width: 72px; height: 50px;">
@@ -98,6 +98,3 @@
     </ul>
 </div>
 
-
-<script src="lib/swipeSlide/swipeSlide.min.js" type="text/javascript" inline></script>
-<script src="lib/dropload/dist/dropload.min.js" type="text/javascript" inline></script>

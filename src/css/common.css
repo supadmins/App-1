@@ -1,0 +1,43 @@
+.timeLimiter span {
+    display: inline;
+    color: #fff;
+    background: #000;
+    font-size: 12px;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.masker {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, .7);
+}
+
+.masker .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.masker .center {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background: #fff;
+}
+
+.masker .top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #fff;
+}

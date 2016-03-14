@@ -57,7 +57,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                                     url: attrs['api'],
                                     dataType: 'json',
                                     success: function (data) {
-                                        scope.shopList = [].concat(scope.shopList, data);
+                                        scope.scrollList = [].concat(scope.scrollList, data);
                                         scope.$apply();
                                         me.resetload();
                                     },
@@ -70,6 +70,39 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                         });
                     });
 
+            }
+        }
+    }])
+    .directive('yyzTimelimiter', ['$interval', function ($interval) {
+        return {
+            restrict: 'E',
+            scope: true,
+            template: '<div class="timeLimiter"><span ng-bind="hour"></span>:<span ng-bind="min"></span>:<span ng-bind="sec"></span></div>',
+            resplace: true,
+            link: function (scope, element, attrs) {
+                var endTime = new Date(attrs['endTime']),
+                    counter = function () {
+                        var now = new Date(),
+                            diff = endTime.getTime() - now.getTime();
+                        scope.hour = Math.floor(diff/ 1000 / 3600);
+                        scope.min = Math.floor((diff / 1000 / 3600 - scope.hour) * 60);
+                        scope.sec = Math.floor((diff / 1000 - scope.hour * 3600 - scope.min * 60));
+                        if(scope.hour.toString().length == 1) scope.hour = '0' + scope.hour;
+                        if(scope.min.toString().length == 1) scope.min = '0' + scope.min;
+                        if(scope.sec.toString().length == 1) scope.sec = '0' + scope.sec;
+
+                        if(scope.sec === 0) {
+                            scope.$emit('activityEnd');
+                            if(interval) {
+                                $interval.cancel(interval);
+                            }
+                        }
+                    };
+                counter();
+
+                var interval = $interval(function () {
+                    counter();
+                }, 1000);
             }
         }
     }]);
