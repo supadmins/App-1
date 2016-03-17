@@ -2,73 +2,118 @@
 <link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline/>
 <link rel="stylesheet" href="css/home.css" type="text/css" />
 
+<div class="locationInfo">
+    <p>
+        <em></em>
+        <span id="pos">深圳市南山区好好小区</span>
+        <em></em>
+    </p>
+    <div class="search">
+        <em></em>
+        <input type="search" placeholder="请输入商家或商品名称" />
+    </div>
+</div>
+
 <yyz-banner data-api="../json/banner.json"></yyz-banner>
 <div class="adArea">
     <a href="#" class="adItem">
-        <img src="imgs/home/add_2.png" alt=""/>
+        <img src="imgs/home/eshop.png" alt=""/>
         e家店
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_3.png" alt=""/>
+        <img src="imgs/home/arround.png" alt=""/>
         周边小店
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_4.png" alt=""/>
+        <img src="imgs/home/service.png" alt=""/>
         生活服务
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_5.png" alt=""/>
+        <img src="imgs/home/integral.png" alt=""/>
         我的积分
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_6.png" alt=""/>
+        <img src="imgs/home/market.png" alt=""/>
         e超市
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_7.png" alt=""/>
+        <img src="imgs/home/oversea.png" alt=""/>
         跨境商品
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_8.png" alt=""/>
+        <img src="imgs/home/purchasing.png" alt=""/>
         代劳跑腿
     </a>
     <a href="#" class="adItem">
-        <img src="imgs/home/add_1.png" alt=""/>
+        <img src="imgs/home/coupon.png" alt=""/>
         优惠券
     </a>
 </div>
 <div class="elife">
-    <ul>
-        <li>
-            <a href="#">
-                <img src="imgs/home/ad_lf.png">
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="imgs/home/ad_rt_tp.png">
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="imgs/home/ad_rt_bt.png">
-            </a>
-        </li>
-    </ul>
+    <a href="#">
+        <img src="imgs/home/emarket.png">
+    </a>
+    <a href="#">
+        <img src="imgs/home/vip.png">
+    </a>
+    <a href="#">
+        <img src="imgs/home/9.9Area.png">
+    </a>
 </div>
+
+
 <yyz-dropload id="scroller" data-api="../json/shopList.json">
     <div class="business" >
-        <h2 class="title">常用商家</h2>
+        <h2 class="title"><em></em>常用商家</h2>
+        <div class="nav">
+            <ul>
+                <li>
+                    <span>分类</span>
+                    <em class="down"></em>
+                </li>
+                <li>
+                    <span>排序</span>
+                    <em class="down"></em>
+                </li>
+                <li>
+                    <span>筛选</span>
+                    <em class="down"></em>
+                </li>
+            </ul>
+        </div>
         <div class="listItem" ng-repeat="item in scrollList">
-            <div class="desc">
-                <a href="#">
-                    <img ng-src="{{item.src}}" style="width: 72px; height: 50px;">
-                    <span ng-bind="item.content+$index"></span>
-                </a>
+            <div class="top">
+                <div class="left">
+                    <a href="#"><img src="imgs/home/ejd.png" alt=""/></a>
+                    <div class="content">
+                        <p class="name">e家店</p>
+                        <p class="grade">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i></i>
+                            <i></i>
+                            <span>月售2300份</span>
+                        </p>
+                        <p class="limit">起送 ￥16 配送￥3</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>
+                        <i></i>
+                        <i></i>
+                    </p>
+                    <p>达达配送</p>
+                    <p>30分钟</p>
+                </div>
+            </div>
+            <div class="bottom">
+
             </div>
         </div>
     </div>
 </yyz-dropload>
+
 <div class="footer">
     <ul>
         <li>

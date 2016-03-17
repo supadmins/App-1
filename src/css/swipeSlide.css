@@ -1,8 +1,8 @@
 .slide{
     position: relative;
-    max-width: 640px;
     overflow: hidden;
     margin: 0 auto;
+    height: 3.06rem;
 }
 .slide:after{
     content: '';

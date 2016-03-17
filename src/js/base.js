@@ -1,6 +1,6 @@
 var docEl = document.documentElement;
 function setRem() {
-    var visualView = Math.min(docEl.getBoundingClientRect().width, 540);
+    var visualView = docEl.getBoundingClientRect().width;
     newBase = 100 * visualView / 750;
     docEl.style.fontSize = newBase + 'px';
 }
