@@ -66,20 +66,163 @@
     <div class="business" >
         <h2 class="title"><em></em>常用商家</h2>
         <div class="nav">
-            <ul>
-                <li>
+            <ul class="tabs">
+                <li ng-click="show('categoryInfo');">
                     <span>分类</span>
                     <em class="down"></em>
                 </li>
-                <li>
+                <li ng-click="show('sortInfo');">
                     <span>排序</span>
                     <em class="down"></em>
                 </li>
-                <li>
+                <li ng-click="show('filterInfo');">
                     <span>筛选</span>
                     <em class="down"></em>
                 </li>
             </ul>
+            <div class="categoryWrapper" ng-if="categoryInfo">
+                <ul class="category">
+                    <li>
+                        全部商家
+                        <span class="count">524</span>
+                    </li>
+                    <li class="active">
+                        水果生鲜
+                        <span class="count">214</span>
+                        <em class="right"></em>
+                    </li>
+                    <li>
+                        水果生鲜
+                        <span class="count">300</span>
+                        <em class="right"></em>
+                    </li>
+                </ul>
+
+                <ul class="subCategory">
+                    <li>
+                        水果生鲜
+                        <span class="count1">161</span>
+                    </li>
+                    <li>
+                        水果
+                        <span class="count1">165</span>
+                    </li>
+                    <li>
+                        蔬菜
+                        <span class="count1">135</span>
+                    </li>
+                    <li>
+                        肉类
+                        <span class="count1">128</span>
+                    </li>
+                    <li>
+                        水产
+                        <span class="count1">365</span>
+                    </li>
+                </ul>
+                <div class="categoryFooter">
+                    <span></span>
+                </div>
+            </div>
+            <div class="sortWrapper" ng-if="sortInfo">
+                <ul>
+                    <li>
+                        <em></em>
+                        智能排序
+                    </li>
+                    <li>
+                        <em></em>
+                        距离最近
+                    </li>
+                    <li>
+                        <em></em>
+                        销量最高
+                    </li>
+                    <li>
+                        <em></em>
+                        起送价最低
+                    </li>
+                    <li>
+                        <em></em>
+                        配送速度最快
+                    </li>
+                    <li>
+                        <em></em>
+                        评分最高
+                    </li>
+                </ul>
+                <div class="categoryFooter">
+                    <span></span>
+                </div>
+            </div>
+            <div class="filterWrapper" ng-if="filterInfo">
+                <p class="express">
+                    配送方式
+                    <span>达达配送</span>
+                    <span>e小二</span>
+                    <span>不限</span>
+                </p>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <span class="qa">品</span>
+                            品牌馆
+                        </li>
+                        <li>
+                            <span class="ensure">保</span>
+                            外卖保
+                        </li>
+                        <li>
+                            <span class="new">新</span>
+                            新店
+                        </li>
+                        <li>
+                            <span class="ticket">票</span>
+                            开发票
+                        </li>
+                        <li>
+                            <span class="pay">付</span>
+                            在线支付
+                        </li>
+                        <li>
+                            <span class="com">赔</span>
+                            超时赔付
+                        </li>
+                    </ul>
+                </div>
+                <p class="title1">优惠活动</p>
+                <div class="active">
+                    <ul>
+                        <li>
+                            <span class="xin">新</span>
+                            新用户优惠
+                        </li>
+                        <li>
+                            <span class="te">特</span>
+                            特价秒杀
+                        </li>
+                        <li>
+                            <span class="jian">减</span>
+                            下单立减
+                        </li>
+                        <li>
+                            <span class="zeng">赠</span>
+                            赠品优惠
+                        </li>
+                        <li>
+                            <span class="zuan">专</span>
+                            专享红包
+                        </li>
+                    </ul>
+                    <div class="btnArea">
+                        <span class="btnClear">清空</span>
+                        <span class="btnConfirm">确定</span>
+                    </div>
+                    <div class="categoryFooter">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="listItem" ng-repeat="item in scrollList">
             <div class="top">
@@ -108,7 +251,18 @@
                 </div>
             </div>
             <div class="bottom">
-
+                <p>
+                    <i>领</i>
+                    <span style="font-size: 0.22rem">进店可领取商家代金券一张</span>
+                    <span>
+                        3个活动
+                        <em class="down1"></em>
+                    </span>
+                </p>
+                <p>
+                    <i>返</i>
+                    下单满38元即可获得5元代金券，代金券可......
+                </p>
             </div>
         </div>
     </div>
@@ -118,25 +272,21 @@
     <ul>
         <li>
             <a href="#">
-                <img src="imgs/home/footer_1_1.png" alt=""/>
                 首页
             </a>
         </li>
         <li>
             <a href="#">
-                <img src="imgs/home/footer_2.png" alt=""/>
                 e家店
             </a>
         </li>
         <li>
             <a href="#">
-                <img src="imgs/home/footer_3.png" alt=""/>
                 订单
             </a>
         </li>
         <li>
             <a href="#">
-                <img src="imgs/home/footer_4.png" alt=""/>
                 我的
             </a>
         </li>
