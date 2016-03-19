@@ -14,6 +14,6 @@ angular.module('yyzWebApp')
                 }
             });
 
-            $scope[type] = ~$scope[type];
+            $scope[type] = !$scope[type];
         }
     }]);

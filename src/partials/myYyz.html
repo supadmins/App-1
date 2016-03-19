@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="css/myYyz.css" type="text/css"/>
+
+<div class="header">
+    <img src="imgs/myYyz/header.png" alt=""/>
+
+    <p class="uname">廖桑桑</p>
+
+    <p ng-if="customer" class="switch" ng-click="switch();">去卖家中心</p>
+    <p ng-if="seller" class="switch" ng-click="switch();">去买家中心</p>
+</div>
+
+<div class="content" ng-if="customer">
+    <ul class="basicInfo">
+        <li>
+            <p class="balance">
+                <span >0.00</span>元
+            </p>
+            <p>我的余额</p>
+        </li>
+        <li>
+            <p class="voucher">
+                <span>0</span>张
+            </p>
+            <p>我的代金券</p>
+        </li>
+        <li>
+            <p class="integral">
+                <span>0</span>分
+            </p>
+            <p>我的积分</p>
+        </li>
+    </ul>
+
+    <ul class="money">
+        <li>
+            我要退款
+            <span>888元</span>
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            我要提现
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            账单流水
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+
+    <ul class="order">
+        <li>
+            我的订单
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            我的评价
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            我的收藏
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            我的邀请码
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+
+    <ul class="issure">
+        <li>
+            常见问题
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            成为商家
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+
+    <div class="bottom">
+        客服 400-823-4166
+    </div>
+</div>
+
+<div class="content1" ng-if="seller">
+    <ul class="func">
+        <li>
+            <span class="shopName">店铺名</span>
+            <span class="date">今日</span>
+            <span class="info">1280元/100单，总计：13280单</span>
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            <h1 class="dfk">
+                <img src="imgs/myYyz/seller_1_1.png" alt=""/>
+                <p>待付款</p>
+            </h1>
+            <h1 class="wfh">
+                <img src="imgs/myYyz/seller_1_2.png" alt=""/>
+                <p>未发货</p>
+            </h1>
+            <h1 class="dfh">
+                <img src="imgs/myYyz/seller_1_3.png" alt=""/>
+                <p>待发货</p>
+            </h1>
+            <h1 class="sh">
+                <img src="imgs/myYyz/seller_1_4.png" alt=""/>
+                <p>售后</p>
+            </h1>
+        </li>
+    </ul>
+    <ul class="money1">
+        <li>
+            我要提现
+            <span>888元</span>
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            账单流水
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+    <ul class="run">
+        <li>商品管理<em class="arrwoRight"></em></li>
+        <li>订单管理<em class="arrwoRight"></em></li>
+        <li>进货订单<em class="arrwoRight"></em></li>
+        <li>促销管理<em class="arrwoRight"></em></li>
+        <li>客户管理<em class="arrwoRight"></em></li>
+        <li>店铺管理<em class="arrwoRight"></em></li>
+        <li>代金券设置<em class="arrwoRight"></em></li>
+        <li>常见问题<em class="arrwoRight"></em></li>
+    </ul>
+    <div class="bottom">
+        客服 400-823-4166
+    </div>
+</div>
+
+<div class="footer">
+    <ul>
+        <li>
+            <a href="#">
+                首页
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                e家店
+            </a>
+        </li>
+        <li>
+            <a href="#/orderList">
+                订单
+            </a>
+        </li>
+        <li>
+            <a href="#/myYyz" class="active">
+                我的
+            </a>
+        </li>
+    </ul>
+</div>
+
