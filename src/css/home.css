@@ -238,7 +238,6 @@ div.categoryFooter span {
 
 .business ul.category > li .count {
     width: 0.72rem;
-    height: 0.3rem;
     border-radius: 0.1rem;
     color: #fff;
     display: inline-block;
@@ -320,29 +319,29 @@ div.sortWrapper li:nth-child(2) em {
 }
 
 div.sortWrapper li:nth-child(3) em {
-    width: 0.29rem;
+    width: 0.24rem;
     height: 0.27rem;
     background: url('../imgs/home/sort3.png') no-repeat;
     background-size: 0.24rem 0.27rem;
 }
 
 div.sortWrapper li:nth-child(4) em {
-    width: 0.27rem;
+    width: 0.24rem;
     height: 0.27rem;
     background: url('../imgs/home/sort4.png') no-repeat;
     background-size: 0.24rem 0.27rem;
 }
 
 div.sortWrapper li:nth-child(5) em {
-    width: 0.27rem;
-    height: 0.26rem;
+    width: 0.24rem;
+    height: 0.27rem;
     background: url('../imgs/home/sort5.png') no-repeat;
     background-size: 0.24rem 0.27rem;
 }
 
 div.sortWrapper li:nth-child(6) em {
-    width: 0.26rem;
-    height: 0.24rem;
+    width: 0.24rem;
+    height: 0.27rem;
     background: url('../imgs/home/sort6.png') no-repeat;
     background-size: 0.24rem 0.27rem;
 }
@@ -521,6 +520,7 @@ div.filterWrapper div.btnArea .btnClear {
     margin-left: 0.48rem;
     float: left;
     margin-top: 0.14rem;
+    font-size: 0.3rem;
 }
 
 div.filterWrapper div.btnArea .btnConfirm {
@@ -532,6 +532,7 @@ div.filterWrapper div.btnArea .btnConfirm {
     background: #ff9d06;
     float: left;
     margin-top: 0.14rem;
+    font-size: 0.3rem;
 }
 
 .business .nav .tabs > li {
@@ -788,26 +789,26 @@ em.down1 {
 }
 
 .footer ul li:nth-child(1) a {
-    background: url('../imgs/home/footer_1.png') no-repeat;
-    background-size: 0.33rem 0.39rem;
+    background: url('../imgs/home/footer_1_1.png') no-repeat;
+    background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
 .footer ul li:nth-child(2) a {
     background: url('../imgs/home/footer_2.png') no-repeat;
-    background-size: 0.4rem 0.33rem;
+    background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
 .footer ul li:nth-child(3) a {
     background: url('../imgs/home/footer_3.png') no-repeat;
-    background-size: 0.33rem 0.39rem;
+    background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
 .footer ul li:nth-child(4) a {
     background: url('../imgs/home/footer_4.png') no-repeat;
-    background-size: 0.33rem 0.39rem;
+    background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
