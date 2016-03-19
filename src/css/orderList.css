@@ -96,7 +96,7 @@ html, body {
 }
 
 .footer ul li a.active {
-    background: url('../imgs/home/footer_3_1.png') no-repeat;
+    background: url('imgs/home/footer_3_1.png') no-repeat;
     background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }

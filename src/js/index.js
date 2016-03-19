@@ -45,6 +45,20 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                     }]
                 }
             })
+            .state('orderStatus', {
+                url: "/orderStatus",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'orderStatusCtrl',
+                        templateUrl: 'partials/orderStatus.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/orderStatusCtrl.js')
+                    }]
+                }
+            })
     }]);
 
 

@@ -83,25 +83,25 @@ em, i {
 }
 
 .footer ul li:nth-child(1) a {
-    background: url('../imgs/home/footer_1.png') no-repeat;
+    background: url('imgs/home/footer_1.png') no-repeat;
     background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
 .footer ul li:nth-child(2) a {
-    background: url('../imgs/home/footer_2.png') no-repeat;
+    background: url('imgs/home/footer_2.png') no-repeat;
     background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
 .footer ul li:nth-child(3) a {
-    background: url('../imgs/home/footer_3.png') no-repeat;
+    background: url('imgs/home/footer_3.png') no-repeat;
     background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
 
 .footer ul li:nth-child(4) a {
-    background: url('../imgs/home/footer_4.png') no-repeat;
+    background: url('imgs/home/footer_4.png') no-repeat;
     background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;
 }
