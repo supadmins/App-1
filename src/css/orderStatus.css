@@ -45,7 +45,7 @@ html, body {
 
 .item .content {
     height: 1.28rem;
-    border: 0.02rem solid #dfdfdf;
+    border: 1px solid #dfdfdf;
     box-sizing: border-box;
     background: #fff;
     float: left;
@@ -75,8 +75,8 @@ html, body {
     width: 0.12rem;
     height: 0.12rem;
     background: #fff;
-    border-top: 0.02rem solid #dfdfdf;
-    border-left: 0.02rem solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
     position: absolute;
     top: 0.4rem;
     left: 0.68rem;

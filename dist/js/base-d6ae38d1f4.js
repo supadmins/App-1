@@ -1,1 +1,0 @@
-function setRem(){var e=docEl.getBoundingClientRect().width;newBase=100*e/750,docEl.style.fontSize=newBase+"px"}var docEl=document.documentElement,tid;window.addEventListener("resize",function(){clearTimeout(tid),tid=setTimeout(setRem,300)}),window.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(tid),tid=setTimeout(setRem,300))}),setRem();

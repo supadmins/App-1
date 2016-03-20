@@ -2,6 +2,10 @@ html, body {
     background: #ecedf1;
 }
 
+#wrapper {
+    margin-bottom: 1rem;
+}
+
 .order {
     margin-top: 0.16rem;
     background: #fff;
@@ -11,7 +15,7 @@ html, body {
     height: 0.92rem;
     line-height: 0.92rem;
     font-size: 0.32rem;
-    border-bottom: 0.02rem dashed #dcdcdc;
+    border-bottom: 1px dashed #dcdcdc;
 }
 
 .order .header a {
@@ -32,8 +36,8 @@ html, body {
     width: 0.16rem;
     height: 0.16rem;
     box-sizing: border-box;
-    border-left: 0.02rem solid #323232;
-    border-bottom: 0.02rem solid #323232;
+    border-left: 1px solid #323232;
+    border-bottom: 1px solid #323232;
     -webkit-transform: rotateZ(-135deg);
     transform: rotateZ(-135deg);
     position: relative;
@@ -43,7 +47,8 @@ html, body {
 
 .order .content {
     height: 1.54rem;
-    border-bottom: 0.02rem solid #dcdcdc;
+    /*border-bottom: 0.02rem solid #dcdcdc;*/
+    border-bottom: 1px solid #dcdcdc;
     padding: 0 0.26rem;
 }
 
@@ -79,7 +84,7 @@ html, body {
     height: 0.78rem;
     font-size: 0.26rem;
     color: #676767;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .order .bottom span {
@@ -92,7 +97,7 @@ html, body {
 }
 
 .order .bottom span:first-child {
-    border-right: 0.02rem solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
 }
 
 .footer ul li a.active {

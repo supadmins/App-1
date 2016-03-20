@@ -7,8 +7,8 @@ em.arrowRight {
     width: 0.16rem;
     height: 0.16rem;
     box-sizing: border-box;
-    border-left: 0.02rem solid #c2c2c2;
-    border-bottom: 0.02rem solid #c2c2c2;
+    border-left: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
     -webkit-transform: rotateZ(-135deg);
     transform: rotateZ(-135deg);
     position: absolute;
@@ -55,14 +55,14 @@ em.arrowRight {
     overflow: hidden;
     height: 1.28rem;
     background: #fff;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .content ul.basicInfo li {
     float: left;
     height: 100%;
     width: 33.33%;
-    border-right: 0.02rem solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
     box-sizing: border-box;
     text-align: center;
     padding-top: 0.34rem;
@@ -108,7 +108,7 @@ em.arrowRight {
 
 .content ul.money li, .content ul.order li, .content ul.issure li {
     height: 0.85rem;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     line-height: 0.85rem;
     padding: 0 0.8rem;
     position: relative;
@@ -207,7 +207,7 @@ div.bottom {
 
 .content1 ul.func li {
     padding: 0 0.3rem;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -294,7 +294,7 @@ div.bottom {
 }
 
 .content1 ul.money1 li, .content1 ul.run li {
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     height: 0.78rem;
     font-size: 0.3rem;
     color: #333;

@@ -164,7 +164,7 @@ a {
 
 /*选项卡 Begin*/
 .business .nav {
-    border-top: 0.02rem solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
     position: relative;
 }
 
@@ -191,7 +191,7 @@ div.categoryFooter {
     height: 0.6rem;
     background: #fff;
     float: left;
-    border-top: 0.02rem solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
     text-align: center;
 }
 
@@ -200,8 +200,8 @@ div.categoryFooter span {
     box-sizing: border-box;
     height: 0.16rem !important;
     width: 0.42rem !important;;
-    border-top: 0.02rem solid #d4d4d4;
-    border-bottom: 0.02rem solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
     margin-top: 0.24rem !important;
     border-radius: 0 !important;
 }
@@ -219,8 +219,8 @@ div.categoryFooter span {
     height: 1rem;
     line-height: 1rem;
     padding-left: 0.36rem;
-    border-bottom: 0.02rem solid #dcdcdc;
-    border-right: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
     box-sizing: border-box;
 }
 
@@ -255,7 +255,7 @@ div.categoryFooter span {
 
 .business ul.subCategory li {
     margin-left: 0.36rem;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     height: 1rem;
     line-height: 1rem;
     font-size: 0.28rem;
@@ -286,7 +286,7 @@ div.sortWrapper {
 
 div.sortWrapper li {
     height: 0.9rem;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     line-height: 0.9rem;
     font-size: 0.3rem;
     color: #333333;
@@ -369,16 +369,16 @@ div.filterWrapper p.express span {
     width: 1.44rem;
     line-height: 0.54rem;
     text-align: center;
-    border-right: 0.02rem solid #dcdcdc;
-    border-top: 0.02rem solid #dcdcdc;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     font-size: 0.24rem;
     float: right;
     margin-top: 0.12rem;
 }
 
 div.filterWrapper p.express span:last-child {
-    border-left: 0.02rem solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
 }
 
 div.filterWrapper p.express span:first-child {
@@ -402,7 +402,7 @@ div.filterWrapper .content ul li {
     height: 0.48rem;
     font-size: 0.24rem;
     color: #676767;
-    border: 0.02rem solid #dcdcdc;
+    border: 1px solid #dcdcdc;
     border-radius: 0.05rem;
     line-height: 0.48rem;
     margin-top: 0.18rem;
@@ -419,32 +419,32 @@ div.filterWrapper .content span {
 
 div.filterWrapper .content span.qa {
     color: #70d635;
-    border: 0.02rem solid #70d635;
+    border: 1px solid #70d635;
 }
 
 div.filterWrapper .content span.ensure {
     color: #5ec0fd;
-    border: 0.02rem solid #5ec0fd;
+    border: 1px solid #5ec0fd;
 }
 
 div.filterWrapper .content span.new {
     color: #ff5d37;
-    border: 0.02rem solid #ff5d37;
+    border: 1px solid #ff5d37;
 }
 
 div.filterWrapper .content span.ticket {
     color: #ff9d06;
-    border: 0.02rem solid #ff9d06;
+    border: 1px solid #ff9d06;
 }
 
 div.filterWrapper .content span.pay {
     color: #ff5d37;
-    border: 0.02rem solid #ff5d37;
+    border: 1px solid #ff5d37;
 }
 
 div.filterWrapper .content span.com {
     color: #70d635;
-    border: 0.02rem solid #70d635;
+    border: 1px solid #70d635;
 }
 
 div.filterWrapper p.title1 {
@@ -467,7 +467,7 @@ div.filterWrapper .active ul li {
     color: #333333;
     height: 0.92rem;
     line-height: 0.92rem;
-    border-bottom: 0.02rem solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 
@@ -510,7 +510,7 @@ div.filterWrapper div.btnArea {
 div.filterWrapper div.btnArea .btnClear {
     width: 2.13rem;
     height: 0.63rem;
-    border: 0.02rem solid #dcdcdc;
+    border: 1px solid #dcdcdc;
     text-align: center;
     color: #333333;
     line-height: 0.63rem;
@@ -545,7 +545,7 @@ div.filterWrapper div.btnArea .btnConfirm {
     height: 0.5rem;
     line-height: 0.58rem;
     margin-top: 0.14rem;
-    border-right: 0.02rem solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
 }
 
 .business .nav .tabs>li:last-child {
@@ -568,8 +568,8 @@ em.right {
     width: 0.12rem;
     height: 0.12rem;
     box-sizing: border-box;
-    border-left: 0.02rem solid #d4d4d4;
-    border-bottom: 0.02rem solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
     -webkit-transform: rotateZ(-135deg);
     transform: rotateZ(-135deg);
     position: relative;
