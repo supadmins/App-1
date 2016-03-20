@@ -7,8 +7,14 @@ html, body {
 }
 
 .item {
-    margin: 0.36rem 0.26rem 0 0.26rem;
     overflow: hidden;
+    position: relative;
+    height: 1.64rem;
+    margin-left: 0.26rem;
+}
+
+.wrapper .item:first-child {
+    margin-top: 0.36rem;
 }
 
 .item .icon {
@@ -22,6 +28,21 @@ html, body {
     top: 0.25rem;
 }
 
+.item .icon::after {
+    content: '';
+    display: inline-block;
+    height: 1.1rem;
+    width: 0.02rem;
+    background: #c0c0c0;
+    position: relative;
+    left: 0.24rem;
+    top: 0.52rem;
+}
+
+.item:last-child .icon::after {
+    display: none;
+}
+
 .item .content {
     height: 1.28rem;
     border: 0.02rem solid #dfdfdf;
@@ -29,9 +50,48 @@ html, body {
     background: #fff;
     float: left;
     width: 6.18rem;
+    padding: 0 0.18rem;
 }
 
-.item .content p:first-child {
-    font-size: 0.28rem;
-    color: #dfdfdf;
+.item .content p:nth-child(1) {
+    font-size: 0.30rem;
+    color: #333333;
+    padding-top: 0.32rem;
 }
+
+.item .content span.time {
+    float: right;
+    font-size: 0.24rem;
+    color: #a8a8a8;
+}
+
+.item .content p.desc {
+    font-size: 0.24rem;
+    color: #a8a8a8;
+    padding-top: 0.14rem;
+}
+
+.item .content em.triangle {
+    width: 0.12rem;
+    height: 0.12rem;
+    background: #fff;
+    border-top: 0.02rem solid #dfdfdf;
+    border-left: 0.02rem solid #dfdfdf;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.68rem;
+    transform: rotateZ(-135deg);
+    -webkit-transform: rotateZ(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
