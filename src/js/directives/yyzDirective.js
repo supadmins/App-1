@@ -105,7 +105,18 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                 }, 1000);
             }
         }
-    }]);
+    }])
+    .directive('yyzUpload', function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                var fileElement = document.querySelector(attrs['yyzUpload']);
+                element[0].addEventListener('click', function () {
+                    fileElement.click();
+                }, false);
+            }
+        }
+    });
 
 
 

@@ -1,0 +1,271 @@
+html, body {
+    background: #ecedf1;
+}
+
+#wrapper {
+    margin-bottom: 1rem;
+}
+
+em.arrowRight {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #ff9d06;
+    border-bottom: 1px solid #ff9d06;
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
+    position: relative;
+    top: -0.03rem;
+}
+
+em.shop {
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    left: 0.2rem;
+}
+
+.order {
+    background: #fff;
+}
+
+.order .header {
+    background: #ecedf1;
+    font-size: 0.28rem;
+    color: #525252;
+    height: 0.64rem;
+    line-height: 0.64rem;
+    padding-left: 0.26rem;
+}
+
+.order .header .bar {
+    position: relative;
+    border-left: 1px solid #dcdcdc;
+    height: 0.55rem;
+    left: 0.16rem;
+}
+
+.order .content {
+    height: 1.54rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0.26rem;
+}
+
+.order .content span {
+    float: left;
+    font-size: 0.24rem;
+    display: inline-block;
+    background: #ff9d06;
+    width: 0.32rem;
+    height: 0.32rem;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.6rem;
+    line-height: 0.32rem;
+}
+
+.order .content .left {
+    float: left;
+    height: 100%;
+    margin-left: 0.16rem;
+}
+
+.order .content .left p:first-child {
+    padding-top: 0.46rem;
+    color: #333333;
+    font-size: 0.28rem;
+}
+
+.order .content .right p:first-child {
+    padding-top: 0.46rem;
+    color: #a8a8a8;
+    font-size: 0.24rem;
+}
+
+.order .content .left p:last-child {
+    color: #9a9a9a;
+    padding-top: 0.16rem;
+    font-size: 0.22rem;
+}
+
+.order .content .right {
+    float: right;
+    height: 100%;
+}
+
+.order .content .right p:last-child {
+    font-size: 0.26rem;
+    color: #ff9d06;
+    padding-top: 0.16rem;
+}
+
+.order .bottom {
+    height: 0.78rem;
+    font-size: 0.26rem;
+    color: #333333;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.order .bottom > div {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.order .bottom span {
+    box-sizing: border-box;
+    line-height: 0.78rem;
+    text-align: center;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+            order: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+            flex-grow: 1;
+    border-right: 1px solid #dcdcdc;
+}
+
+.order .bottom span:last-child {
+    border-right: none;
+}
+
+.orderInfo {
+    background: #fff;
+}
+
+.orderInfo > p {
+    height: 0.64rem;
+    line-height: 0.64rem;
+    font-size: 0.28rem;
+    background: #ecedf1;
+    padding-left: 0.26rem;
+}
+
+.orderInfo .content .shopName {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.orderInfo .content .shopName a {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #333333;
+    display: block;
+    font-size: 0.32rem;
+    padding-left: 0.26rem;
+}
+
+.orderInfo .content .shopName img {
+    display: inline-block;
+    height: 0.55rem;
+    width: 0.55rem;
+    vertical-align: middle;
+    padding-right: 0.08rem;
+}
+
+.orderInfo .info {
+    height: 2.43rem;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 0 0.26rem;
+}
+
+.orderInfo .info p {
+    color: #1a191e;
+    font-size: 0.3rem;
+    padding-top: 0.38rem;
+}
+
+.orderInfo .info p span {
+    display: inline-block;
+    float: right;
+}
+
+.orderInfo .info p span + span {
+    padding-right: 0.36rem;
+}
+
+.orderInfo .discount {
+    height: 1.74rem;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 0 0.26rem;
+}
+
+.orderInfo .discount p {
+    padding-top: 0.38rem;
+    font-size: 0.3rem;
+    color: #333;
+}
+
+.orderInfo .discount span.reduce {
+    display: inline-block;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 50%;
+    background: #ff4d4d;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.36rem;
+    margin-left: 0.1rem;
+}
+
+.orderInfo .discount p:first-child span + span {
+    float: right;
+}
+
+.orderInfo .discount p:last-child {
+    text-align: right;
+}
+
+.orderInfo .counter {
+    height: 0.84rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 0 0.26rem;
+    font-size: 0.28rem;
+    color: #ff4d4d;
+    text-align: right;
+    line-height: 0.84rem;
+}
+
+.orderInfo .bottom {
+    height: 0.76rem;
+    margin: 0 0.26rem;
+    color: #ff9d06;
+    font-size: 0.30rem;
+    text-align: center;
+    line-height: 0.76rem;
+}
+
+.other {
+    background: #fff;
+}
+
+.other p {
+    font-size: 0.28rem;
+    color: #525151;
+    height: 0.65rem;
+    line-height: 0.65rem;
+    background: #ecedf1;
+    padding: 0 0.26rem;
+}
+
+.other ul li {
+    border-bottom: 1px solid #dcdcdc;
+    height: 0.66rem;
+    line-height: 0.66rem;
+    font-size: 0.28rem;
+    color: #333333;
+    margin: 0 0.26rem;
+}
+
+.other ul li:last-child {
+    border-bottom: none;
+}
+
+.other ul li span {
+    font-size: 0.24rem;
+    color: #676767;
+    padding-left: 0.24rem;
+}

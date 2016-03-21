@@ -1,0 +1,28 @@
+html, body {
+    background: #eef0f2;
+}
+
+div {
+    margin-top: 0.36rem;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.address {
+    height: 1.56rem;
+    background: url('../imgs/createOrder/icon1.png') repeat-x;
+    background-size: 0.36rem 0.11rem;
+    padding-left: 0.24rem;
+}
+
+.address p:first-child {
+    font-size: 0.24rem;
+    color: #676767;
+    padding-top: 0.35rem;
+}
+
+.address p:last-child {
+    font-size: 0.30rem;
+    color: #333333;
+    padding-top: 0.24rem;
+}

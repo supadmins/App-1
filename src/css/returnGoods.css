@@ -1,0 +1,118 @@
+html, body {
+    background: #eef0f2;
+}
+
+em.arrowBottom {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #b8b8b8;
+    border-bottom: 1px solid #b8b8b8;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    position: absolute;
+    top: 0.3rem;
+    right: 0.38rem;
+}
+
+.content {
+    padding: 0 0.26rem 0 0.26rem;
+}
+
+.content p {
+    color: #333333;
+    font-size: 0.3rem;
+    padding: 0.26rem 0 ;
+}
+
+.content p span {
+    color: #b7b7b7;
+    font-size: 0.24rem;
+}
+
+.content ul {
+    background: #fff;
+    height: 1.5rem;
+}
+
+.content ul li {
+    font-size: 0.28rem;
+    padding: 0 0.32rem 0 0.38rem;
+}
+
+.content ul li:first-child {
+    color: #ff9d06;
+    padding-top: 0.16rem;
+}
+
+.content ul li:first-child span {
+    color: #b4b4b4;
+    font-size: 0.24rem;
+}
+
+.content ul li em {
+    height: 0.3rem;
+    width: 0.3rem;
+    border-radius: 50%;
+    border: 1px solid #b7b7b7;
+    float: right;
+    color: #fff;
+    text-align: center;
+}
+
+.content ul li em.active {
+    border: none;
+    background: #ff9d06 url('../imgs/returnGoods/gou.png') no-repeat;
+    background-size: 0.18rem 0.13rem;
+    background-position: center;
+}
+
+.content ul li:last-child {
+    padding-top: 0.56rem;
+}
+
+.content .reason, .content .amount, .content .explain {
+    background: #fff;
+    height: 0.77rem;
+    position: relative;
+    padding-right: 0.26rem;
+}
+
+.content .reason select, .content input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: 0;
+    font-size: 0.28rem;
+    padding-left: 0.32rem;
+    color: #b7b7b7;
+}
+
+
+.content .upload {
+    border: 1px dashed #b4b4b4;
+    font-size: 0.28rem;
+    color: #b4b4b4;
+    margin-top: 0.2rem;
+    text-align: right;
+    background: url('../imgs/returnGoods/camera.png') no-repeat;
+    background-size: 0.38rem 0.3rem;
+    background-position: 0.24rem center;
+    padding: 0.22rem;
+}
+
+#file {
+    display: none;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    background: #ff9d06;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.34rem;
+    width: 100%;
+}

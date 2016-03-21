@@ -556,8 +556,8 @@ em.down {
     width: 0.12rem;
     height: 0.12rem;
     box-sizing: border-box;
-    border-left: 0.02rem solid #323232;
-    border-bottom: 0.02rem solid #323232;
+    border-left: 1px solid #323232;
+    border-bottom: 1px solid #323232;
     -webkit-transform: rotateZ(-45deg);
             transform: rotateZ(-45deg);
     position: relative;

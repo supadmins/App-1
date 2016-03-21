@@ -47,7 +47,6 @@ html, body {
 
 .order .content {
     height: 1.54rem;
-    /*border-bottom: 0.02rem solid #dcdcdc;*/
     border-bottom: 1px solid #dcdcdc;
     padding: 0 0.26rem;
 }

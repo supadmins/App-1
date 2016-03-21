@@ -59,6 +59,48 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                     }]
                 }
             })
+            .state('orderDetail', {
+                url: "/orderDetail",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'orderDetailCtrl',
+                        templateUrl: 'partials/orderDetail.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/orderDetailCtrl.js')
+                    }]
+                }
+            })
+            .state('returnGoods', {
+                url: "/returnGoods",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'returnGoodsCtrl',
+                        templateUrl: 'partials/returnGoods.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/returnGoodsCtrl.js')
+                    }]
+                }
+            })
+            .state('createOrder', {
+                url: "/createOrder",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'createOrderCtrl',
+                        templateUrl: 'partials/createOrder.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/createOrderCtrl.js')
+                    }]
+                }
+            })
     }]);
 
 
