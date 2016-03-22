@@ -4,8 +4,15 @@ html, body {
 
 div {
     margin-top: 0.36rem;
-    background: #FFFFFF;
     box-sizing: border-box;
+}
+
+.right {
+    float: right;
+}
+
+.alignR {
+    text-align: right;
 }
 
 .address {
@@ -13,6 +20,7 @@ div {
     background: url('../imgs/createOrder/icon1.png') repeat-x;
     background-size: 0.36rem 0.11rem;
     padding-left: 0.24rem;
+    background: #fff;
 }
 
 .address p:first-child {
@@ -26,3 +34,244 @@ div {
     color: #333333;
     padding-top: 0.24rem;
 }
+
+em {
+    height: 0.3rem;
+    width: 0.3rem;
+    border-radius: 50%;
+    border: 1px solid #b7b7b7;
+    float: right;
+    color: #fff;
+    text-align: center;
+    margin-top: 0.28rem;
+    box-sizing: border-box;
+}
+
+em.active {
+    border: none;
+    background: #ff9d06 url('../imgs/returnGoods/gou.png') no-repeat;
+    background-size: 0.18rem 0.13rem;
+    background-position: center;
+}
+
+i.arrowRight {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
+    position: absolute;
+    top: 0.3rem;
+    right: 0.38rem;
+}
+
+.pay {
+    margin-bottom: 0.36rem;
+}
+
+.pay p, .balance, .voucher, .time p, .orderInfo ul li, .orderInfo p, .discount {
+    height: 0.86rem;
+    line-height: 0.86rem;
+    font-size: 0.3rem;
+    color: #333;
+    padding: 0 0.24rem;
+    background: #fff;
+    position: relative;
+}
+
+.voucher {
+    margin-top: 0.36rem;
+}
+
+.pay p:first-child {
+    background: #eef0f2;
+    height: 0.6rem;
+    line-height: 0.6rem;
+}
+
+.pay p:nth-child(2) {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.pay p span {
+    color: #ff9d06;
+    font-size: 0.26rem;
+}
+
+.balance span:first-child {
+    font-size: 0.26rem;
+    color: #ff9d06;
+}
+
+.balance span:last-child {
+    color: #b4b4b4;
+    font-size: 0.26rem;
+    padding-right: 0.16rem;
+}
+
+.voucher span:first-child {
+    font-size: 0.26rem;
+    color: #fff;
+    display: inline-block;
+    background: #ff9d06;
+    border-radius: 50%;
+    text-align: center;
+    height: 0.36rem;
+    width: 0.36rem;
+    line-height: 0.36rem;
+}
+
+.voucher span.right {
+    font-size: 0.26rem;
+    color: #ff9d06;
+    padding-right: 0.5rem;
+}
+
+div.time .right {
+    font-size: 0.26rem;
+}
+
+div.time p:first-child {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+div.time span:first-child {
+    color: #ff0000;
+    padding-right: 0.5rem;
+}
+
+div.time p:last-child span {
+    color: #b4b4b4;
+    font-size: 0.26rem;
+}
+
+.orderInfo p:first-child {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.orderInfo p:first-child span {
+    color: #333333;
+    font-size: 0.26rem;
+}
+
+.orderInfo p:nth-of-type(2) {
+    /*border-bottom: 1px solid #dcdcdc;*/
+}
+
+.orderInfo ul li span {
+    color: #333333;
+    font-size: 0.24rem;
+}
+
+p.sum {
+    text-align: right;
+}
+
+.discount span:first-child {
+    font-size: 0.26rem;
+    color: #fff;
+    display: inline-block;
+    background: #ff4d4d;
+    border-radius: 50%;
+    text-align: center;
+    height: 0.36rem;
+    width: 0.36rem;
+    line-height: 0.36rem;
+    margin-left: 0.12rem;
+}
+
+.discount span:nth-child(2) {
+    color: #333333;
+    font-size: 0.24rem;
+}
+
+.discount span:nth-child(3) {
+    display: block;
+}
+
+.discount p:nth-of-type(1) {
+    font-size: 0.26rem;
+    color: #333;
+}
+
+.discount p:nth-of-type(2) {
+    font-size: 0.3rem;
+    color: #ff4d4d;
+}
+
+.rule {
+    background: url('../imgs/createOrder/icon2.png') no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0 center;
+    font-size: 0.26rem;
+    color: #ff4d4d;
+    padding-left: 0.32rem;
+}
+
+.discount {
+    height: 4.38rem;
+    background: #fff;
+    margin-top: 0;
+    border-top: 1px solid #dcdcdc;
+}
+
+.summary {
+    margin-bottom: 1rem;
+    background: #fff;
+    height:  0.66rem;
+    margin-top: 0;
+    padding: 0 0.26rem;
+}
+
+
+.summary span:nth-of-type(1) {
+    color: #ff4d4d;
+}
+
+.summary span:nth-of-type(2), .summary span:nth-of-type(3) {
+    font-size: 0.32rem;
+}
+
+.summary span:nth-of-type(2) {
+    color: #ff4d4d;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    background: #ff9d06;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.34rem;
+    width: 100%;
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

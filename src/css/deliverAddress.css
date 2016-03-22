@@ -1,0 +1,264 @@
+html, body {
+    background: #f5f5f5;
+}
+
+.arrowDown {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: translateY(-80%) rotateZ(-45deg);
+    transform: translateY(-80%) rotateZ(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.right {
+    float: right;
+}
+
+.arrowRight {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #676767;
+    border-bottom: 1px solid #676767;
+    -webkit-transform: translateY(-50%) rotateZ(-135deg);
+    transform: translateY(-50%) rotateZ(-135deg);
+    position: absolute;
+    top: 50%;
+    right: 0.26rem;
+}
+
+header {
+    background: #ff9d06;
+    height: 0.9rem;
+    padding: 0 0.28rem;
+    position: relative;
+}
+
+.cityName {
+    color: #fff;
+    font-size: 0.3rem;
+    display: inline-block;
+    height: 100%;
+    line-height: 0.9rem;
+    width: 1.2rem;
+    position: relative;
+}
+
+.searchBox {
+    position: absolute;
+    height: 0.6rem;
+    top: 0.16rem;
+    left: 1.8rem;
+    border: none;
+    outline: 0;
+    font-size: 0.28rem;
+    border-radius: 3px;
+    width: 5.5rem;
+    line-height: 0.6rem;
+    background: #fff url('../imgs/home/search.png') no-repeat;
+    background-size: 0.23rem 0.24rem;
+    background-position: 0.18rem center;
+    padding-left: 0.48rem;
+}
+
+.content {
+    background: #fff;
+}
+
+.content p:first-child, .myAddress > p:first-child, .moreAddress > p:first-child {
+    height: 0.79rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dcdcdc;
+    line-height: 0.79rem;
+    color: #676767;
+    font-size: 0.26rem;
+    padding-left: 0.28rem;
+    position: relative;
+}
+
+.content p:last-child {
+    height: 0.6rem;
+    color: #333;
+    font-size: 0.3rem;
+    padding-left: 0.28rem;
+    line-height: 0.6rem;
+}
+
+.content p.place {
+    background: url('../imgs/other/refresh.png') no-repeat;
+    background-size: 0.27rem 0.32rem;
+    background-position: right center;
+    margin-right: 0.28rem;
+}
+
+.myAddress {
+    background: #fff;
+    margin-top: 0.2rem;
+}
+
+.myAddress ul p {
+    padding: 0 0.28rem;
+}
+
+.myAddress ul li {
+    height: 1.36rem;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.myAddress ul li p:first-child {
+    font-size: 0.24rem;
+    color: #676767;
+    padding-top: 0.31rem;
+}
+
+.myAddress p:first-child span {
+    font-size: 0.26rem;
+    margin-right: 0.42rem;
+}
+
+.myAddress ul li p:last-child {
+    font-size: 0.3rem;
+    color: #333;
+    padding-top: 0.26rem;
+}
+
+.hotCity p, .allCity p {
+    font-size: 0.26rem;
+    color: #333;
+    height: 0.44rem;
+    padding-left: 0.26rem;
+    line-height: 0.44rem;
+}
+
+.hotCity ul {
+    background: #fff;
+    height: 1.64rem;
+    box-sizing: border-box;
+    padding: 0 1.32rem 0 0.26rem;
+}
+
+.hotCity ul li {
+    display: inline-block;
+    width: 1.3rem;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+    height: 0.55rem;
+    line-height: 0.55rem;
+    font-size: 0.3rem;
+    color: #333333;
+    margin: 0.2rem 0.1rem 0 0;
+    box-sizing: border-box;
+}
+
+.hotCity ul li:last-child {
+    margin-right: 0;
+}
+
+.allCity ul {
+    background: #fff;
+}
+
+.allCity ul li {
+    font-size: 0.32rem;
+    color: #333333;
+    height: 0.76rem;
+    line-height: 0.76rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 0.26rem;
+}
+
+.allCity ul li:last-child {
+    border-bottom: none;
+}
+
+.selectPos img {
+    height: 3.8rem;
+    width: 100%;
+    display: block;
+    border: none;
+}
+.selectPos ul {
+    background: #fff;
+}
+
+.selectPos ul li {
+    border-bottom: 1px solid #dcdcdc;
+    background: url('../imgs/other/pos.png') no-repeat;
+    background-size: 0.27rem 0.31rem;
+    background-position: 0.26rem 0.16rem;
+    padding-left: 0.46rem;
+}
+
+.selectPos ul li:last-child {
+    border-bottom: none;
+}
+
+.selectPos ul li p:first-child {
+    padding: 0.18rem 0.26rem 0 0.26rem;
+    font-size: 0.28rem;
+    color: #333;
+}
+
+.selectPos ul li.active {
+    background: url('../imgs/other/pos1.png') no-repeat;
+    background-size: 0.27rem 0.31rem;
+    background-position: 0.26rem 0.16rem;
+}
+
+.selectPos ul li.active p:first-child {
+    color: #ff9d06;
+}
+
+.selectPos ul li p:last-child {
+    font-size: 0.24rem;
+    color: #676767;
+    padding: 0.18rem 0.26rem;
+}
+
+.moreAddress p:first-child span {
+    margin-right: 0.48rem;
+}
+
+.moreAddress ul {
+    background: #fff;
+}
+
+.moreAddress ul li {
+    border-bottom: 1px solid #dcdcdc;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #333333;
+    font-size: 0.3rem;
+    padding-left: 0.28rem;
+}
+
+.moreAddress ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

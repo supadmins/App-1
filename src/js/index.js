@@ -101,6 +101,48 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                     }]
                 }
             })
+            .state('login', {
+                url: "/login",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'loginCtrl',
+                        templateUrl: 'partials/login.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/loginCtrl.js')
+                    }]
+                }
+            })
+            .state('personalCenter', {
+                url: "/personalCenter",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'personalCenterCtrl',
+                        templateUrl: 'partials/personalCenter.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/personalCenterCtrl.js')
+                    }]
+                }
+            })
+            .state('deliverAddress', {
+                url: "/deliverAddress",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'deliverAddressCtrl',
+                        templateUrl: 'partials/deliverAddress.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/deliverAddressCtrl.js')
+                    }]
+                }
+            })
     }]);
 
 

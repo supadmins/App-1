@@ -15,14 +15,10 @@ em.arrowBottom {
     right: 0.38rem;
 }
 
-.content {
-    padding: 0 0.26rem 0 0.26rem;
-}
-
 .content p {
     color: #333333;
     font-size: 0.3rem;
-    padding: 0.26rem 0 ;
+    padding: 0.26rem 0 0.26rem 0.26rem;
 }
 
 .content p span {
@@ -42,7 +38,9 @@ em.arrowBottom {
 
 .content ul li:first-child {
     color: #ff9d06;
-    padding-top: 0.16rem;
+    padding-top: 0.26rem;
+    padding-bottom: 0.28rem;
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .content ul li:first-child span {
@@ -58,6 +56,7 @@ em.arrowBottom {
     float: right;
     color: #fff;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .content ul li em.active {
@@ -68,7 +67,7 @@ em.arrowBottom {
 }
 
 .content ul li:last-child {
-    padding-top: 0.56rem;
+    padding-top: 0.2rem;
 }
 
 .content .reason, .content .amount, .content .explain {

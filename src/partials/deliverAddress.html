@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="css/deliverAddress.css" type="text/css" inline />
+
+<header>
+    <span class="cityName" ng-click="selectCity();">深圳市 <em class="arrowDown"></em></span>
+    <input class="searchBox" type="search" placeholder="请输入你的送货地址" />
+</header>
+
+<div ng-if="view1">
+    <div class="content">
+        <p>定位地址</p>
+        <p class="place">威盛大厦</p>
+    </div>
+
+    <div class="myAddress">
+        <p>
+            我的收货地址
+        </p>
+        <ul>
+            <li>
+                <p>廖双女士  13689503122</p>
+                <p>威盛大厦14楼 </p>
+            </li>
+            <li>
+                <p>sun先生  13689503122</p>
+                <p>森那美大厦12楼 </p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="moreAddress">
+        <p>
+            附近地址
+            <span class="right" ng-click="selectPos();">
+                更多地址
+                <em class="arrowRight"></em>
+            </span>
+        </p>
+        <ul>
+            <li>
+                森那美大厦
+            </li>
+            <li>深圳首创森美</li>
+            <li>宝创BMW尊选二手车展厅</li>
+            <li>深圳森那美汽车实业有限公司售后服务中心</li>
+        </ul>
+    </div>
+</div>
+
+<div ng-if="view2">
+    <div class="hotCity">
+        <p>热门城市</p>
+        <ul>
+            <li>北京</li>
+            <li>上海</li>
+            <li>广州</li>
+            <li>深圳</li>
+            <li>北京</li>
+            <li>上海</li>
+            <li>广州</li>
+            <li>深圳</li>
+        </ul>
+    </div>
+    <div class="allCity">
+        <p>全部城市</p>
+        <ul>
+            <li>深圳</li>
+            <li>上饶</li>
+            <li>南昌</li>
+            <li>深圳</li>
+            <li>上饶</li>
+            <li>南昌</li>
+        </ul>
+    </div>
+</div>
+
+<div ng-if="view3">
+    <div class="selectPos">
+        <img src="" alt=""/>
+        <ul>
+            <li class="active">
+                <p>[当前]深圳首创森美</p>
+                <p>南山区深南大道麻雀岭工业区森那美大厦1楼</p>
+            </li>
+            <li>
+                <p>深圳首创森美</p>
+                <p>南山区深南大道麻雀岭工业区森那美大厦1楼</p>
+            </li>
+            <li>
+                <p>深圳首创森美</p>
+                <p>南山区深南大道麻雀岭工业区森那美大厦1楼</p>
+            </li>
+            <li>
+                <p>深圳首创森美</p>
+                <p>南山区深南大道麻雀岭工业区森那美大厦1楼</p>
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -288,7 +288,7 @@ div.sortWrapper li {
     height: 0.9rem;
     border-bottom: 1px solid #dcdcdc;
     line-height: 0.9rem;
-    font-size: 0.3rem;
+    font-size: 0.28rem;
     color: #333333;
     margin-left: 0.25rem;
 }
@@ -470,13 +470,12 @@ div.filterWrapper .active ul li {
     border-bottom: 1px solid #dcdcdc;
 }
 
-
 div.filterWrapper .active span {
     display: inline-block;
     color: #fff;
     height: 0.36rem;
     width: 0.36rem;
-    line-height: normal;
+    line-height: 0.36rem;
     border-radius: 0.04rem;
     margin: 0 0.18rem;
     text-align: center;
