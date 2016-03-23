@@ -17,5 +17,8 @@ angular.module('yyzWebApp')
             });
 
             $scope[type] = !$scope[type];
-        }
+        };
+
+        $scope.$on('onDropload', function () {
+        });
     }]);

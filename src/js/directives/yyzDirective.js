@@ -52,20 +52,8 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                         $('#' + attrs['id']).dropload({
                             scrollArea: window,
                             loadDownFn: function (me) {
-                                $.ajax({
-                                    type: 'GET',
-                                    url: attrs['api'],
-                                    dataType: 'json',
-                                    success: function (data) {
-                                        scope.scrollList = [].concat(scope.scrollList, data);
-                                        scope.$apply();
-                                        me.resetload();
-                                    },
-                                    error: function (xhr, type) {
-                                        alert('请求数据失败!');
-                                        me.resetload();
-                                    }
-                                });
+                                scope.$emit('onDropload');
+                                me.resetload();
                             }
                         });
                     });

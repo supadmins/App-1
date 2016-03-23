@@ -36,6 +36,24 @@
     <div class="content">
         <div class="left">
             <ul>
+                <li class="active">蔬菜</li>
+                <li>水果</li>
+                <li>肉禽</li>
+                <li>干货</li>
+                <li>干果</li>
+                <li>蜂蜜</li>
+                <li>蔬菜</li>
+                <li>水果</li>
+                <li>肉禽</li>
+                <li>干货</li>
+                <li>干果</li>
+                <li>蜂蜜</li>
+                <li>蔬菜</li>
+                <li>水果</li>
+                <li>肉禽</li>
+                <li>干货</li>
+                <li>干果</li>
+                <li>蜂蜜</li>
                 <li>蔬菜</li>
                 <li>水果</li>
                 <li>肉禽</li>
@@ -45,7 +63,7 @@
             </ul>
         </div>
         <div class="right">
-            <div class="goods" ng-repeat="item in [1, 2, 3, 4, 5]">
+            <div class="goods" ng-repeat="item in goods track by $index">
                 <img src="imgs/eshop/goods1.png" alt=""/>
                 <p class="name">清新柠檬</p>
                 <p class="desc">月售300份  好评186</p>
@@ -66,7 +84,7 @@
                 <div class="bottom1">
                     <span class="price">￥ 9</span>
                     <div class="fr">
-                        <span class="sku">可选规格</span>
+                        <span class="sku" ng-click="showSpec();">可选规格</span>
                     </div>
                 </div>
             </div>
@@ -146,11 +164,10 @@
     </div>
 </div>
 
-
 <div class="masker" ng-show="specView" yyz-masker>
     <div class="spec">
         <p>
-            <span class="close" ng-click="hideVouchers();">
+            <span class="close" ng-click="hideSpec();">
                 <em></em>
                 <em></em>
             </span>
@@ -161,7 +178,7 @@
             <span>规格</span>
             <div>
                 <ul>
-                    <li>
+                    <li class="active">
                         尤力克中大果6-8个 <i></i>
                     </li>
                     <li>
@@ -175,12 +192,14 @@
         </div>
         <p>
             数量
-            <span class="circle">-</span>
+            <span class="circle1">-</span>
             <span class="count">3</span>
-            <span class="circle">+</span>
+            <span class="circle1">+</span>
         </p>
         <p class="total">
-            <span>￥ 168.00</span>
+            ￥
+            <span>168.</span>
+            <span>00</span>
             <span>加入购物车</span>
         </p>
     </div>
