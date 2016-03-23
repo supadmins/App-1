@@ -130,55 +130,55 @@ em.arrowRight {
 }
 
 .content ul.money li:nth-child(1) {
-    background: url('imgs/myYyz/ul_2.png') no-repeat;
+    background: url('../imgs/myYyz/ul_2.png') no-repeat;
     background-size: 0.27rem 0.27rem;
     background-position: 0.3rem center;
 }
 
 .content ul.money li:nth-child(2) {
-    background: url('imgs/myYyz/ul_1.png') no-repeat;
+    background: url('../imgs/myYyz/ul_1.png') no-repeat;
     background-size: 0.27rem 0.3rem;
     background-position: 0.3rem center;
 }
 
 .content ul.money li:nth-child(3) {
-    background: url('imgs/myYyz/ul_3.png') no-repeat;
+    background: url('../imgs/myYyz/ul_3.png') no-repeat;
     background-size: 0.24rem 0.28rem;
     background-position: 0.3rem center;
 }
 
 .content ul.order li:nth-child(1) {
-    background: url('imgs/myYyz/ul_4.png') no-repeat;
+    background: url('../imgs/myYyz/ul_4.png') no-repeat;
     background-size: 0.21rem 0.25rem;
     background-position: 0.3rem center;
 }
 
 .content ul.order li:nth-child(2) {
-    background: url('imgs/myYyz/ul_5.png') no-repeat;
+    background: url('../imgs/myYyz/ul_5.png') no-repeat;
     background-size: 0.25rem 0.22rem;
     background-position: 0.3rem center;
 }
 
 .content ul.order li:nth-child(3) {
-    background: url('imgs/myYyz/ul_6.png') no-repeat;
+    background: url('../imgs/myYyz/ul_6.png') no-repeat;
     background-size: 0.27rem 0.24rem;
     background-position: 0.3rem center;
 }
 
 .content ul.order li:nth-child(4) {
-    background: url('imgs/myYyz/ul_7.png') no-repeat;
+    background: url('../imgs/myYyz/ul_7.png') no-repeat;
     background-size: 0.27rem 0.26rem;
     background-position: 0.3rem center;
 }
 
 .content ul.issure li:nth-child(1) {
-    background: url('imgs/myYyz/ul_8.png') no-repeat;
+    background: url('../imgs/myYyz/ul_8.png') no-repeat;
     background-size: 0.27rem 0.27rem;
     background-position: 0.3rem center;
 }
 
 .content ul.issure li:nth-child(2) {
-    background: url('imgs/myYyz/ul_9.png') no-repeat;
+    background: url('../imgs/myYyz/ul_9.png') no-repeat;
     background-size: 0.27rem 0.24rem;
     background-position: 0.3rem center;
 }

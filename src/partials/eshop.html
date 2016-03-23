@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="css/eshop.css" type="text/css" inline />
+
+<div class="header">
+    <div class="left">
+        <a href="#">
+            <img class="headerImg" src="imgs/eshop/shopHeader.jpg" alt=""/>
+        </a>
+    </div>
+    <div class="right">
+        <div class="top">
+            <ul>
+                <li>起送 ￥20  <i></i></li>
+                <li>配送 ￥2   <i></i></li>
+                <li>送达 45分钟</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <span>进店可领取商家代金券一张</span>
+            <em class="arrowRight"></em>
+        </div>
+    </div>
+</div>
+
+<nav>
+    <ul>
+        <li class="active">商品</li>
+        <li>评价</li>
+    </ul>
+</nav>
+
+<div class="hotCategory">
+    <p>
+        <i></i>
+        热销分类
+    </p>
+    <div class="content">
+        <div class="left">
+            <ul>
+                <li>蔬菜</li>
+                <li>水果</li>
+                <li>肉禽</li>
+                <li>干货</li>
+                <li>干果</li>
+                <li>蜂蜜</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="goods" ng-repeat="item in [1, 2, 3, 4, 5]">
+                <img src="imgs/eshop/goods1.png" alt=""/>
+                <p class="name">清新柠檬</p>
+                <p class="desc">月售300份  好评186</p>
+                <div class="bottom">
+                    <span class="price">￥ 9</span>
+                    <div class="fr">
+                        <span class="circle">-</span>
+                        <span class="count">3</span>
+                        <span class="circle">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="goods" ng-repeat="item in [1, 2, 3]">
+                <img src="imgs/eshop/goods1.png" alt=""/>
+                <p class="name">清新柠檬</p>
+                <p class="desc">月售300份  好评186</p>
+                <div class="bottom1">
+                    <span class="price">￥ 9</span>
+                    <div class="fr">
+                        <span class="sku">可选规格</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="imgs/eshop/quang.png" ng-click="showVouchers();" class="quang" alt=""/>
+</div>
+
+<footer>
+    <div class="cart">
+        <span class="circular" ng-click="showCartInfo();">
+            <i>3</i>
+        </span>
+        <span>共￥27</span>
+    </div>
+    <div class="btn">
+        选好了
+    </div>
+</footer>
+
+<div class="masker" ng-show="cartView" yyz-masker>
+    <ul>
+        <li>
+            清新柠檬(中大果8-10个)
+            <span class="amount">￥18</span>
+            <div class="modify">
+                <span class="circle1">-</span>
+                1
+                <span class="circle1">+</span>
+            </div>
+        </li>
+        <li>
+            进口青苹(6个装)
+            <span class="amount">￥18</span>
+            <div class="modify">
+                <span class="circle1">-</span>
+                1
+                <span class="circle1">+</span>
+            </div>
+        </li>
+    </ul>
+    <footer>
+        <div class="cart">
+        <span class="circular" ng-click="showCartInfo();">
+            <i>3</i>
+        </span>
+            <span>共￥27</span>
+        </div>
+        <div class="btn">
+            选好了
+        </div>
+    </footer>
+</div>
+
+<div class="masker" ng-show="vouchersView" yyz-masker>
+    <div class="vouchers">
+        <p>
+            <span class="close" ng-click="hideVouchers();">
+                <em></em>
+                <em></em>
+            </span>
+            点击领取商家券
+        </p>
+        <p>商家券可与其他优惠同享</p>
+
+        <div class="box" yyz-vouchers>
+            <span>￥</span>
+            <span class="value">13.0</span>
+            <div class="desc">
+                <p>绿叶水果4元优惠券</p>
+                <ul>
+                    <li>满36元可用</li>
+                    <li>2016-01-06-2016-01-07</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="masker" ng-show="specView" yyz-masker>
+    <div class="spec">
+        <p>
+            <span class="close" ng-click="hideVouchers();">
+                <em></em>
+                <em></em>
+            </span>
+            清新柠檬
+            <span>月售300份  好评186</span>
+        </p>
+        <div class="specContent">
+            <span>规格</span>
+            <div>
+                <ul>
+                    <li>
+                        尤力克中大果6-8个 <i></i>
+                    </li>
+                    <li>
+                        中大果8-10个 <i></i>
+                    </li>
+                    <li>
+                        中大果10-12个 <i></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            数量
+            <span class="circle">-</span>
+            <span class="count">3</span>
+            <span class="circle">+</span>
+        </p>
+        <p class="total">
+            <span>￥ 168.00</span>
+            <span>加入购物车</span>
+        </p>
+    </div>
+    <footer>
+        <div class="cart">
+        <span class="circular" ng-click="showCartInfo();">
+            <i>3</i>
+        </span>
+            <span>共￥27</span>
+        </div>
+        <div class="btn">
+            选好了
+        </div>
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

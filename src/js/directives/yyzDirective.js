@@ -116,6 +116,31 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                 }, false);
             }
         }
+    })
+    .directive('yyzVouchers', function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                element.on('click', function (e) {
+                    if(element.html().toString().indexOf('领取成功') == -1) {
+                        element.css('opacity', 0.5);
+                        var html = '<div style="color: #ff9d06; font-size: 0.28rem; margin-top: 0.4rem; text-align: center">领取成功</div>';
+                        element.append(html);
+                    }
+                })
+            }
+        }
+    })
+    .directive('yyzMasker', function () {
+        return {
+            restrict: 'A',
+            scope: false,
+            link: function (scope, element, attrs) {
+                element.on('click', function () {
+                    scope.$emit('maskerClick');
+                })
+            }
+        }
     });
 
 
