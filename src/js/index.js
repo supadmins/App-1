@@ -157,6 +157,20 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                     }]
                 }
             })
+            .state('shopDetail', {
+                url: "/shopDetail",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'shopDetailCtrl',
+                        templateUrl: 'partials/shopDetail.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/shopDetailCtrl.js')
+                    }]
+                }
+            })
     }]);
 
 

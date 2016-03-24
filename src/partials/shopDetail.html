@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="css/swipeSlide.css" type="text/css" inline />
+<link rel="stylesheet" href="css/shopDetail.css" type="text/css" inline />
+
+<yyz-banner data-api="../json/shopDetail.json" >
+</yyz-banner>
+<em class="faver"></em>
+
+<div class="part1">
+    <p class="title">四川安岳新鲜黄柠檬水果 800克</p>
+    <p class="price">
+        <span class="small"></span>
+        168
+        <span class="small"></span>
+        <span class="originPrice">￥268.00</span>
+        <span class="addCart" ng-click="ShowSpec();">加入购物车</span>
+    </p>
+</div>
+<div class="part2">
+    <p>
+        安庆柠檬品质优良,富含人体所需的维生素和各种微量元素，
+        其果型长圆形或卵圆形，两端均凸起而稍尖，成熟果皮色
+        鲜黄，芳香浓郁。
+    </p>
+    <ul>
+        <li>
+            <em></em>
+            全球精选
+        </li>
+        <li>
+            <em></em>
+            安全品质
+        </li>
+        <li>
+            <em></em>
+            服务到家
+        </li>
+    </ul>
+</div>
+<div class="part3">
+    <p>
+        点击展开图文
+        <em></em>
+    </p>
+</div>
+<footer>
+    <div class="cart">
+        <span class="circular" ng-click="showCartInfo();">
+            <i>3</i>
+        </span>
+        <span>共￥27</span>
+    </div>
+    <div class="btn">
+        选好了
+    </div>
+</footer>
+<div class="masker" ng-show="specView" yyz-masker>
+    <div class="spec">
+        <p>
+            <span class="close" ng-click="hideSpec();">
+                <em></em>
+                <em></em>
+            </span>
+            清新柠檬
+            <span>月售300份  好评186</span>
+        </p>
+        <div class="specContent">
+            <span>规格</span>
+            <div>
+                <ul>
+                    <li class="active">
+                        尤力克中大果6-8个 <i></i>
+                    </li>
+                    <li>
+                        中大果8-10个 <i></i>
+                    </li>
+                    <li>
+                        中大果10-12个 <i></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            数量
+            <span class="circle1">-</span>
+            <span class="count">3</span>
+            <span class="circle1">+</span>
+        </p>
+        <p class="total">
+            ￥
+            <span>168.</span>
+            <span>00</span>
+            <span>加入购物车</span>
+        </p>
+    </div>
+    <footer>
+        <div class="cart">
+        <span class="circular" ng-click="showCartInfo();">
+            <i>3</i>
+        </span>
+            <span>共￥27</span>
+        </div>
+        <div class="btn">
+            选好了
+        </div>
+    </footer>
+</div>

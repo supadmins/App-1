@@ -15,7 +15,7 @@
             </ul>
         </div>
         <div class="bottom">
-            <span>进店可领取商家代金券一张</span>
+            <span ng-click="showMessageView();">进店可领取商家代金券一张</span>
             <em class="arrowRight"></em>
         </div>
     </div>
@@ -49,23 +49,12 @@
                 <li>干果</li>
                 <li>蜂蜜</li>
                 <li>蔬菜</li>
-                <li>水果</li>
-                <li>肉禽</li>
-                <li>干货</li>
-                <li>干果</li>
-                <li>蜂蜜</li>
-                <li>蔬菜</li>
-                <li>水果</li>
-                <li>肉禽</li>
-                <li>干货</li>
-                <li>干果</li>
-                <li>蜂蜜</li>
             </ul>
         </div>
-        <div class="right">
+        <div class="right" yyz-scroll-spy=".goods">
             <div class="goods" ng-repeat="item in goods track by $index">
                 <img src="imgs/eshop/goods1.png" alt=""/>
-                <p class="name">清新柠檬</p>
+                <p class="name">清新柠檬-- {{$index}}</p>
                 <p class="desc">月售300份  好评186</p>
                 <div class="bottom">
                     <span class="price">￥ 9</span>
@@ -128,9 +117,9 @@
     </ul>
     <footer>
         <div class="cart">
-        <span class="circular" ng-click="showCartInfo();">
-            <i>3</i>
-        </span>
+    <span class="circular" ng-click="showCartInfo();">
+        <i>3</i>
+    </span>
             <span>共￥27</span>
         </div>
         <div class="btn">
@@ -216,8 +205,63 @@
     </footer>
 </div>
 
-
-
+<div class="masker1" ng-show="shopMessageView" yyz-masker>
+    <div class="message">
+        <div class="title">
+            <p class="shopname">
+                绿叶水果
+            </p>
+            <p class="score">
+                <em></em>
+                <em></em>
+                <em></em>
+                <em></em>
+                <em></em>
+                <span>5分</span>
+            </p>
+            <p>
+                月售:727 营业时间: 08:30-21:11
+            </p>
+        </div>
+        <div class="content">
+            <p>优惠信息</p>
+            <ul>
+                <li>
+                    <span class="pink">减</span>
+                    <p>在线支付39减5元</p>
+                </li>
+                <li>
+                    <span class="skyBlue">赠</span>
+                    <p>本店新用户可领新用户券4元</p>
+                </li>
+                <li>
+                    <span class="yellow">代</span>
+                    <p>
+                        下单满45元即得商户代金券，代金券可与平台
+                        优惠同享
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="messageInfo">
+            <p>商家公告</p>
+            <p>
+                尊敬的顾客你们好
+            </p>
+            <p>
+                本店购买水果有奖，凡一次性购满超过200
+                元者，送甜蜜柚子一个
+            </p>
+            <p>
+                欢迎来店光临   谢谢
+            </p>
+            <span class="close1" ng-click="closeMessageView();">
+                <em></em>
+                <em></em>
+            </span>
+        </div>
+    </div>
+</div>
 
 
 

@@ -412,9 +412,14 @@ div.filterWrapper .content ul li {
 div.filterWrapper .content span {
     display: inline-block;
     line-height: 0.24rem;
-    padding: 0.02rem;
+    padding: 1px;
     float: left;
-    margin: 0.06rem 0.18rem 0 0.16rem;
+    margin: 0 0.16rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-48%);
+    -webkit-transform: translateY(-48%);
+    box-sizing: border-box;
 }
 
 div.filterWrapper .content span.qa {
@@ -473,12 +478,12 @@ div.filterWrapper .active ul li {
 div.filterWrapper .active span {
     display: inline-block;
     color: #fff;
-    height: 0.36rem;
     width: 0.36rem;
     line-height: 0.36rem;
     border-radius: 0.04rem;
     margin: 0 0.18rem;
     text-align: center;
+    box-sizing: border-box;
 }
 
 span.xin {

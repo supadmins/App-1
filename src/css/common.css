@@ -23,6 +23,15 @@ em, i {
     background: rgba(0, 0, 0, .7);
 }
 
+.masker1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.9);
+}
+
 .masker .bottom {
     position: absolute;
     bottom: 0;

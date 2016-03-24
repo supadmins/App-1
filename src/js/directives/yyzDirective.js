@@ -6,6 +6,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
         return {
             restrict: 'E',
             scope: true,
+            transclude: true,
             template: '<div class="slide" id="slide"><ul><li ng-repeat="banner in banners">'               +
             '<a ng-href="{{banner.link}}"><img ng-src="{{banner.imgSrc}}" alt=""></a>'           +
             '</li></ul><div class="dot"><span ng-repeat="banner in banners"></span></div></div>',
@@ -101,6 +102,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                 var fileElement = document.querySelector(attrs['yyzUpload']);
                 element[0].addEventListener('click', function () {
                     fileElement.click();
+                    scope.$apply();
                 }, false);
             }
         }
@@ -119,13 +121,28 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     })
+    .directive('yyzScrollSpy', function ($timeout) {
+        return {
+            link: function (scope, element, attrs) {
+                var scrollTop, timeout, index = 0;
+                element.on('scroll', function () {
+                    scrollTop = $(element[0]).scrollTop();
+                    var height = $(attrs['yyzScrollSpy']).height();
+                    index = Math.floor(scrollTop / height);
+                    scope.$emit('onScroll', index);
+                });
+            }
+        }
+    })
     .directive('yyzMasker', function () {
         return {
             restrict: 'A',
             scope: false,
             link: function (scope, element, attrs) {
-                element.on('click', function () {
-                    scope.$emit('maskerClick');
+                element.on('click', function (event) {
+                    if(event.target.className.toString().indexOf('masker') > -1) {
+                        scope.$emit('maskerClick');
+                    }
                 })
             }
         }

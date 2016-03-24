@@ -11,8 +11,7 @@ em.arrowRight {
     border-left: 1px solid #fff;
     border-bottom: 1px solid #fff;
     -webkit-transform: rotateZ(-135deg);
-    -ms-transform: rotate(-135deg);
-        transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
     position: absolute;
     top: 0.1rem;
     right: 0;
@@ -74,8 +73,7 @@ em.arrowRight {
     background: #fff;
     top: 50%;
     right: -0.24rem;
-    -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+    transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
 
@@ -112,7 +110,6 @@ nav ul {
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -123,7 +120,6 @@ nav ul li {
     color: #333;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
     text-align: center;
     height: 0.64rem;
@@ -168,16 +164,12 @@ nav ul li.active {
     overflow: scroll;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
 }
 
 .hotCategory .content .left {
     border-right: 1px solid #dcdcdc;
     width: 1.62rem;
-    overflow: scroll;
-    overflow-scrolling: touch;
-    -webkit-overflow-scrolling: touch;
 }
 
 .hotCategory .content .left ul {
@@ -202,9 +194,6 @@ nav ul li.active {
 
 .hotCategory .content > .right {
     background: #fff;
-    overflow: scroll;
-    overflow-scrolling: touch;
-    -webkit-overflow-scrolling: touch;
 }
 
 .right .goods {
@@ -401,8 +390,7 @@ div.vouchers {
     position: absolute;
     left: 50%;
     top: 50%;
-    -ms-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     padding: 0.44rem 0.36rem 0 0.36rem;
 }
@@ -417,11 +405,11 @@ span.close {
 }
 
 span.close em {
-    height: 0.02rem;
+    height: 1px;
     width: 0.44rem;
     background: #b4b4b4;
     position: absolute;
-    top: 0.1rem;
+    top: 0.3rem;
     left: 0;
 }
 
@@ -642,19 +630,138 @@ p.total span:nth-child(3) {
     font-size: 0.26rem;
 }
 
+.message {
+    color: #fff;
+    margin: 1rem 0.55rem 0;
+    text-align: center;
+}
 
+p.shopname {
+    font-size: 0.32rem;
+    text-align: center;
+}
 
+p.score {
+    padding-top: 0.16rem;
+    font-size: 0.2rem;
+}
 
+p.score em {
+    background: url('../imgs/eshop/statr.png') no-repeat;
+    background-size: 0.16rem 0.16rem;
+    width: 0.16rem;
+    height: 0.16rem;
+}
 
+div.title {
+    border-bottom: 1px solid #fff;
+}
 
+div.title p:last-child {
+    font-size: 0.22rem;
+    padding-top: 0.16rem;
+    padding-bottom: 0.34rem;
+}
 
+div.message > div.content > p {
+    font-size: 0.32rem;
+    padding: 0.24rem 0;
+}
 
+div.message > div.content ul {
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #fff;
+}
 
+div.message > div.content ul li {
+    height: 0.8rem;
+    font-size: 0.28rem;
+    text-align: left;
+}
 
+div.message > div.content ul li span {
+    display: inline-block;
+    height: 0.36rem;
+    width: 0.36rem;
+    border-radius: 50%;
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    text-align: center;
+    margin-right: 0.16rem;
+    float: left;
+    margin-top: 0.24rem;
+}
 
+div.message > div.content ul li p {
+    float: left;
+    width: 5.68rem;
+    padding-top: 0.28rem;
+}
 
+span.pink {
+    background: #ff4d4d;
+}
 
+span.skyBlue {
+    background: #62d1b6;
+}
 
+span.yellow {
+    background: #ffb600;
+}
 
+.messageInfo {
+    text-align: center;
+}
 
+.messageInfo p {
+    font-size: 0.28rem;
+    padding-top: 0.24rem;
+}
+
+.messageInfo p:nth-child(2) {
+    text-align: left;
+}
+
+.messageInfo p:nth-child(3) {
+    text-align: left;
+    text-indent: 1rem;
+}
+
+.messageInfo p:nth-child(4) {
+    text-align: left;
+    text-indent: 0.5rem;
+}
+
+span.close1 {
+    width: 0.96rem;
+    height: 0.96rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-top: 1.4rem;
+    position: relative;
+}
+
+span.close1 em:first-child {
+    position: absolute;
+    width: 0.5rem;
+    top: 0.48rem;
+    height: 1px;
+    background: #fff;
+    left: 0.23rem;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+span.close1 em:last-child {
+    position: absolute;
+    width: 0.5rem;
+    top: 0.48rem;
+    height: 1px;
+    background: #fff;
+    left: 0.23rem;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
 

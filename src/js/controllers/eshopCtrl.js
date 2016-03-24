@@ -1,8 +1,9 @@
 angular.module('yyzWebApp')
-    .controller('eshopCtrl', ['$scope', '$http', function ($scope, $http) {
+    .controller('eshopCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
         $scope.cartView = false;
         $scope.vouchersView = false;
         $scope.specView = false;
+        $scope.shopMessageView = false;
         $scope.goods = [
             1, 2, 3, 4, 5, 1, 2, 3, 4, 5,1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
             1, 2, 3, 4, 5, 1, 2, 3, 4, 5,1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
@@ -35,6 +36,31 @@ angular.module('yyzWebApp')
             $scope.specView = false;
         };
 
-        $scope.$on('onDropload', function () {
-        });
+        $scope.closeMessageView = function () {
+            $scope.shopMessageView = false;
+        };
+
+        $scope.showMessageView = function () {
+            $scope.shopMessageView = true;
+        };
+
+        $scope.$on('onScroll', function (e, index) {
+        })
     }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
