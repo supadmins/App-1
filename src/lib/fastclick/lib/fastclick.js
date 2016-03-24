@@ -225,6 +225,13 @@
 	 * @returns {boolean} Returns true if the element needs a native click
 	 */
 	FastClick.prototype.needsClick = function(target) {
+        if(target.childNodes.length > 0) {
+            for(var i = 0; i < target.childNodes.length; i++) {
+                if(this.needsClick(target.childNodes[i])) {
+                    return true;
+                }
+            }
+        }
 		switch (target.nodeName.toLowerCase()) {
 
 		// Don't send a synthetic click to disabled inputs (issue #62)
@@ -239,7 +246,8 @@
 		case 'input':
 
 			// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)
-			if ((deviceIsIOS && target.type === 'file') || target.disabled) {
+			//if ((deviceIsIOS && target.type === 'file') || target.disabled) {
+			if ((target.type === 'file') || target.disabled) {
 				return true;
 			}
 

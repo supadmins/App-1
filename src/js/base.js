@@ -19,13 +19,6 @@ setRem();
 
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
-        FastClick.prototype.onTouchEnd = function () {
-            if(event.target.nodeName == 'INPUT') {
-                return false;
-            }
-            //console.log(event.target);
-        };
-
         FastClick.attach(document.body);
     }, false);
 }
