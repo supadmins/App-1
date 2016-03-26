@@ -1,5 +1,8 @@
-angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod'])
-    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+angular.module('yyzWebApp', [
+    'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'angularFileUpload'])
+    .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
+        $httpProvider.defaults.withCredentials = true;
+
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
@@ -13,7 +16,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/homeCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/homeCtrl.js');
                     }]
                 }
             })
@@ -27,7 +30,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/orderListCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/orderListCtrl.js');
                     }]
                 }
             })
@@ -41,7 +44,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/myYyzCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/myYyzCtrl.js');
                     }]
                 }
             })
@@ -55,7 +58,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/orderStatusCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/orderStatusCtrl.js');
                     }]
                 }
             })
@@ -69,7 +72,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/orderDetailCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/orderDetailCtrl.js');
                     }]
                 }
             })
@@ -83,7 +86,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/returnGoodsCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/returnGoodsCtrl.js');
                     }]
                 }
             })
@@ -97,7 +100,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/createOrderCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/createOrderCtrl.js');
                     }]
                 }
             })
@@ -111,7 +114,21 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/loginCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/loginCtrl.js');
+                    }]
+                }
+            })
+            .state('register', {
+                url: "/register",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'loginCtrl',
+                        templateUrl: 'partials/login.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/loginCtrl.js');
                     }]
                 }
             })
@@ -125,7 +142,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/personalCenterCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/personalCenterCtrl.js');
                     }]
                 }
             })
@@ -139,7 +156,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/deliverAddressCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/deliverAddressCtrl.js');
                     }]
                 }
             })
@@ -153,7 +170,7 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/eshopCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/eshopCtrl.js');
                     }]
                 }
             })
@@ -167,10 +184,53 @@ angular.module('yyzWebApp', ['ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyz
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/shopDetailCtrl.js')
+                        return $ocLazyLoad.load('js/controllers/shopDetailCtrl.js');
                     }]
                 }
             })
-    }]);
+            .state('shopInfo', {
+                url: "/shopInfo",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'shopInfoCtrl',
+                        templateUrl: 'partials/shopInfo.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/shopInfoCtrl.js');
+                    }]
+                }
+            })
+            .state('myAllOrder', {
+                url: "/myAllOrder",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myAllOrderCtrl',
+                        templateUrl: 'partials/myAllOrder.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myAllOrderCtrl.js');
+                    }]
+                }
+            })
+            .state('addGoods', {
+                url: "/addGoods",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'addGoodsCtrl',
+                        templateUrl: 'partials/addGoods.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/addGoodsCtrl.js');
+                    }]
+                }
+            })
+    }])
+    .value('baseUrl', 'http://112.74.126.176:8899/');
 
 

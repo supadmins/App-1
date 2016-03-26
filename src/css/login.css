@@ -25,6 +25,16 @@ html, body {
     border-bottom: none;
 }
 
+.login ul li img {
+    width: 1.8rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
 .login input {
     border: none;
     outline: 0;

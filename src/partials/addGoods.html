@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="css/addGoods.css" type="text/css" inline />
+
+<div ng-init="view1=true;" ng-show="view1">
+    <div class="imgArea">
+        <ul>
+            <li ng-repeat="img in imgs">
+                <img ng-src="{{img}}" alt=""/>
+            </li>
+        </ul>
+        <div class="inc" yyz-upload="#file">
+            +<input type="file" id="file" nv-file-select uploader="uploader" accept="image/*" />
+        </div>
+    </div>
+
+    <div class="desc">
+        <ul>
+            <li>标题</li>
+            <li>市场价格</li>
+            <li>销售价格</li>
+            <li>库存</li>
+        </ul>
+    </div>
+
+    <div class="specWrapper">
+        <div class="spec">
+            <div class="delete">
+                <em></em>
+                <i></i>
+            </div>
+            <ul>
+                <li>规格</li>
+                <li>
+                    <span>规格名称:</span>
+                    <input type="text"/>
+                </li>
+                <li>
+                    <span>市场价格:</span>
+                    <input type="text"/>
+                </li>
+                <li>
+                    <span>销售价格:</span>
+                    <input type="text"/>
+                </li>
+                <li>
+                    <span>库存:</span>
+                    <input type="text"/>
+                </li>
+            </ul>
+        </div>
+        <div class="add">
+            +添加商品规格
+        </div>
+        <div class="group" ng-click="doGroup();">
+            分组
+        </div>
+        <div class="class">
+            <span>分类</span>
+            <select name="pname">
+                <option value="0">-请选择-</option>
+            </select>
+            <span class="spilter">|</span>
+            <select name="sname"></select>
+        </div>
+        <div class="goodsDesc">
+            <span>描述</span>
+            <textarea name="remark" id="remark" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+</div>
+
+<div ng-show="view2">
+    <div class="addClass">
+        <span ng-click="view1=true;view2=false;">
+            <em class="arrowLeft"></em>
+        </span>
+        添加分类
+        <span class="confirm" ng-click="add();">添加</span>
+    </div>
+    <input class="name" type="text" ng-model="groupName" placeholder="输入分类名称" />
+
+    <ul class="groupList">
+        <li ng-repeat="item in groupList">
+            <span ng-bind="item.Name"></span>
+            <span>0</span>
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+</div>
