@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="css/refunding.css" type="text/css" inline/>
+
+<div ng-show="true">
+    <header>
+        <p>
+            <span>!</span>
+            等待商家处理退款申请
+        </p>
+    </header>
+
+    <div class="body">
+        <div class="content1" ng-show="false">
+            <p>如您同意: 申请将达成并退款给买家</p>
+
+            <p>如您拒绝: 卖家需要重新修改退款申请或申请维权</p>
+
+            <p>若您在
+                <span>06天12时55分20秒</span>
+                内未处理，则视为默认<br>同意退款申请
+            </p>
+        </div>
+
+        <div class="content1">
+            <ul>
+                <li class="on">
+                    <i></i>
+                    <p>商家同意退款</p>
+                    <p>
+                        2016-03-18 <br/>14:20:02
+                    </p>
+                    <em class="line"></em>
+                </li>
+                <li>
+                    <i></i>
+                    <p>银行受理</p>
+                    <p>
+                        预计2-7个工作日
+                    </p>
+                    <em class="line"></em>
+                </li>
+                <li>
+                    <i></i>
+                    <p>退至买家账户</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content2">
+            <p>
+                卖家电话
+                <span class="fr">18846411233</span>
+            </p>
+            <ul>
+                <li>
+                    退款金额
+                    <span class="fr">￥0.10</span>
+                </li>
+                <li>
+                    处理方式
+                    <span class="fr">我要退款，但不退货</span>
+                </li>
+                <li>
+                    申请时间
+                    <span class="fr">2016-03-17 16:17:01</span>
+                </li>
+                <li>
+                    退款原因
+                    <span class="fr">买/卖双方协商一致</span></li>
+                <li>
+                    退款编号
+                    <span class="fr">W1603171617018235</span>
+                </li>
+            </ul>
+            <p>查看完整的协商记录</p>
+        </div>
+
+        <div class="btnArea">
+            <span>拒绝买家申请</span>
+            <span>同意退款</span>
+        </div>
+    </div>
+</div>
+
+<div class="refuse" ng-show="false">
+    <p>
+        建议您与买家协商后，再确定是否拒绝退款。如您拒绝退款后，买
+        家可修改退款申请协议重新发起退款。也可直接发起维权申请，将
+        会由e小店客满介入处理。
+    </p>
+    <textarea name="reason" placeholder="请填写您的拒绝理由" id="reason" cols="30" rows="10"></textarea>
+    <p>
+        <span>拒绝申请</span>
+    </p>
+</div>

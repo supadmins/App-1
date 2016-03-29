@@ -230,6 +230,84 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            .state('orderDesc', {
+                url: "/orderDesc",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'orderDescCtrl',
+                        templateUrl: 'partials/orderDesc.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/orderDescCtrl.js');
+                    }]
+                }
+            })
+            .state('refunding', {
+                url: "/refunding",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'refundingCtrl',
+                        templateUrl: 'partials/refunding.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/refundingCtrl.js');
+                    }]
+                }
+            })
+            .state('consultHistory', {
+                url: "/consultHistory",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'consultHistoryCtrl',
+                        templateUrl: 'partials/consultHistory.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/consultHistoryCtrl.js');
+                    }]
+                }
+            })
+            .state('goodsManage', {
+                url: "/goodsManage",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'goodsManageCtrl',
+                        templateUrl: 'partials/goodsManage.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/goodsManageCtrl.js');
+                    }]
+                }
+            })
+            .state('goodsTypeManage', {
+                url: "/goodsTypeManage",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'goodsTypeManageCtrl',
+                        templateUrl: 'partials/goodsTypeManage.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/goodsTypeManageCtrl.js');
+                    }]
+                }
+            })
+            .state('help', {
+                url: "/help",
+                views: {
+                    "lazyLoadView": {
+                        templateUrl: 'partials/help.html'
+                    }
+                }
+            })
     }])
     .value('baseUrl', 'http://112.74.126.176:8899/');
 

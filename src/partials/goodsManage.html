@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="css/goodsManage.css" type="text/css" inline />
+
+<header>
+    <em class="back"></em>
+    <span>小店商品</span>
+    <span class="active">商品分类</span>
+    <em class="question"></em>
+</header>
+
+<div class="body">
+    <div ng-show="true">
+        <ul class="category">
+            <li>
+                水果生鲜
+                <span class="fr">3</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                肉类
+                <span class="fr">3</span>
+                <em class="arrowRight"></em>
+            </li>
+        </ul>
+    </div>
+    <div ng-show="false">
+        <ul class="nav">
+            <li class="on">出售中(<span>3</span>)</li>
+            <li>已下架(<span>1</span>)</li>
+        </ul>
+
+        <div class="goods">
+            <i class="circle"></i>
+            <img src="imgs/other/goods1.png" alt=""/>
+            <div>
+                <p>清新柠檬</p>
+                <p>库存：108件</p>
+                <p>售价：<span class="price">￥40.00</span></p>
+            </div>
+            <em></em>
+        </div>
+        <div class="goods">
+            <i class="circle on"></i>
+            <img src="imgs/other/goods1.png" alt=""/>
+            <div>
+                <p>清新柠檬</p>
+                <p>库存：108件</p>
+                <p>售价：<span class="price">￥40.00</span></p>
+            </div>
+            <em></em>
+        </div>
+        <div class="goods">
+            <i class="circle"></i>
+            <img src="imgs/other/goods1.png" alt=""/>
+            <div>
+                <p>清新柠檬</p>
+                <p>库存：108件</p>
+                <p>售价：<span class="price">￥40.00</span></p>
+            </div>
+            <em class="on"></em>
+            <div class="popMenu">
+                <ul class="menus">
+                    <li>
+                        <span>编辑</span>
+                    </li>
+                    <li>
+                        <span>下架</span>
+                    </li>
+                    <li>
+                        <span>分类</span>
+                    </li>
+                    <li>
+                        <span>删除</span>
+                    </li>
+                    <li>
+                        <span>推广</span>
+                    </li>
+                    <li>
+                        <span>置顶</span>
+                    </li>
+                </ul>
+                <em class="triangle"></em>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <div ng-show="true">
+        <span>添加商品</span>
+        <span>批量管理</span>
+    </div>
+    <div ng-show="false" class="settings">
+        <div class="fl">
+            <i class="circle"></i>
+            <p>全选</p>
+        </div>
+        <div class="fr">
+            <em class="remove"></em>
+            <p>删除</p>
+        </div>
+        <div class="fr">
+            <em class="off"></em>
+            <p>下架</p>
+        </div>
+        <div class="fr">
+            <em class="top"></em>
+            <p>移动顶部</p>
+        </div>
+    </div>
+</div>
+

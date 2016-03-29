@@ -1,5 +1,5 @@
 angular.module('yyzWebApp')
-    .controller('homeCtrl', ['$scope', '$http', 'User', function ($scope, $http, User) {
+    .controller('homeCtrl', ['$scope', '$http', function ($scope, $http) {
 
         $scope.categoryInfo = $scope.sortInfo = $scope.filterInfo = false;
 

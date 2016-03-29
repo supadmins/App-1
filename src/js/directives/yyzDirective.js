@@ -134,6 +134,27 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     })
+    .directive('yyzDelete', function ($timeout) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                var selector = attrs['yyzDelete'],
+                    $ele = $(element[0]);
+
+                $ele.click(function () {
+                    $ele.parent('.left')
+                        .css({
+                            'transform': 'translateX(-1.16rem)',
+                            '-webkit-transform': 'translateX(-1.16rem)'
+                        });
+                    $ele.parents('li').find(selector)
+                        .css({
+                            'width': '1.16rem'
+                        });
+                });
+            }
+        }
+    })
     .directive('yyzMasker', function () {
         return {
             restrict: 'A',
