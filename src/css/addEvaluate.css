@@ -1,0 +1,105 @@
+body {
+    background: #f5f5f5;
+}
+
+.title {
+    font-size: 0.3rem;
+    color: #676767;
+    height: 0.64rem;
+    line-height: 0.64rem;
+    padding: 0 0.3rem;
+}
+
+.content {
+    height: 2.4rem;
+    background: #fff;
+    color: #333333;
+    font-size: 0.3rem;
+    padding: 0.37rem 0 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.content i {
+    background: url('../imgs/addEvaluate/star.png') no-repeat;
+    background-size: 0.39rem 0.37rem;
+    width: 0.39rem;
+    height: 0.37rem;
+    margin-left: 0.1rem;
+}
+
+.content i.on {
+    background: url('../imgs/addEvaluate/star1.png') no-repeat;
+    background-size: 0.39rem 0.37rem;
+}
+
+.content p.grade {
+    margin-top: 0.87rem;
+}
+
+.content ul {
+    color: #676767;
+    font-size: 0.28rem;
+    margin-top: 0.1rem;
+}
+
+.content ul li {
+    height: 0.7rem;
+    line-height: 0.7rem;
+    margin-right: 0.3rem;
+    position: relative;
+}
+
+.content ul li em {
+    width: 0.78rem;
+    height: 0.49rem;
+    background: #fff url('../imgs/addEvaluate/zan.png') no-repeat;
+    background-size: 0.78rem 0.49rem;
+    background-position: right center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.content ul li em.on {
+    background: #fff url('../imgs/addEvaluate/zan1.png') no-repeat;
+    background-size: 0.78rem 0.49rem;
+    background-position: right center;
+}
+
+textarea {
+    background: #fff;
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    height: 0.95rem;
+    background: #ff9d06;
+    color: #fff;
+    font-size: 0.34rem;
+    text-align: center;
+    width: 100%;
+    line-height: 0.95rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

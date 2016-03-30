@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="css/addEvaluate.css" type="text/css" inline />
+
+<p class="title">配送评价</p>
+
+<div class="content">
+    <p>送达时间 15:30</p>
+    <p class="grade">
+        配送服务
+        <i ng-repeat="item in [1, 2, 3, 4, 5]" yyz-grade>
+        </i>
+    </p>
+</div>
+
+<p class="title">商品评价</p>
+
+<div class="content">
+    <p>
+        配送服务
+        <i ng-repeat="item in [1, 2, 3, 4, 5]" yyz-grade>
+        </i>
+    </p>
+    <ul>
+        <li ng-repeat="item in [1, 2]">
+            智利蓝莓
+            <em yyz-grade></em>
+        </li>
+    </ul>
+</div>
+
+<p class="title">写点什么</p>
+
+<div class="content">
+    <textarea name="remark" id="remark" cols="30" ng-minlength="10" rows="10" placeholder="(至少输入10字)您的意见很重要！来点评一下吧"></textarea>
+</div>
+
+<div class="bottom">
+    提交评价
+</div>

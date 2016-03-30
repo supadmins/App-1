@@ -1,5 +1,6 @@
 angular.module('yyzWebApp', [
-    'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'angularFileUpload'])
+    'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod',
+    'angularFileUpload'])
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.withCredentials = true;
 
@@ -297,6 +298,62 @@ angular.module('yyzWebApp', [
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                         return $ocLazyLoad.load('js/controllers/goodsTypeManageCtrl.js');
+                    }]
+                }
+            })
+            .state('selectType', {
+                url: "/selectType",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'selectTypeCtrl',
+                        templateUrl: 'partials/selectType.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/selectTypeCtrl.js');
+                    }]
+                }
+            })
+            .state('goodsTypeHelper', {
+                url: "/goodsTypeHelper",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'goodsTypeHelperCtrl',
+                        templateUrl: 'partials/goodsTypeHelper.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/goodsTypeHelperCtrl.js');
+                    }]
+                }
+            })
+            .state('addEvaluate', {
+                url: "/addEvaluate",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'addEvaluateCtrl',
+                        templateUrl: 'partials/addEvaluate.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/addEvaluateCtrl.js');
+                    }]
+                }
+            })
+            .state('shopManagement', {
+                url: "/shopManagement",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'shopManagementCtrl',
+                        templateUrl: 'partials/shopManagement.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/shopManagementCtrl.js');
                     }]
                 }
             })

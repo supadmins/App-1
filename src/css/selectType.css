@@ -1,0 +1,142 @@
+html, body {
+    background: #fdfcfc;
+}
+
+header {
+    background: #ff9d06;
+    height: 0.87rem;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 0.32rem;
+    box-sizing: border-box;
+    line-height: 0.87rem;
+}
+
+em.back {
+    position: absolute;
+    width: 0.16rem;
+    height: 0.16rem;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    top: 50%;
+    left: 0.35rem;
+    transform: rotateZ(-45deg) translateY(-50%);
+    -webkit-transform: rotateZ(-45deg) translateY(-50%);
+}
+
+header span {
+    position: absolute;
+    font-size: 0.3rem;
+    top: 50%;
+    right: 0.35rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.search {
+    height: 0.78rem;
+    margin: 0.2rem 0.3rem;
+    position: relative;
+    background: #fdfcfc;
+}
+
+.search input {
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: 0;
+    width: 90%;
+    font-size: 0.28rem;
+    color: #b4b4b4;
+}
+
+.search img {
+    width: 0.32rem;
+    height: 0.32rem;
+    float: right;
+    display: inline-block;
+    padding-top: 0.2rem;
+}
+
+.goods {
+    float: left;
+    padding: 0.3rem 0.35rem;
+    border-bottom: 1px solid #dcdcdc;
+    height: 1.96rem;
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%;
+}
+
+.goods i.circle {
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+}
+
+i.circle {
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 50%;
+    border: 1px solid #b4b4b4;
+    float: left;
+}
+
+.goods > div {
+    float: left;
+    padding-left: 0.2rem;
+}
+
+.goods > div p:nth-child(1) {
+    font-size: 0.32rem;
+    color: #333333;
+    padding-bottom: 0.32rem;
+}
+
+.goods > div p:nth-child(2), .goods > div p:nth-child(3) {
+    font-size: 0.22rem;
+    color: #aaaaaa;
+    padding-bottom: 0.13rem;
+}
+
+span.price {
+    color: #ff2e4b;
+}
+
+.goods img {
+    width: 1.28rem;
+    height: 1.28rem;
+    float: left;
+    display: inline-block;
+    border: none;
+}
+
+.goods i.circle.on {
+    border: none;
+    background: #ff9d06 url('../imgs/returnGoods/gou.png') no-repeat;
+    background-size: 0.18rem 0.13rem;
+    background-position: center;
+}
+
+.body .goods:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

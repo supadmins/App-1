@@ -9,12 +9,12 @@
 
 <div class="body">
     <ul class="list">
-        <li>
+        <li ng-repeat="item in [1, 2, 3]">
             <div class="left">
                 <span yyz-delete=".right">
                     <em></em>
                 </span>
-                <span>水果生鲜</span>
+                <span>水果生鲜 + {{$index + 1}}</span>
                 <span class="count">0</span>
                 <span class="edit"></span>
                 <span class="bar">

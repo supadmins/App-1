@@ -134,14 +134,27 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     })
-    .directive('yyzDelete', function ($timeout) {
+    .directive('yyzGrade', function ($timeout) {
         return {
             restrict: 'A',
+            link: function (scope, element, attrs) {
+                var className = attrs['yyzGrade'];
+                $(element[0]).click(function () {
+                    $(this).toggleClass('on');
+                })
+            }
+        }
+    })
+    .directive('yyzDelete', ['$document', function ($document) {
+        return {
+            restrict: 'A',
+            scope: true,
             link: function (scope, element, attrs) {
                 var selector = attrs['yyzDelete'],
                     $ele = $(element[0]);
 
-                $ele.click(function () {
+                $ele.click(function ($event) {
+                    $event.stopPropagation();
                     $ele.parent('.left')
                         .css({
                             'transform': 'translateX(-1.16rem)',
@@ -151,10 +164,26 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                         .css({
                             'width': '1.16rem'
                         });
+
+                    scope.delete = true;
                 });
+
+                $document.on('click', function () {
+                    if(scope.delete) {
+                        $ele.parent('.left')
+                            .css({
+                                'transform': 'translateX(0)',
+                                '-webkit-transform': 'translateX(0)'
+                            });
+                        $ele.parents('li').find(selector)
+                            .css({
+                                'width': '0'
+                            });
+                    }
+                })
             }
         }
-    })
+    }])
     .directive('yyzMasker', function () {
         return {
             restrict: 'A',

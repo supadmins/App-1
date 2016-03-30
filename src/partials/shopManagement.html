@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="css/shopManagement.css" type="text/css" inline />
+
+<div ng-show="!modifyView">
+    <header>
+        <em class="back"></em>
+        <p>店铺管理</p>
+        <span>查看店铺</span>
+    </header>
+
+    <div class="body">
+        <ul>
+            <li yyz-upload="#file">
+                <span class="name">店铺头像</span>
+                <img src="imgs/myYyz/header.png"  class="header" alt=""/>
+                <input type="file" id="file"/>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">店铺名称</span>
+                <span class="value">哦啦啦</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">店铺审核</span>
+                <span class="value">已通过审核</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li ng-click="modifyView=true;">
+                <span class="name">店铺简介</span>
+                <span class="value">您身边的优质生鲜水果等你</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">店铺定位</span>
+                <span class="value">麒麟小区</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">物流配送</span>
+                <span class="value">商家自行配送</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">起送价</span>
+                <span class="value">20.0元</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">配送价</span>
+                <span class="value">1.0元</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">配送范围</span>
+                <span class="value">5km</span>
+                <em class="arrowRight"></em>
+            </li>
+            <li>
+                <span class="name">是否营业</span>
+                <span class="value">正常营业</span>
+                <em class="arrowRight"></em>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="func" ng-show="modifyView">
+    <div class="nav">
+        <span>取消</span>
+        <p>店铺管理</p>
+        <span>保存</span>
+    </div>
+    <div class="container">
+        <textarea name="remark" ng-model="remark" ng-change="calac();" id="remark" autofocus cols="30" rows="10"></textarea>
+        <span class="left" ng-bind="left"></span>
+    </div>
+</div>
