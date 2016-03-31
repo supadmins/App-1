@@ -56,24 +56,24 @@
     </div>
 </div>
 
-<div class="btnArea" ng-if="false">
-    <span class="on">发货</span>
+<div class="btnArea">
+    <span class="on" ng-click="logisticsView=true;">发货</span>
     <span>取消发货</span>
 </div>
 
-<div class="masker" ng-if="true">
+<div class="masker" ng-if="logisticsView">
     <div class="container">
-        <div class="top">
-            <span class="on">需要物流</span>
-            <span>无需物流</span>
+        <div class="top" yyz-select-uniqe="span">
+            <span>需要物流</span>
+            <span class="on">无需物流</span>
         </div>
         <div class="body">
             <div>
-                <span class="tip">
+                <span class="tip" ng-show="!logistics">
                     无需物流则不用填写物流相关信息
                 </span>
-                <input type="text" placeholder="请输入快递单号"/>
-                <select name="company" id="company">
+                <input ng-show="logistics" type="text" placeholder="请输入快递单号"/>
+                <select ng-show="logistics" name="company" id="company">
                     <option value="">请选择物流公司</option>
                     <option value="">全一快递</option>
                     <option value="">德邦快递</option>
@@ -83,7 +83,7 @@
             </div>
         </div>
         <div class="btn">
-            <span>取消</span>
+            <span ng-click="cancel();">取消</span>
             <span>确定</span>
         </div>
     </div>

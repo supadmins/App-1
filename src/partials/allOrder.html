@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="css/allOrder.css" type="text/css" inline />
+
+<header>
+    <em class="back"></em>
+    客户订单
+    <em class="search"></em>
+</header>
+
+<div class="userInfo" ng-if="true">
+    <img src="imgs/myYyz/header.png" alt=""/>
+    <div class="content">
+        <p class="uname">欧巴撒浪嘿哟~</p>
+        <p class="phoneNumber">
+            手机：13554544654
+            <span>设置分组</span>
+        </p>
+    </div>
+</div>
+
+<nav>
+    <ul yyz-select-uniqe="li">
+        <li class="on">全部</li>
+        <li>待付款</li>
+        <li>待发货</li>
+        <li>已发货</li>
+        <li>已完成</li>
+        <li>已关闭</li>
+    </ul>
+</nav>
+
+<div class="wrapper">
+    <div class="orderItem" ng-repeat="item in [1, 2, 3]">
+        <div class="top">
+            <a href="#">
+                <img src="imgs/other/goods.png" alt=""/>
+            </a>
+            <div class="fl">
+                <p class="goodsName">酸爽的清新柠檬</p>
+                <p class="uname">暮然回首</p>
+                <p class="qty">￥10.00  共1件</p>
+            </div>
+            <div class="fr">
+                <p class="deliver">等您发货</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <span>单号：E20160317153818002070943</span>
+            <span class="fr">16-03-17 15:38</span>
+        </div>
+    </div>
+</div>

@@ -371,6 +371,20 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            .state('allOrder', {
+                url: "/allOrder",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'allOrderCtrl',
+                        templateUrl: 'partials/allOrder.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/allOrderCtrl.js');
+                    }]
+                }
+            })
             .state('help', {
                 url: "/help",
                 views: {

@@ -154,15 +154,18 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                var className = attrs['yyzGrade'];
-                $(element[0]).click(function () {
-                    $(this).find('em').toggleClass('on');
-                    $(this).siblings().find('em').removeClass('on');
-                    $(this).find('i').toggleClass('on');
-                    $(this).siblings().find('i').removeClass('on');
-
-                    scope.$emit('onselect');
+                var target = attrs['yyzSelectUniqe'];
+                $(element[0]).children().click(function () {
+                    if($(this).find(target).length > 0) {
+                        $(this).find(target).toggleClass('on');
+                        $(this).siblings().find(target).removeClass('on');
+                    }else {
+                        $(this).toggleClass('on');
+                        $(this).siblings().removeClass('on');
+                    }
                 });
+
+                scope.$emit('onselectUniqe');
             }
         }
     })
