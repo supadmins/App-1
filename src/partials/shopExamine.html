@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="css/shopExamine.css" type="text/css" inline />
+
+<header>
+    <span>返回</span>
+    <p>店铺审核</p>
+</header>
+
+<div class="body">
+    <p class="tip">
+        <span class="require">*</span>
+        项为必填
+    </p>
+    <div class="item">
+        <p ng-click="type=!type;">
+            <span class="require">*</span>
+            商家类型
+            <span>个体商户</span>
+            <em class="arrow" ng-class="{'on': type}"></em>
+        </p>
+        <ul ng-show="type">
+            <li yyz-select-uniqe>
+                企业商户
+                <em class="circle"></em>
+            </li>
+            <li yyz-select-uniqe>
+                个体商户
+                <em class="circle"></em>
+            </li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <p ng-click="range=!range;">
+            <span class="require">*</span>
+            经营范围
+            <span>未选择</span>
+            <em class="arrow" ng-class="{'on': range}"></em>
+        </p>
+        <ul ng-show="range">
+            <li yyz-select>
+                水果生鲜
+                <em class="circle"></em>
+            </li>
+            <li yyz-select>
+                零食干货
+                <em class="circle"></em>
+            </li>
+        </ul>
+    </div>
+
+    <div class="licence">
+        <p>
+            <span class="require">*</span>
+            营业执照
+        </p>
+        <div class="imgContainer" yyz-upload="#file">
+            <img ng-src="{{defaultImg}}" alt=""/>
+            <input type="file" id="file" />
+        </div>
+        <div class="desc">
+            <p>照片要求:</p>
+            <ul>
+                <li>1.图片清晰，不得有水印</li>
+                <li>2.图片大小不得超过2MB</li>
+                <li>3.仅支持JPG\PNG格式图片</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="licence">
+        <p>
+            <span class="require">*</span>
+            税务登记证
+        </p>
+        <div class="imgContainer" yyz-upload="#file">
+            <img ng-src="{{defaultImg}}" alt=""/>
+            <input type="file" id="file" />
+        </div>
+        <div class="desc">
+            <p>照片要求:</p>
+            <ul>
+                <li>1.图片清晰，不得有水印</li>
+                <li>2.图片大小不得超过2MB</li>
+                <li>3.仅支持JPG\PNG格式图片</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="licence">
+        <p>
+            <span class="require">*</span>
+            身份证正面
+        </p>
+        <div class="imgContainer" yyz-upload="#file">
+            <img ng-src="{{defaultImg}}" alt=""/>
+            <input type="file" id="file" />
+        </div>
+        <div class="desc">
+            <p>照片要求:</p>
+            <ul>
+                <li>1.图片清晰，不得有水印</li>
+                <li>2.图片大小不得超过2MB</li>
+                <li>3.仅支持JPG\PNG格式图片</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="licence">
+        <p>
+            <span class="require">*</span>
+            身份证反面
+        </p>
+        <div class="imgContainer" yyz-upload="#file">
+            <img ng-src="{{defaultImg}}" alt=""/>
+            <input type="file" id="file" />
+        </div>
+        <div class="desc">
+            <p>照片要求:</p>
+            <ul>
+                <li>1.图片清晰，不得有水印</li>
+                <li>2.图片大小不得超过2MB</li>
+                <li>3.仅支持JPG\PNG格式图片</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<p class="tip1">
+    注：为了便于审核，以上信息需您如实填写
+</p>
+
+<div class="bottom">
+    提交
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

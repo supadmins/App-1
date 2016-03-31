@@ -99,11 +99,14 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                var fileElement = document.querySelector(attrs['yyzUpload']);
-                element[0].addEventListener('click', function () {
+                var selector = attrs['yyzUpload'],
+                    fileElement = document.querySelector(selector),
+                    $ele = $(element[0]);
+
+                $ele.click(function ($event) {
                     fileElement.click();
                     scope.$apply();
-                }, false);
+                });
             }
         }
     })
@@ -134,14 +137,32 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     })
-    .directive('yyzGrade', function ($timeout) {
+    .directive('yyzSelect', function ($timeout) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
                 var className = attrs['yyzGrade'];
                 $(element[0]).click(function () {
-                    $(this).toggleClass('on');
-                })
+                    $(this).find('em').toggleClass('on');
+                    $(this).find('i').toggleClass('on');
+                    scope.$emit('onselect');
+                });
+            }
+        }
+    })
+    .directive('yyzSelectUniqe', function ($timeout) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                var className = attrs['yyzGrade'];
+                $(element[0]).click(function () {
+                    $(this).find('em').toggleClass('on');
+                    $(this).siblings().find('em').removeClass('on');
+                    $(this).find('i').toggleClass('on');
+                    $(this).siblings().find('i').removeClass('on');
+
+                    scope.$emit('onselect');
+                });
             }
         }
     })

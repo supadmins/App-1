@@ -1,6 +1,6 @@
 angular.module('yyzWebApp')
     .controller('shopManagementCtrl', ['$scope', function ($scope) {
-        $scope.modifyView = true;
+        $scope.modifyView = false;
         $scope.left = $scope.max = 255;
         $scope.remark = '';
 
@@ -10,4 +10,41 @@ angular.module('yyzWebApp')
                 $scope.remark = $scope.remark.substr(0, $scope.max);
             }
         };
+
+        $scope.cancel = function () {
+            var viewArray = [
+                'modifyView',
+                'remarkView',
+                'shopNameView',
+                'distanceView',
+                'sendPriceView',
+                'dispatchView',
+                'runView'
+            ];
+            viewArray.forEach(function (item) {
+                $scope[item] = false;
+            })
+        };
     }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

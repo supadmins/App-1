@@ -15,7 +15,7 @@
                 <input type="file" id="file"/>
                 <em class="arrowRight"></em>
             </li>
-            <li>
+            <li ng-click="modifyView=shopNameView=true;">
                 <span class="name">店铺名称</span>
                 <span class="value">哦啦啦</span>
                 <em class="arrowRight"></em>
@@ -25,7 +25,7 @@
                 <span class="value">已通过审核</span>
                 <em class="arrowRight"></em>
             </li>
-            <li ng-click="modifyView=true;">
+            <li ng-click="modifyView=remarkView=true;">
                 <span class="name">店铺简介</span>
                 <span class="value">您身边的优质生鲜水果等你</span>
                 <em class="arrowRight"></em>
@@ -35,27 +35,27 @@
                 <span class="value">麒麟小区</span>
                 <em class="arrowRight"></em>
             </li>
-            <li>
+            <li ng-click="modifyView=distanceView=true;">
                 <span class="name">物流配送</span>
                 <span class="value">商家自行配送</span>
                 <em class="arrowRight"></em>
             </li>
-            <li>
+            <li ng-click="modifyView=sendPriceView=true;">
                 <span class="name">起送价</span>
                 <span class="value">20.0元</span>
                 <em class="arrowRight"></em>
             </li>
-            <li>
+            <li ng-click="modifyView=dispatchView=true;">
                 <span class="name">配送价</span>
                 <span class="value">1.0元</span>
                 <em class="arrowRight"></em>
             </li>
-            <li>
+            <li ng-click="modifyView=dispatchView=true;">
                 <span class="name">配送范围</span>
                 <span class="value">5km</span>
                 <em class="arrowRight"></em>
             </li>
-            <li>
+            <li ng-click="modifyView=runView=true;">
                 <span class="name">是否营业</span>
                 <span class="value">正常营业</span>
                 <em class="arrowRight"></em>
@@ -66,12 +66,74 @@
 
 <div class="func" ng-show="modifyView">
     <div class="nav">
-        <span>取消</span>
+        <span ng-click="cancel();">取消</span>
         <p>店铺管理</p>
         <span>保存</span>
     </div>
     <div class="container">
-        <textarea name="remark" ng-model="remark" ng-change="calac();" id="remark" autofocus cols="30" rows="10"></textarea>
-        <span class="left" ng-bind="left"></span>
+        <!-- 备注-->
+        <div ng-show="remarkView">
+            <textarea name="remark" ng-model="remark" ng-change="calac();" id="remark" autofocus cols="30" rows="10"></textarea>
+            <span class="left" ng-bind="left"></span>
+        </div>
+        <!-- 店名-->
+        <input ng-show="shopNameView" type="text" class="field" placeholder="请设置店铺名称"/>
+        <!-- 配送范围-->
+        <div ng-show="distanceView">
+            <input type="text" class="field" placeholder="配送请输入配送范围" />
+            <span class="unit">km</span>
+        </div>
+        <!-- 起送价-->
+        <div ng-show="sendPriceView">
+            <input type="text" class="field" placeholder="起送价设置" />
+            <span class="unit">元</span>
+        </div>
+        <!-- 物流配送-->
+        <div ng-show="dispatchView">
+            <ul>
+                <li yyz-select>
+                    商家自行配送
+                    <em></em>
+                </li>
+                <li yyz-select>
+                    达达配送
+                    <em></em>
+                </li>
+                <li yyz-select>
+                    快递物流
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+        <!-- 营业管理-->
+        <div ng-show="runView">
+            <ul>
+                <li yyz-select>
+                    正常营业
+                    <em></em>
+                </li>
+                <li yyz-select>
+                    暂停营业
+                    <em></em>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

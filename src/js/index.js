@@ -357,6 +357,20 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            .state('shopExamine', {
+                url: "/shopExamine",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'shopExamineCtrl',
+                        templateUrl: 'partials/shopExamine.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/shopExamineCtrl.js');
+                    }]
+                }
+            })
             .state('help', {
                 url: "/help",
                 views: {

@@ -148,17 +148,56 @@ span.left {
     margin-right: 0.2rem;
 }
 
+input.field {
+    background: #fff;
+    border: none;
+    outline: 0;
+    font-size: 0.28rem;
+    height: 0.86rem;
+    width: 100%;
+    padding-left: 0.2rem;
+}
 
+span.unit {
+    position: absolute;
+    top: 50%;
+    right: 0.2rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    color: #b4b4b4;
+}
 
+.container ul li {
+    background: #fff;
+    height: 0.86rem;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 0.3rem;
+    color: #333333;
+    padding-left: 0.3rem;
+    line-height: 0.86rem;
+    position: relative;
+}
 
+.container ul li:last-child {
+    border-bottom: none;
+}
 
+.container em {
+    width: 0.32rem;
+    height: 0.32rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    float: right;
+    margin: 0.3rem 0.3rem 0 0;
+}
 
-
-
-
-
-
-
+.container em.on {
+    background: #ff9d06 url('../imgs/returnGoods/gou.png') no-repeat;
+    background-size: 0.18rem 0.13rem;
+    background-position: center;
+    border: none;
+}
 
 
 

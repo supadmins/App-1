@@ -243,6 +243,8 @@
 			}
 
 			break;
+        case 'img':
+                return true;
 		case 'input':
 
 			// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)
