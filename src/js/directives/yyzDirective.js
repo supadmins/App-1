@@ -156,8 +156,9 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             link: function (scope, element, attrs) {
                 var target = attrs['yyzSelectUniqe'];
                 $(element[0]).children().click(function () {
-                    if($(this).find(target).length > 0) {
-                        $(this).find(target).toggleClass('on');
+                    var $tmp = $(this).find(target);
+                    if($tmp.length > 0) {
+                        $tmp.toggleClass('on');
                         $(this).siblings().find(target).removeClass('on');
                     }else {
                         $(this).toggleClass('on');

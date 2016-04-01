@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/myVouchers.css" type="text/css" inline/>
+
+<div class="voucher" ng-class="{'invalid': invalidView}" ng-repeat="item in [1, 2, 3]">
+    <span>￥</span>
+    <span>13.</span>
+    <span>0</span>
+
+    <div class="desc">
+        <p>绿叶水果4元优惠券</p>
+        <ul>
+            <li>满36元可用</li>
+            <li>2016-01-06-2016-01-07</li>
+        </ul>
+        <em ng-class="{ 'expired': expired&&invalidView, 'used': used&&invalidView }"></em>
+    </div>
+
+    <div class="limit" ng-show="$index==1">
+        <em class="left"></em>
+        <ul>
+            <li>
+                限绿叶水果店铺使用
+            </li>
+        </ul>
+        <em class="right"></em>
+    </div>
+</div>
+<div class="empty" ng-if="false">
+    <p>
+        无可用代金券
+        <span class="history">查看历史代金券</span>
+    </p>
+</div>
+<span ng-show="!invalidView" ng-click="invalidView=true;" class="history">查看历史代金券</span>

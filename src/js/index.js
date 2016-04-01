@@ -385,6 +385,48 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            .state('customerManagement', {
+                url: "/customerManagement",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'customerManagementCtrl',
+                        templateUrl: 'partials/customerManagement.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/customerManagementCtrl.js');
+                    }]
+                }
+            })
+            .state('myVouchers', {
+                url: "/myVouchers",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myVouchersCtrl',
+                        templateUrl: 'partials/myVouchers.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myVouchersCtrl.js');
+                    }]
+                }
+            })
+            .state('myComments', {
+                url: "/myComments",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myCommentsCtrl',
+                        templateUrl: 'partials/myComments.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myCommentsCtrl.js');
+                    }]
+                }
+            })
             .state('help', {
                 url: "/help",
                 views: {

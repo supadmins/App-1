@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="css/customerManagement.css" type="text/css" inline />
+
+<div ng-show="contentView">
+    <header>
+        <span>
+            <em class="back"></em>
+        </span>
+        <p>客户管理</p>
+        <span ng-click="contentView=false;editView=true;">管理</span>
+    </header>
+
+    <div class="search">
+        <input type="search" placeholder="通过 手机号、收货人姓名搜索"/>
+    </div>
+
+    <ul class="list">
+        <li>
+            <span>宋仲基</span>
+            <span>18647583120</span>
+            <span>刷单组</span>
+            <em class="edit"></em>
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            <span>宋仲基</span>
+            <span>18647583120</span>
+            <span>帅哥组</span>
+            <em class="edit"></em>
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+</div>
+
+<div ng-show="editView">
+    <header>
+        <span ng-click="contentView=true;editView=false;">
+            <em class="back"></em>
+        </span>
+        <p>客户分组</p>
+        <span ng-click="maskerView=true;">新增</span>
+    </header>
+
+    <ul class="list">
+        <li>
+            <span>刷单组</span>
+            <em class="edit"></em>
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            <span>帅哥组</span>
+            <em class="edit"></em>
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+
+    <div class="masker" ng-show="maskerView">
+        <div class="content">
+            <p class="title">分组设置</p>
+            <div>
+                <input type="text" class="groupName" placeholder="请输入分组名称" />
+            </div>
+            <div class="bottom">
+                <span ng-click="maskerView=false;">取消</span>
+                <span>确认</span>
+            </div>
+        </div>
+    </div>
+</div>

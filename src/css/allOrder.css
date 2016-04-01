@@ -182,12 +182,31 @@ p.deliver {
     color: #676767;
 }
 
+.search {
+    position: absolute;
+    right: 0.3rem;
+}
 
+header input {
+    width: 5.2rem;
+    height: 0.64rem;
+    background: #fff;
+    border: none;
+    font-size: 0.26rem;
+    padding-left: 0.2rem;
+    border-radius: 5px;
+    margin-left: -0.6rem;
+    outline: none;
+}
 
-
-
-
-
+header span:nth-child(1) {
+    width: 0.8rem;
+    height: 0.85rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
 

@@ -1,0 +1,177 @@
+html, body {
+    background: #f2f2f2;
+}
+
+.voucher {
+    margin: 0.26rem auto;
+    width: 7.1rem;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-top: none;
+    border-radius: 3px;
+    background: #fff url('../imgs/eshop/djq.png') repeat-x;
+    background-size: 5.45rem 0.07rem;
+}
+
+.voucher.invalid {
+    background: #fff url('../imgs/other/djq1.png') repeat-x;
+    background-size: 5.45rem 0.07rem;
+}
+
+.voucher span:nth-child(1) {
+    padding-left: 0.24rem;
+    font-size: 0.26rem;
+    color: #ff9d06;
+}
+
+.voucher span:nth-child(2) {
+    font-size: 0.7rem;
+    color: #ff9d06;
+    line-height: 1.53rem;
+}
+
+.voucher span:nth-child(3) {
+    font-size: 0.4rem;
+    color: #ff9d06;
+    line-height: 1.53rem;
+}
+
+.voucher.invalid span {
+    color: #c7c7cd;
+}
+
+.voucher .desc {
+    float: right;
+    height: 1.2rem;
+    padding-left: 0.36rem;
+    box-sizing: border-box;
+    border-left: 1px dashed #b4b4b4;
+    width: 5rem;
+    margin-top: 0.24rem;
+    position: relative;
+}
+
+.voucher .desc p {
+    color: #333333;
+    font-size: 0.28rem;
+    margin-top: 0.04rem;
+    margin-bottom: 0.1rem;
+}
+
+.voucher.invalid .desc p {
+    color: #c7c7cd;
+    font-size: 0.3rem;
+}
+
+.voucher .desc ul li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.voucher .desc ul {
+    font-size: 0.24rem;
+    color: #b4b4b4;
+}
+
+.voucher .desc ul li {
+    padding-top: 0.1rem;
+}
+
+.voucher .limit {
+    height: 0.65rem;
+    position: relative;
+    color: #b4b4b4;
+    font-size: 0.24rem;
+    box-sizing: border-box;
+    border-top: 1px dashed #b4b4b4;
+}
+
+.voucher .limit ul li {
+    height: 0.65rem;
+    line-height: 0.65rem;
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 0.2rem;
+}
+
+em.left {
+    width: 0.24rem;
+    height: 0.24rem;
+    background: #f2f2f2;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.12rem;
+    left: -0.12rem;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+em.right {
+    width: 0.24rem;
+    height: 0.24rem;
+    background: #f2f2f2;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.12rem;
+    right: -0.12rem;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+span.history {
+    display: block;
+    margin-top: 0.24rem;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 0.24rem;
+    color: #b4b4b4;
+}
+
+em.used {
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url('../imgs/other/invalid.png') no-repeat;
+    background-size: 1.08rem 1.08rem;
+    position: absolute;
+    top: 0;
+    right: 0.2rem;
+}
+
+em.expired {
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url('../imgs/other/used.png') no-repeat;
+    background-size: 1.08rem 1.08rem;
+    position: absolute;
+    top: 0;
+    right: 0.2rem;
+}
+
+.empty {
+    position: absolute;
+    background: #fff url('../imgs/other/none1.png') no-repeat;
+    background-size: 0.6rem 0.73rem;
+    background-position: center 3.57rem;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.empty p {
+    color: #b4b4b4;
+    font-size: 0.32rem;
+    text-align: center;
+    height: 1.51rem;
+    margin-top: 4.72rem;
+}
+
+
+
+
+
+
+
+
+
+
+
