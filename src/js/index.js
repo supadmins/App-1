@@ -7,6 +7,7 @@ angular.module('yyzWebApp', [
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
+            //首页
             .state('index', {
                 url: "/",
                 views: {
@@ -21,6 +22,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //订单列表
             .state('orderList', {
                 url: "/orderList",
                 views: {
@@ -35,6 +37,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //我的一扬指
             .state('myYyz', {
                 url: "/myYyz",
                 views: {
@@ -49,6 +52,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //订单状态
             .state('orderStatus', {
                 url: "/orderStatus",
                 views: {
@@ -63,6 +67,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //订单明细
             .state('orderDetail', {
                 url: "/orderDetail",
                 views: {
@@ -77,6 +82,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //退货
             .state('returnGoods', {
                 url: "/returnGoods",
                 views: {
@@ -91,6 +97,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //创建订单
             .state('createOrder', {
                 url: "/createOrder",
                 views: {
@@ -105,6 +112,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //登陆
             .state('login', {
                 url: "/login",
                 views: {
@@ -119,6 +127,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //注册
             .state('register', {
                 url: "/register",
                 views: {
@@ -133,6 +142,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //个人中心
             .state('personalCenter', {
                 url: "/personalCenter",
                 views: {
@@ -147,6 +157,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //收货地址
             .state('deliverAddress', {
                 url: "/deliverAddress",
                 views: {
@@ -161,6 +172,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //e家店
             .state('eshop', {
                 url: "/eshop",
                 views: {
@@ -175,6 +187,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //店铺详情
             .state('shopDetail', {
                 url: "/shopDetail",
                 views: {
@@ -189,6 +202,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //店铺信息
             .state('shopInfo', {
                 url: "/shopInfo",
                 views: {
@@ -203,6 +217,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //我的全部订单
             .state('myAllOrder', {
                 url: "/myAllOrder",
                 views: {
@@ -217,6 +232,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //添加商品
             .state('addGoods', {
                 url: "/addGoods",
                 views: {
@@ -231,6 +247,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //订单信息
             .state('orderDesc', {
                 url: "/orderDesc",
                 views: {
@@ -245,6 +262,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //商品退货
             .state('refunding', {
                 url: "/refunding",
                 views: {
@@ -259,6 +277,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //交易历史
             .state('consultHistory', {
                 url: "/consultHistory",
                 views: {
@@ -273,6 +292,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //商品管理
             .state('goodsManage', {
                 url: "/goodsManage",
                 views: {
@@ -287,6 +307,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //商品类型管理
             .state('goodsTypeManage', {
                 url: "/goodsTypeManage",
                 views: {
@@ -301,6 +322,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //选择商品类型
             .state('selectType', {
                 url: "/selectType",
                 views: {
@@ -315,6 +337,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //商品类型
             .state('goodsTypeHelper', {
                 url: "/goodsTypeHelper",
                 views: {
@@ -329,6 +352,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //添加评价
             .state('addEvaluate', {
                 url: "/addEvaluate",
                 views: {
@@ -343,6 +367,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //店铺管理
             .state('shopManagement', {
                 url: "/shopManagement",
                 views: {
@@ -357,6 +382,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //店铺审核
             .state('shopExamine', {
                 url: "/shopExamine",
                 views: {
@@ -371,6 +397,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //商家版所有订单
             .state('allOrder', {
                 url: "/allOrder",
                 views: {
@@ -385,6 +412,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //商家客户管理
             .state('customerManagement', {
                 url: "/customerManagement",
                 views: {
@@ -399,6 +427,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //我的代金券
             .state('myVouchers', {
                 url: "/myVouchers",
                 views: {
@@ -413,6 +442,7 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //我的评论
             .state('myComments', {
                 url: "/myComments",
                 views: {
@@ -427,6 +457,82 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //我的收藏
+            .state('myCollections', {
+                url: "/myCollections",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myCollectionsCtrl',
+                        templateUrl: 'partials/myCollections.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myCollectionsCtrl.js');
+                    }]
+                }
+            })
+            //我的邀请码
+            .state('myInvitationCode', {
+                url: "/myInvitationCode",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myInvitationCodeCtrl',
+                        templateUrl: 'partials/myInvitationCode.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myInvitationCodeCtrl.js');
+                    }]
+                }
+            })
+            //我要提现
+            .state('withdrawals', {
+                url: "/withdrawals",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'withdrawalsCtrl',
+                        templateUrl: 'partials/withdrawals.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/withdrawalsCtrl.js');
+                    }]
+                }
+            })
+            //账单流水
+            .state('myBill', {
+                url: "/myBill",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myBillCtrl',
+                        templateUrl: 'partials/myBill.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myBillCtrl.js');
+                    }]
+                }
+            })
+            //我的收货地址
+            .state('myAddress', {
+                url: "/myAddress",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'myAddressCtrl',
+                        templateUrl: 'partials/myAddress.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/myAddressCtrl.js');
+                    }]
+                }
+            })
+            //帮助文档
             .state('help', {
                 url: "/help",
                 views: {

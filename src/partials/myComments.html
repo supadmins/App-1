@@ -1,5 +1,19 @@
 <link rel="stylesheet" href="css/myComments.css" type="text/css" inline />
 
-<div class="item">
-    <p></p>
+<div class="item" ng-repeat="item in [1, 2, 3, 4, 5]">
+    <p class="shopName">
+        e生活店
+        <span class="time">2015-12-21 16:30</span>
+    </p>
+    <p class="grade">
+        <i ng-repeat="item in [1, 2, 3, 4, 5]" ng-class="{'on': $index < 4}"></i>
+        <span>送货速度：29分钟</span>
+    </p>
+    <p class="summary">
+        送货:5分
+        商品:5分
+    </p>
+    <p class="content">
+        水果超级新鲜，派送员也很有礼貌哦，非常好~
+    </p>
 </div>

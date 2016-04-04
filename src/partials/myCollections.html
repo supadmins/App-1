@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="css/myCollections.css" type="text/css" inline />
+
+<header>
+    <span>
+        <em class="arrowRight"></em>
+    </span>
+    <p>我的收藏</p>
+</header>
+
+<nav>
+    <ul yyz-select-uniqe="span">
+        <li>
+            <span>收藏商品</span>
+        </li>
+        <li>
+            <span class="on">收藏店铺</span>
+        </li>
+    </ul>
+</nav>
+
+<div class="wrapper">
+    <div class="good" ng-if="false"  ng-repeat="item in [1, 2, 3, 4, 5]">
+        <img src="imgs/eshop/goods1.png" alt=""/>
+        <p class="name">清新柠檬</p>
+        <p class="grade">
+            月售300份  好评186
+        </p>
+        <p class="price">
+            ￥ <span>9</span>
+        </p>
+        <span class="entry">查看详情</span>
+    </div>
+
+    <div class="shop" ng-repeat="item in [1, 2, 3, 4, 5]">
+        <img src="imgs/other/eshop.png" alt=""/>
+        <p class="name">e家店</p>
+        <p class="grade">
+            <i ng-repeat="item in [1, 2, 3, 4, 5]" ng-class="{'on': $index < 4}"></i>
+            月售300份
+        </p>
+        <p class="desc">
+            起送￥16
+            配送￥3
+        </p>
+        <span class="entry">进入店铺</span>
+    </div>
+</div>

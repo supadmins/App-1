@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="css/myBill.css" type="text/css" inline />
+
+<div ng-show="false">
+    <header class="ng-scope">
+        <span>
+            <em class="arroLeft"></em>
+        </span>
+        <input type="text" placeholder="请输入账单相关信息" />
+        <span>搜索</span>
+    </header>
+
+    <div class="body">
+        <ul>
+            <li>
+                进账单
+                <em class="arrorRight"></em>
+            </li>
+            <li>
+                出账单
+                <em class="arrorRight"></em>
+            </li>
+            <li>
+                待确认账单
+                <em class="arrorRight"></em>
+            </li>
+            <li>
+                提现流水
+                <em class="arrorRight"></em>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div ng-show="false">
+    <header class="ng-scope">
+        <span>
+            <em class="arroLeft"></em>
+        </span>
+        <p>进账单</p>
+        <span>筛选</span>
+    </header>
+    <div class="item" ng-repeat="item in [1, 2, 3]">
+        <p>2016-3-14 11:30</p>
+        <p>
+            充值
+            <span>(收入)</span>
+            <span>+ 68.00</span>
+        </p>
+    </div>
+</div>
+
+<div ng-show="true">
+    <header class="ng-scope">
+        <span>
+            <em class="arroLeft"></em>
+        </span>
+        <p>账单流水</p>
+        <span>筛选</span>
+    </header>
+    <div class="item" ng-repeat="item in [1, 2, 3, 4, 5]">
+        <p>
+            2016-3-14 11:30
+            <span>充值</span>
+        </p>
+        <p>
+            充值
+            <span>(收入)</span>
+            <span class="number">+ 68.00</span>
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

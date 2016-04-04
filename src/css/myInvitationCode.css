@@ -1,0 +1,116 @@
+html, body {
+    background: #ecedf1;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.content {
+    margin: 0.2rem 0.36rem 0 0.36rem;
+    height: 7.63rem;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+p.info {
+    color: #202020;
+    font-size: 0.28rem;
+    padding: 0.36rem 0.2rem 0 0.2rem;
+    line-height: 0.42rem;
+}
+
+p.code {
+    margin-top: 0.82rem;
+    font-size: 0.28rem;
+    color: #000;
+    text-align: center;
+}
+
+p.code span {
+    color: #ff9d06;
+}
+
+.qr {
+    display: block;
+    width: 2.81rem;
+    height: 2.81rem;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    border-radius: 0.16rem;
+    border: 2px solid #dedede;
+    background: url('../imgs/weixin/qrCode.png') no-repeat;
+    background-size: 2.81rem 2.81rem;
+    background-position: center;
+}
+
+span.btn {
+    display: block;
+    width: 5.53rem;
+    height: 0.82rem;
+    background: #73c933 url('../imgs/weixin/weixin.png') no-repeat;
+    background-size: 0.64rem 0.51rem;
+    background-position: 0.98rem center;
+    color: #fff;
+    line-height: 0.82rem;
+    font-size: 0.4rem;
+    margin: 0 auto;
+    margin-top: 0.24rem;
+    text-align: center;
+    border-radius: 0.1rem;
+}
+
+p.desc {
+    margin-top: 0.64rem;
+    text-align: center;
+}
+
+p.desc span:first-child {
+    font-size: 0.32rem;
+    color: #333333;
+}
+
+p.desc span:last-child {
+    font-size: 0.26rem;
+    color: #676767;
+    margin-top: 0.2rem;
+    display: inline-block;
+}
+
+ul.list {
+    margin: 0.4rem 0 0.5rem 0.6rem;
+    overflow: hidden;
+}
+
+ul.list li {
+    float: left;
+    margin-top: 0.36rem;
+}
+
+ul.list li img {
+    width: 0.64rem;
+    height: 0.64rem;
+    float: left;
+}
+
+ul.list li p {
+    position: relative;
+    left: 0.34rem;
+    width: 5.8rem;
+    padding-top: 0.16rem;
+    font-size: 0.26rem;
+ }
+
+span.time {
+    font-size: 0.22rem;
+    color: #676767;
+    padding-left: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+

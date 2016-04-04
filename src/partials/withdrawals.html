@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="css/withdrawals.css" type="text/css" inline />
+
+<header>
+    <span>
+        <em class="arrowLeft"></em>
+    </span>
+    <p>我要提现</p>
+</header>
+
+<div class="bank" ng-click="accoutView=true;">
+    <p>中国建设银行</p>
+    <p>尾号3088储蓄卡</p>
+    <em class="arrowRight"></em>
+</div>
+
+<p class="time">
+    到账时间
+    <span>2个工作日到账</span>
+</p>
+
+<ul class="left">
+    <li>
+        账户余额
+        <span>8888元</span>
+    </li>
+    <li>
+        账户余额
+        <span>2888元</span>
+    </li>
+</ul>
+
+<p class="withdrawals">
+    提
+    <span>现</span>
+    <input type="text" class="count" placeholder="可提现金额：2888元"/>
+</p>
+
+<p class="tip">
+    注意：金额低于1元不能提现哦~
+</p>
+
+<span class="btn">确认提现</span>
+
+
+<div class="masker" ng-show="accoutView">
+    <div class="accountList">
+        <p>
+           <span class="close" ng-click="accoutView=false;">
+               <em></em>
+               <em></em>
+           </span>
+            选择提现账号
+        </p>
+        <ul class="list">
+            <li ng-repeat="item in [1, 2, 3]">
+                <img src="imgs/other/bank.png" alt=""/>
+                <p class="bankName">中国建设银行</p>
+                <p class="number">尾号3088储蓄卡</p>
+                <span class="circle">
+                    <em></em>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

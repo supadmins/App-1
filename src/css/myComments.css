@@ -1,3 +1,58 @@
 html, body {
     background: #ecedf1;
 }
+
+.item {
+    background: #fff;
+    height: 2.29rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 0.16rem;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.shopName {
+    font-size: 0.3rem;
+    color: #1a191e;
+    padding-top: 0.22rem;
+    margin-bottom: 0.14rem;
+}
+
+.shopName .time {
+    color: #676767;
+    font-size: 0.22rem;
+    float: right;
+    padding-right: 0.16rem;
+    position: relative;
+    top: 0.04rem;
+}
+
+.grade i {
+    width: 0.18rem;
+    height: 0.17rem;
+    background: url('../imgs/other/star.png') no-repeat;
+    background-size: 0.18rem 0.17rem;
+}
+
+.grade i.on {
+    background: url('../imgs/other/star1.png') no-repeat;
+    background-size: 0.18rem 0.17rem;
+}
+
+.grade span, .summary {
+    color: #b4b4b4;
+    font-size: 0.22rem;
+}
+
+.summary {
+    margin-top: 0.14rem;
+}
+
+p.content {
+    margin-top: 0.26rem;
+    font-size: 0.26rem;
+    color: #676767
+}
