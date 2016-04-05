@@ -158,10 +158,11 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                 $(element[0]).children().click(function () {
                     var $tmp = $(this).find(target);
                     if($tmp.length > 0) {
-                        $tmp.toggleClass('on');
+                        $tmp.addClass('on');
                         $(this).siblings().find(target).removeClass('on');
                     }else {
-                        $(this).toggleClass('on');
+                        console.log($(this).data('key'));
+                        $(this).addClass('on');
                         $(this).siblings().removeClass('on');
                     }
                 });

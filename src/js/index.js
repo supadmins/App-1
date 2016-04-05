@@ -532,6 +532,36 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //卖家角色选择
+            .state('role', {
+                url: "/role",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'roleCtrl',
+                        templateUrl: 'partials/role.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/roleCtrl.js');
+                    }]
+                }
+            })
+            //代金券设置
+            .state('vouchSettings', {
+                url: "/vouchSettings",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'vouchSettingsCtrl',
+                        templateUrl: 'partials/vouchSettings.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/vouchSettingsCtrl.js');
+                    }]
+                }
+            })
             //帮助文档
             .state('help', {
                 url: "/help",

@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="css/vouchSettings.css" type="text/css" inline />
+
+<header class="ng-scope">
+    <span ng-click="back();">
+        <em class="arrowLeft"></em>
+    </span>
+    <p ng-bind="title"></p>
+    <span ng-bind="btn" ng-click="add();">新增</span>
+</header>
+
+<div class="body" ng-show="listView">
+    <ul>
+        <li>
+            <span>代</span>
+            4月份代金券
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            <span>代</span>
+            3月份代金券
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+
+    <ul class="invalid">
+        <li>
+            <span>代</span>
+            2月份代金券
+            <span>已过期</span>
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            <span>代</span>
+            1月份代金券
+            <span>已过期</span>
+            <em class="arrowRight"></em>
+        </li>
+    </ul>
+</div>
+
+<div class="addView" ng-if="addView">
+    <ul>
+        <li>
+            活动名称
+            <input type="text" placeholder="请输入活动名称" />
+        </li>
+        <li>
+            开始时间
+            <span class="time" ng-bind="month"></span> 月
+            <span class="time" ng-bind="day"></span> 日
+            <span class="time" ng-bind="hour"></span> 时
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            结束时间
+            <span class="time" ng-bind="month1"></span> 月
+            <span class="time" ng-bind="day1"></span> 日
+            <span class="time" ng-bind="hour1"></span> 时
+            <em class="arrowRight"></em>
+        </li>
+        <li>
+            库
+            <span class="align">存</span>
+            <input type="text" placeholder="请输入库存数量" />
+        </li>
+        <li>
+            活动规则
+            <span>满</span>
+            <input type="text" placeholder="请输入金额" />
+            <span>元</span>
+        </li>
+        <li>
+            <span>减</span>
+            <input type="text" placeholder="请输入金额" />
+            <span>元</span>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+

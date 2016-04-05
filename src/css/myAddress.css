@@ -1,0 +1,226 @@
+html, body {
+    background: #ecedf1;
+}
+
+header {
+    font-size: 0.3rem;
+    color: #333333;
+    background: #fff;
+    height: 0.8rem;
+    box-sizing: border-box;
+    margin-bottom: 0.16rem;
+}
+
+header span:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.6rem;
+    height: 0.8rem;
+}
+
+em.arroLeft {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+    -webkit-transform: translateY(-50%) rotateZ(45deg);
+    transform: translateY(-50%) rotateZ(45deg);
+    position: absolute;
+    left: 0.26rem;
+    top: 50%;
+}
+
+em.arrowRight {
+    width: 0.16rem;
+    height: 0.16rem;
+    box-sizing: border-box;
+    border-left: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+    -webkit-transform: translateY(-50%) rotateZ(-135deg);
+    transform: translateY(-50%) rotateZ(-135deg);
+    position: absolute;
+    right: 0.26rem;
+    top: 50%;
+}
+
+header p {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+header span:nth-of-type(2) {
+    position: absolute;
+    top: 0.15rem;
+    right: 0.26rem;
+    height: 0.56rem;
+    color: #ff9d06;
+    font-size: 0.26rem;
+    text-align: center;
+    line-height: 0.56rem;
+    border-radius: 0.06rem;
+}
+
+.body {
+    background: #fff;
+}
+
+.body ul li {
+    height: 1.42rem;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 0.26rem;
+    background: url('../imgs/other/edit.png') no-repeat;
+    background-size: 0.3rem 0.3rem;
+    background-position: 6.83rem center;
+}
+
+.body ul li:last-child {
+    border-bottom: none;
+}
+
+.userInfo {
+    font-size: 0.26rem;
+    color: #676767;
+    padding-top: 0.2rem;
+}
+
+.userInfo span:last-child {
+    padding-left: 0.3rem;
+}
+
+.address {
+    font-size: 0.3rem;
+    color: #333333;
+    padding-top: 0.2rem;
+}
+
+.edit {
+    background: #fff;
+    padding-left: 0.26rem;
+}
+
+.contacts {
+    overflow: hidden;
+    border-bottom: 1px solid #dcdcdc;
+    margin-right: 0.2rem;
+}
+
+.contacts p {
+    font-size: 0.3rem;
+    color: #333333;
+    width: 1.62rem;
+    float: left;
+    line-height: 0.77rem;
+    height: 1.6rem;
+}
+
+p.name, p.sex {
+    height: 0.77rem;
+    line-height: 0.77rem;
+    width: 5.4rem;
+    border-bottom: 1px solid #dcdcdc;
+    box-sizing: border-box;
+}
+
+p.name input {
+    margin-left: 0;
+}
+
+input[type=text] {
+    height: 0.68rem;
+    width: 5.4rem;
+    box-sizing: border-box;
+    border: none;
+    outline: 0;
+    font-size: 0.3rem;
+    color: #333333;
+    margin-left: 0.26rem;
+}
+
+p.sex {
+    border-bottom: none;
+    font-size: 0.3rem;
+    color: #333333;
+}
+
+p.sex span:nth-of-type(1) {
+    margin-right: 0.2rem;
+}
+
+em.circle {
+    width: 0.32rem;
+    height: 0.32rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #b4b4b4;
+    margin-right: 0.1rem;
+    position: relative;
+    top: 0.04rem;
+}
+
+em.circle.on {
+    border: none;
+    background: #ff9d06 url('../imgs/returnGoods/gou.png') no-repeat;
+    background-size: 0.18rem 0.13rem;
+    background-position: center;
+}
+
+.addressInfo {
+    height: 0.81rem;
+    line-height: 0.81rem;
+    position: relative;
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 0.3rem;
+    color: #333333;
+    margin-right: 0.2rem;
+}
+
+span.province, span.value {
+    margin-left: 0.26rem;
+}
+
+.edit .addressInfo:last-child {
+    border-bottom: none;
+}
+
+.btn {
+    margin-top: 0.38rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #ff9d06;
+    font-size: 0.3rem;
+    background: #fff;
+}
+
+.addressView {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+
+.addressView ul li {
+    height: 0.86rem;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 0.26rem;
+    box-sizing: border-box;
+    font-size: 0.32rem;
+    color: #333333;
+    line-height: 0.86rem;
+}
+
+.ul1 {
+    background: #ecedf1;
+}
+
+
+
+
+

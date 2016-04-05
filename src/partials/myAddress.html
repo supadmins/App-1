@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="css/myAddress.css" type="text/css" inline/>
+
+<header class="ng-scope">
+    <span ng-click="back();">
+        <em class="arroLeft"></em>
+    </span>
+    <p ng-bind="title"></p>
+    <span ng-bind="fname" ng-click="fn();"></span>
+</header>
+
+<div class="body" ng-show="contentView">
+    <ul>
+        <li ng-repeat="item in [1, 2, 3]" ng-click="editAddress();">
+            <p class="userInfo">
+                <span>sun先生</span>
+                <span>13689503122</span>
+            </p>
+            <p class="address">
+                森那美大厦00
+            </p>
+        </li>
+    </ul>
+</div>
+
+<div class="edit" ng-if="editView">
+    <div class="contacts">
+        <p>联系人</p>
+        <p class="name">
+            <input type="text" value="拉拉" placeholder="您的姓名"/>
+        </p>
+        <p class="sex">
+            <em class="circle on"></em>
+            <span>先生</span>
+            <em class="circle"></em>
+            <span>女士</span>
+        </p>
+    </div>
+    <div class="addressInfo">
+        收货地址
+        <span class="province">广东省 </span>|
+        <span class="city">深圳市</span>|
+        <span class="zone">南山区</span>
+        <em class="arrowRight"></em>
+    </div>
+    <div class="addressInfo">
+        详细地址
+        <input type="text" value="威盛科技大厦13A08号" placeholder="请输入您的详细居住地址"/>
+    </div>
+    <div class="addressInfo">
+        手机号码
+        <input type="text" value="13689503122" placeholder="配送人员联系您的电话"/>
+    </div>
+</div>
+<div class="btn" ng-if="editView">删除该地址</div>
+
+<div class="edit" ng-if="addView">
+    <div class="contacts">
+        <p>联系人</p>
+        <p class="name">
+            <input type="text" placeholder="您的姓名"/>
+        </p>
+        <p class="sex">
+            <em class="circle on"></em>
+            <span>先生</span>
+            <em class="circle"></em>
+            <span>女士</span>
+        </p>
+    </div>
+    <div class="addressInfo">
+        收货地址
+        <span class="province">广东省 </span>|
+        <span class="city">深圳市</span>|
+        <span class="zone">南山区</span>
+        <em class="arrowRight"></em>
+    </div>
+    <div class="addressInfo">
+        详细地址
+        <input type="text" placeholder="请输入您的详细居住地址"/>
+    </div>
+    <div class="addressInfo">
+        手机号码
+        <input type="text" placeholder="配送人员联系您的电话"/>
+    </div>
+</div>
+
+<div class="addressView" ng-if="false">
+    <ul class="ul1">
+        <li ng-repeat="item in addressArray" ng-bind="item"></li>
+    </ul>
+
+    <ul>
+        <li>广东市</li>
+        <li>韶关市</li>
+        <li>深圳市</li>
+        <li>珠海市</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

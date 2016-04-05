@@ -1,0 +1,87 @@
+.top {
+    margin-top: 0.6rem;
+    background: url('../imgs/other/bussisser.png') no-repeat;
+    background-size: 2.66rem 2.66rem;
+    background-position: center 0;
+    height: 3.91rem;
+    position: relative;
+}
+
+em.circle {
+    width: 0.32rem;
+    height: 0.32rem;
+    background: #b8b8b8 url('../imgs/returnGoods/gou.png') no-repeat;
+    background-size: 0.18rem 0.13rem;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+    top: 0.04rem;
+}
+
+em.circle.on {
+    background-color: #ff9d06;
+}
+
+.top p:first-child, .bottom p:first-child {
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #333;
+}
+
+.top p:last-child, .bottom p:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #676767;
+}
+
+.bottom {
+    margin-top: 0.8rem;
+    background: url('../imgs/other/provider.png') no-repeat;
+    background-size: 2.66rem 2.66rem;
+    background-position: center 0;
+    height: 3.91rem;
+    position: relative;
+}
+
+.next {
+    width: 3.59rem;
+    height: 0.83rem;
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 0.83rem;
+    background: #ff9d06;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    margin-top: 1.19rem;
+    border-radius: 0.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
