@@ -8,8 +8,11 @@ angular.module('yyzAServiceMod', [])
             'shoporderlist': function (params) {
                 return $http.get(baseUrl + 'api/Order/ShopOrderList', {params: params});
             },
-            'shopgodinfo': function (params) {
-                return $http.get(baseUrl + 'api/Order/ShopOrderList', {params: params});
+            'shopgodinfobygodid': function (id) {
+                return $http.get(baseUrl + 'api/GodGroup/ShopGodInfoByGodId?godId='+id);
+            },
+            'shoporderlistbygodid': function (params) {
+                return $http.get(baseUrl + 'api/Order/ShopOrderListByGodId', {params: params});
             }
         };
     }]);

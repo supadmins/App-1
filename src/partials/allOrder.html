@@ -10,26 +10,25 @@
     </header>
 
     <div class="userInfo" ng-if="true">
-        <img src="imgs/myYyz/header.png" alt=""/>
-
+        <img ng-src="user.HeadUrl" alt="头像"/>
         <div class="content">
-            <p class="uname">欧巴撒浪嘿哟~</p>
+            <p class="uname" ng-bind="user.FullName">欧巴撒浪嘿哟~</p>
 
             <p class="phoneNumber">
-                手机：13554544654
-                <span>设置分组</span>
+                手机：<span ng-bind="user.PhoneNumber"></span>
+                <span ur-sref="customerManagement">设置分组</span>
             </p>
         </div>
     </div>
 
     <nav>
         <ul yyz-select-uniqe="li">
-            <li class="on"data-key="0">全部</li>
+            <li class="on" data-key="">全部</li>
             <li data-key="2">待付款</li>
-                  <li data-key="3">待发货</li>
-                    <li data-key="4">已发货</li>
-                  <li data-key="6">已完成</li>
-                    <li data-key="1">已关闭</li>
+            <li data-key="3">待发货</li>
+            <li data-key="4">已发货</li>
+            <li data-key="6">已完成</li>
+            <li data-key="1">已关闭</li>
         </ul>
     </nav>
 
@@ -39,12 +38,14 @@
                 <a href="">
                     <img alt="商品图片" ng-src="item.ListPicture"/>
                 </a>
+
                 <div class="fl">
                     <p class="goodsName" ng-bind="item.ProductListName  | limitTo : 5">酸爽的清新柠檬</p>
 
                     <p class="uname" ng-bind="item.ReceiverName| limitTo : 5">暮然回首</p>
 
-                    <p class="qty"><span ng-bind="item.Amount|currency:'￥'"></span>  共<span ng-bind="item.Quantity"></span>件</p>
+                    <p class="qty"><span ng-bind="item.Amount|currency:'￥'"></span> 共<span
+                            ng-bind="item.Quantity"></span>件</p>
                 </div>
                 <div class="fr">
                     <p class="deliver" ng-bind="item.OrderStatusEnum">等您发货</p>
