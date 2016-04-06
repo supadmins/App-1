@@ -1,6 +1,5 @@
 angular.module('yyzWebApp')
-    .controller('myYyzCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
-        console.log($stateParams);
+    .controller('myYyzCtrl', ['$scope', function ($scope) {
         $scope.customer = true;
         $scope.seller = false;
 

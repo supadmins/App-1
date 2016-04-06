@@ -575,6 +575,7 @@ angular.module('yyzWebApp', [
                 }
             })
     }])
-    .value('baseUrl', 'http://192.168.1.54:8088/');
+    //.value('baseUrl', 'http://192.168.1.54:8088/');
+    .value('baseUrl', 'http://112.74.126.176:8899/');
 
 
