@@ -48,8 +48,4 @@ angular.module('yyzWebApp')
                         })
                 }
             };
-
-            $scope.$on('onvalidator', function () {
-                //console.log($scope.form.$error);
-            });
     }]);

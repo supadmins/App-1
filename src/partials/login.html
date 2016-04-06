@@ -24,6 +24,11 @@
         提示：如果你没有邀请码，请勿略
     </p>
 </form>
+
+<div class="validator" ng-repeat="(key,value) in form.$error" ng-bind="key">
+
+</div>
+
 <button class="bottom" ng-class="{'on': !disable}" ng-disabled="disable" ng-click="bind();">
     绑定
 </button>

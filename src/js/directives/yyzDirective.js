@@ -219,8 +219,10 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                     var phoneNumber = ngModelCtrl.$modelValue;
                     if(!/^1\d{10}$/.test(phoneNumber)) {
                         ngModelCtrl.$setValidity('phone', false);
-                        scope.$emit('onvalidator');
+                    }else {
+                        ngModelCtrl.$setValidity('phone', true);
                     }
+                    scope.$apply();
                 })
             }
         };
