@@ -74,8 +74,15 @@ p.tips {
     text-align: center;
     height: 0.87rem;
     line-height: 0.87rem;
-    background: #ff9d06;
+    background: #b4b4b4;
     border-radius: 5px;
+    border: none;
+    outline: 0;
+    width: 6.6rem;
+}
+
+.bottom.on {
+    background: #ff9d06;
 }
 
 .readMe {
@@ -90,12 +97,16 @@ p.tips {
 }
 
 .readMe i {
+    border: 1px solid #b4b4b4;
     width: 0.26rem;
     height: 0.26rem;
+    position: relative;
+    top: 0.04rem;
+}
+
+.readMe i.on {
     border: 1px solid #ff9d06;
     background: url('../imgs/returnGoods/gou1.png') no-repeat;
     background-size: 0.18rem 0.13rem;
     background-position: center center;
-    position: relative;
-    top: 0.04rem;
 }

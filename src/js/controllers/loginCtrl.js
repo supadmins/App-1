@@ -1,8 +1,10 @@
 angular.module('yyzWebApp')
     .controller('loginCtrl',
         ['$scope', '$http', '$location',
-         'baseUrl', 'user', 'util', function ($scope, $http, $location, baseUrl, user, util) {
+         'baseUrl', 'user', 'util', '$state', function ($scope, $http, $location, baseUrl, user, util, $state) {
             $scope.view1 = false;
+            $scope.disable = true;
+
             var url = $location.url();
 
             if(url.toString().indexOf('register') > -1) {
@@ -13,8 +15,6 @@ angular.module('yyzWebApp')
                 util.getCode({
                     phoneNumber: $scope.phoneNumber,
                     imgCode: $scope.imgCode
-                }).then(function (res) {
-
                 });
             };
 
@@ -29,8 +29,8 @@ angular.module('yyzWebApp')
 
                     user.register(regParams)
                         .then(function (res) {
-                            if(res.status == 200) {
-                                alert('注册成功');
+                            if(res.status == 200 && res.data.ResultStatus) {
+                                $state.go('index');
                             }
                         });
                 }else {
@@ -42,10 +42,14 @@ angular.module('yyzWebApp')
 
                     user.login(loginParams)
                         .then(function (res) {
-                            if(res.status == 200) {
-                                alert('登陆成功');
+                            if(res.status == 200 && res.data.ResultStatus) {
+                                $state.go('index');
                             }
                         })
                 }
             };
+
+            $scope.$on('onvalidator', function () {
+                //console.log($scope.form.$error);
+            });
     }]);

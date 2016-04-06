@@ -1,17 +1,17 @@
 <link rel="stylesheet" href="css/login.css" type="text/css" inline />
 
-<form novalidate>
+<form name="form" novalidate="novalidate">
     <div class="login">
         <ul>
             <li>
-                <input type="text" name="phoneNumber" ng-model="phoneNumber" placeholder="请输入你的手机号码"/>
+                <input type="text" ng-model="phoneNumber" yyz-phone name="phoneNumber" placeholder="请输入你的手机号码"/>
             </li>
             <li>
                 <input type="text" name="imgCode" ng-model="imgCode" placeholder="请输入图中验证码"/>
                 <img src="http://112.74.126.176:8899/api/Comm/GetImgCode" alt="验证图片" />
             </li>
             <li>
-                <input type="text"  ng-model="code" name="code" placeholder="请输入短信验证码"/>
+                <input ng-minlength="13" type="text"  ng-model="code" name="code" placeholder="请输入短信验证码"/>
                 <span class="sendCode" ng-click="getCode();">获取验证码</span>
             </li>
             <li ng-if="view1">
@@ -20,17 +20,16 @@
         </ul>
     </div>
 
-    <p class="tips">
+    <p class="tips" ng-if="view1">
         提示：如果你没有邀请码，请勿略
     </p>
-
-    <div class="bottom" ng-click="bind();">
-        绑定
-    </div>
 </form>
+<button class="bottom" ng-class="{'on': !disable}" ng-disabled="disable" ng-click="bind();">
+    绑定
+</button>
 
-<div class="readMe">
-    <i></i>
+<div class="readMe" ng-click="disable=false;">
+    <i ng-class="{'on': !disable}"></i>
     我已看过并同意一扬指
-    <a href="#"><<用户使用协议>></a>
+    <a ui-sref="help"><<用户使用协议>></a>
 </div>

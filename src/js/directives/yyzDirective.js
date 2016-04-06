@@ -210,18 +210,33 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     }])
+    .directive('yyzPhone', function () {
+        return {
+            restrict: 'A',
+            require: 'ngModel',
+            link: function (scope, element, attrs, ngModelCtrl) {
+                $(element[0]).on('blur', function () {
+                    var phoneNumber = ngModelCtrl.$modelValue;
+                    if(!/^1\d{10}$/.test(phoneNumber)) {
+                        ngModelCtrl.$setValidity('phone', false);
+                        scope.$emit('onvalidator');
+                    }
+                })
+            }
+        };
+    })
     .directive('yyzMasker', function () {
         return {
             restrict: 'A',
             scope: false,
-            link: function (scope, element, attrs) {
+            link: function (scope, element, attrs) { alert(123);
                 element.on('click', function (event) {
                     if(event.target.className.toString().indexOf('masker') > -1) {
                         scope.$emit('maskerClick');
                     }
                 })
             }
-        }
+        };
     });
 
 
