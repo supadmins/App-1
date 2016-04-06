@@ -165,8 +165,8 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                         $(this).addClass('on');
                         $(this).siblings().removeClass('on');
                     }
+                    scope.$emit("onselectUniqe", $(this).data('key'));
                 });
-
                 scope.$emit('onselectUniqe');
             }
         }

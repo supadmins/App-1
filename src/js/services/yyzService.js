@@ -5,7 +5,7 @@ angular.module('yyzServiceMod', [])
                 params = params || {};
                 var url = baseUrl;
 
-                if($location.url().toString().indexOf('register') > -1) {
+                if ($location.url().toString().indexOf('register') > -1) {
                     url = baseUrl + 'api/Comm/RegisterSmsCode?phoneNumber=' + params.phoneNumber + '&imgCode=' + params.imgCode;
                 } else {
                     url = baseUrl + 'api/Comm/LoginSmsCode?phoneNumber=' + params.phoneNumber + '&imgCode=' + params.imgCode;
@@ -18,7 +18,7 @@ angular.module('yyzServiceMod', [])
     .factory('user', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
             'register': function (params) {
-                params = params ||{};
+                params = params || {};
                 return $http.post(baseUrl + 'api/God/Register', params);
             },
             'login': function (params) {
@@ -30,14 +30,13 @@ angular.module('yyzServiceMod', [])
             }
         };
     }])
-    .factory('interceptor', ['$q', '$state', function ($q, $state) {
+    .factory('interceptor', ['$q', function ($q) {
         return {
             response: function (res) {
                 var deferred = $q.defer(),
                     httpCode = res.status;
 
-                if(httpCode == 401) {
-                    $state.state('login');
+                if (httpCode == 401) {
                 }
 
                 deferred.resolve(res);
