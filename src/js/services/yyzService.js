@@ -30,14 +30,14 @@ angular.module('yyzServiceMod', [])
             }
         };
     }])
-    .factory('interceptor', ['$q', '$state', function ($q, $state) {
+    .factory('interceptor', ['$q', function ($q) {
         return {
             response: function (res) {
                 var deferred = $q.defer(),
                     httpCode = res.status;
 
                 if(httpCode == 401) {
-                    $state.state('login');
+                    window.location.href = '#/login';
                 }
 
                 deferred.resolve(res);

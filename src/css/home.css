@@ -586,8 +586,8 @@ em.down1 {
     width: 0.12rem;
     height: 0.12rem;
     box-sizing: border-box;
-    border-left: 0.02rem solid #b4b4b4;
-    border-bottom: 0.02rem solid #b4b4b4;
+    border-left: 1px solid #b4b4b4;
+    border-bottom: 1px solid #b4b4b4;
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
     position: relative;
@@ -650,17 +650,19 @@ em.down1 {
     display: inline-block;
     width: 0.17rem;
     height: 0.16rem;
-    background: url('imgs/home/star.png') no-repeat;
+    background: url('../imgs/home/star.png') no-repeat;
     background-size: 0.17rem 0.16rem;
 }
 
 .business p.grade i.star {
-    background: url('imgs/home/star1.png') no-repeat;
+    background: url('../imgs/home/star1.png') no-repeat;
     background-size: 0.17rem 0.16rem;
 }
 
 .business p.grade span {
     padding-left: 0.1rem;
+    color: #8d8d8d;
+    font-size: 0.2rem;
 }
 
 .business p.limit {
@@ -714,8 +716,8 @@ em.down1 {
 }
 
 .business .listItem .bottom p {
-    font-size: 0.22rem;
-    color: #b4b4b4;
+    font-size: 0.24rem;
+    color: #8d8d8d;
 }
 
 .business .listItem .bottom p:first-child {
@@ -733,6 +735,10 @@ em.down1 {
     font-style: normal;
     text-align: center;
     line-height: 16px;
+}
+
+.business .listItem .bottom p:first-child span:nth-of-type(1) {
+    font-size: 0.24rem;
 }
 
 .business .listItem .bottom p:first-child span:last-child {

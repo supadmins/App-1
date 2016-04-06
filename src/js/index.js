@@ -1,7 +1,6 @@
 angular.module('yyzWebApp', [
     'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod',
     'angularFileUpload'])
-
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.withCredentials = true;
 
