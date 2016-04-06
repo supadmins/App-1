@@ -1,5 +1,5 @@
 angular.module('yyzWebApp', [
-    'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod',
+    'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'yyzAServiceMod',
     'angularFileUpload'])
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.withCredentials = true;
@@ -72,7 +72,7 @@ angular.module('yyzWebApp', [
             })
             //订单明细
             .state('orderDetail', {
-                url: "/orderDetail",
+                url: "/orderDetail?id",
                 views: {
                     "lazyLoadView": {
                         controller: 'orderDetailCtrl',
@@ -252,7 +252,7 @@ angular.module('yyzWebApp', [
             })
             //订单信息
             .state('orderDesc', {
-                url: "/orderDesc",
+                url: "/orderDesc?id",
                 views: {
                     "lazyLoadView": {
                         controller: 'orderDescCtrl',
@@ -402,7 +402,7 @@ angular.module('yyzWebApp', [
             })
             //商家版所有订单
             .state('allOrder', {
-                url: "/allOrder",
+                url: "/allOrder?id",
                 views: {
                     "lazyLoadView": {
                         controller: 'allOrderCtrl',
@@ -575,6 +575,6 @@ angular.module('yyzWebApp', [
                 }
             })
     }])
-    .value('baseUrl', 'http://112.74.126.176:8899/');
+    .value('baseUrl', 'http://192.168.1.54:8088/');
 
 

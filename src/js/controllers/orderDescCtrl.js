@@ -1,5 +1,7 @@
 angular.module('yyzWebApp')
-    .controller('orderDescCtrl', ['$scope', '$http', function ($scope, $http) {
+    .controller('orderDescCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {
+        console.log($stateParams);
+        console.log($stateParams.id);
         $scope.logistics = $scope.logisticsView = false;
 
         $scope.$on('onselectUniqe', function () {
