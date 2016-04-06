@@ -36,14 +36,9 @@ angular.module('yyzServiceMod', [])
                 var deferred = $q.defer(),
                     httpCode = res.status;
 
-<<<<<<< HEAD
                 if(httpCode == 401) {
                     window.location.href = '#/login';
-=======
-                if (httpCode == 401) {
->>>>>>> 2e38d1ac27b2e85f978527f1b11f61bbf99d2485
                 }
-
                 deferred.resolve(res);
 
                 return deferred.promise;
