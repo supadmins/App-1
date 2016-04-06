@@ -80,7 +80,7 @@ function objectKeys(object) {
  *
  * @param {Array} array A JavaScript array.
  * @param {*} value A value to search the array for.
- * @return {Number} Returns the array home value of `value`, or `-1` if not present.
+ * @return {Number} Returns the array index value of `value`, or `-1` if not present.
  */
 function indexOf(array, value) {
   if (Array.prototype.indexOf) {
@@ -162,7 +162,7 @@ function filterByKeys(keys, values) {
 }
 
 // like _.indexBy
-// when you know that your home values will be unique, or you want last-one-in to win
+// when you know that your index values will be unique, or you want last-one-in to win
 function indexBy(array, propName) {
   var result = {};
   forEach(array, function(item) {
@@ -1461,18 +1461,18 @@ function $UrlMatcherFactory() {
    *
    * @example
    * This is a simple example of a custom type that encodes and decodes items from an
-   * array, using the array home as the URL-encoded value:
+   * array, using the array index as the URL-encoded value:
    *
    * <pre>
    * var list = ['John', 'Paul', 'George', 'Ringo'];
    *
    * $urlMatcherFactoryProvider.type('listItem', {
    *   encode: function(item) {
-   *     // Represent the list item in the URL using its corresponding home
+   *     // Represent the list item in the URL using its corresponding index
    *     return list.indexOf(item);
    *   },
    *   decode: function(item) {
-   *     // Look up the list item by home
+   *     // Look up the list item by index
    *     return list[parseInt(item, 10)];
    *   },
    *   is: function(item) {
@@ -1837,7 +1837,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    *   // if the path doesn't match any of the urls you configured
    *   // otherwise will take care of routing the user to the
    *   // specified url
-   *   $urlRouterProvider.otherwise('/home');
+   *   $urlRouterProvider.otherwise('/index');
    *
    *   // Example of using function rule as param
    *   $urlRouterProvider.otherwise(function ($injector, $location) {

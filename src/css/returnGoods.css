@@ -1,5 +1,7 @@
 html, body {
     background: #eef0f2;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 em.arrowBottom {

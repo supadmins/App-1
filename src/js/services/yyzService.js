@@ -30,6 +30,22 @@ angular.module('yyzServiceMod', [])
             }
         };
     }])
+    .factory('interceptor', ['$q', '$state', function ($q, $state) {
+        return {
+            response: function (res) {
+                var deferred = $q.defer(),
+                    httpCode = res.status;
+
+                if(httpCode == 401) {
+                    $state.state('login');
+                }
+
+                deferred.resolve(res);
+
+                return deferred.promise;
+            }
+        };
+    }])
     .factory('productType', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
             'getTypeList': function () {

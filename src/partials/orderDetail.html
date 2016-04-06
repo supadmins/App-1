@@ -6,7 +6,7 @@
             配送状态
             <div class="bar"></div>
         </div>
-        <div class="content">
+        <div class="content" ui-sref="orderStatus">
             <span>￥</span>
             <div class="left">
                 <p>
@@ -34,9 +34,9 @@
                 <span>立即支付</span>
             </div>
             <div ng-if="true">
-                <span>再来一单</span>
-                <span>评价</span>
-                <span>退款退货</span>
+                <span ui-sref="shopInfo">再来一单</span>
+                <span ui-sref="addEvaluate">评价</span>
+                <span ui-sref="returnGoods">退款退货</span>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@
             <div class="counter">
                 总计 <span>￥6.8</span>
             </div>
-            <div class="bottom">
+            <div class="bottom" ui-sref="shopInfo">
                 再来一单
             </div>
         </div>

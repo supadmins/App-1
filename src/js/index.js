@@ -1,9 +1,13 @@
 angular.module('yyzWebApp', [
     'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod',
     'angularFileUpload'])
+
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.withCredentials = true;
 
+        $httpProvider.interceptors.push('interceptor');
+
+        //默认路由
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
