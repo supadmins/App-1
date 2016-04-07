@@ -1,13 +1,14 @@
 angular.module('yyzWebApp')
     .controller('allOrderCtrl', ['$scope', '$http', 'baseUrl', 'order', '$location', '$stateParams', '$state',
-        function ($scope, $http, baseUrl, order, $location,$stateParams, $state) {
+        function ($scope, $http, baseUrl, order, $location, $stateParams, $state) {
             $scope.contentView = true;
             $scope.searchView = false;
-            $scope.goid=$stateParams.id;
+            $scope.goid = $stateParams.id;
 
-            if(!$scope.goid){
-                //alert("参数错误");
-               $state.go(-1);return;
+            if (!$scope.goid) {
+                alert("参数错误");
+                $state.go(-1);
+                return;
             }
             $scope.isAjax = true;
             $scope.status = "";//订单搜索状态
@@ -15,14 +16,20 @@ angular.module('yyzWebApp')
                 $scope.status = data;
                 getData();
             })
-            var params = {godId:$scope.goid,orderStatus:$scope.status,pageIndex:1,pageSize:5};
+            var params = {
+                godId: $scope.goid,
+                orderStatus: $scope.status,
+                pageIndex: 1,
+                pageSize: 5
+            };
+
             function getData() {
                 if ($scope.isAjax) {
                     order.shopgodinfobygodid($scope.goid).success(function (data) {
                         if (data.ResultStatus) {
                             $scope.user = data.ResultObject;
                         } else {
-                            //alert(data.ResultMessage);
+                            alert(data.ResultMessage);
                             return;
                         }
                     });
@@ -35,7 +42,6 @@ angular.module('yyzWebApp')
                         alert(data.ResultMessage)
                     }
                 });
-
             }
 
             $scope.showContent = function () {

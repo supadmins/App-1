@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/myYyz.css" type="text/css" inline />
 
-<div class="header">
-    <img src="imgs/myYyz/header.png" alt=""/>
+<div class="header" >
+    <img src="imgs/myYyz/header.png" alt="" ui-sref="personalCenter"/>
 
     <p class="uname">廖桑桑</p>
 
@@ -32,8 +32,8 @@
     </ul>
 
     <ul class="money">
-        <li ui-sref="myAllOrder">
-            我要退款
+        <li ui-sref="orderRefundList">
+            我的退款
             <span ng-if="false">888元</span>
             <em class="arrowRight"></em>
         </li>
@@ -48,7 +48,7 @@
     </ul>
 
     <ul class="order">
-        <li ui-sref="myAllOrder">
+        <li ui-sref="orderList">
             我的订单
             <em class="arrowRight"></em>
         </li>
@@ -84,7 +84,7 @@
 
 <div class="content1" ng-if="seller">
     <ul class="func">
-        <li>
+        <li ui-sref="myAllOrder">
             <span class="shopName">店铺名</span>
             <span class="date">今日</span>
             <span class="info">1280元/100单，总计：13280单</span>
@@ -125,7 +125,7 @@
             商品管理
             <em class="arrowRight"></em>
         </li>
-        <li ui-sref="allOrder">
+        <li ui-sref="myAllOrder">
             订单管理
             <em class="arrowRight"></em>
         </li>
