@@ -136,15 +136,31 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     })
-    .directive('yyzSelect', function ($timeout) {
+    .directive('yyzSelectMulti', function ($timeout) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                var className = attrs['yyzGrade'];
+                scope.multiData = [];
+
+                var target = attrs['yyzSelectMulti'].toUpperCase(),
+                    nodeName = element[0].nodeName;
+
                 $(element[0]).click(function () {
-                    $(this).find('em').toggleClass('on');
-                    $(this).find('i').toggleClass('on');
-                    scope.$emit('onselect');
+                    var key = $(this).data('key'),
+                        index = scope.multiData.indexOf(key);
+
+                    if(target !== nodeName) {
+                        $(this).find(target).toggleClass('on');
+                    }else {
+                        $(this).toggleClass('on');
+                    }
+
+                    if(index > -1) {
+                        scope.multiData.splice(index, 1);
+                    }else {
+                        scope.multiData.push(key);
+                    }
+                    scope.$emit('onselectMulti', scope.multiData);
                 });
             }
         }
@@ -153,20 +169,21 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                var target = attrs['yyzSelectUniqe'];
-                $(element[0]).children().click(function () {
-                    var $tmp = $(this).find(target);
-                    if($tmp.length > 0) {
-                        $tmp.addClass('on');
+                var target = attrs['yyzSelectUniqe'].toUpperCase(),
+                    nodeName = element[0].nodeName;
+
+                $(element[0]).click(function () {
+                    var key = $(this).data('key');
+                    if(target !== nodeName) {
+                        $(this).find(target).addClass('on');
                         $(this).siblings().find(target).removeClass('on');
                     }else {
-
                         $(this).addClass('on');
                         $(this).siblings().removeClass('on');
                     }
-                    scope.$emit("onselectUniqe", $(this).data('key'));
+
+                    scope.$emit('onselectUniqe', key);
                 });
-                scope.$emit('onselectUniqe');
             }
         }
     })
