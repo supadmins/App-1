@@ -6,7 +6,7 @@ angular.module('yyzWebApp')
             $scope.goid=$stateParams.id;
 
             if(!$scope.goid){
-                alert("参数错误");
+                //alert("参数错误");
                $state.go(-1);return;
             }
             $scope.isAjax = true;
@@ -22,7 +22,7 @@ angular.module('yyzWebApp')
                         if (data.ResultStatus) {
                             $scope.user = data.ResultObject;
                         } else {
-                            alert(data.ResultMessage);
+                            //alert(data.ResultMessage);
                             return;
                         }
                     });

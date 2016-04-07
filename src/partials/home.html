@@ -5,7 +5,7 @@
 <div class="locationInfo">
     <p>
         <em></em>
-        <span id="pos">深圳市南山区好好小区</span>
+        <span id="pos" yyz-pos ng-bind="address"></span>
         <em></em>
     </p>
     <div class="search">
@@ -14,7 +14,8 @@
     </div>
 </div>
 
-<yyz-banner data-api="../json/banner.json"></yyz-banner>
+<yyz-banner data-api="api/Comm/HomePageBannerList"></yyz-banner>
+
 <div class="adArea">
     <a href="#" class="adItem">
         <img src="imgs/home/eshop.png" alt=""/>
@@ -291,4 +292,3 @@
         </li>
     </ul>
 </div>
-
