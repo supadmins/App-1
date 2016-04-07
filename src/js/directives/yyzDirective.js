@@ -161,7 +161,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                         $tmp.addClass('on');
                         $(this).siblings().find(target).removeClass('on');
                     }else {
-                        console.log($(this).data('key'));
+
                         $(this).addClass('on');
                         $(this).siblings().removeClass('on');
                     }

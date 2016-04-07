@@ -177,7 +177,7 @@ angular.module('yyzWebApp', [
             })
             //e家店
             .state('eshop', {
-                url: "/eshop",
+                url: "/eshop?id",
                 views: {
                     "lazyLoadView": {
                         controller: 'eshopCtrl',
@@ -192,7 +192,7 @@ angular.module('yyzWebApp', [
             })
             //店铺详情
             .state('shopDetail', {
-                url: "/shopDetail",
+                url: "/shopDetail?id&pid",
                 views: {
                     "lazyLoadView": {
                         controller: 'shopDetailCtrl',
@@ -207,7 +207,7 @@ angular.module('yyzWebApp', [
             })
             //店铺信息
             .state('shopInfo', {
-                url: "/shopInfo",
+                url: "/shopInfo?id",
                 views: {
                     "lazyLoadView": {
                         controller: 'shopInfoCtrl',
@@ -265,9 +265,25 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //我的退款订单
+            .state('orderRefundList', {
+                url: "/orderRefundList",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'orderRefundListCtrl',
+                        templateUrl: 'partials/orderRefundList.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/orderDescCtrl.js');
+                    }]
+                }
+            })
+
             //商品退货
             .state('refunding', {
-                url: "/refunding",
+                url: "/refunding?id",
                 views: {
                     "lazyLoadView": {
                         controller: 'refundingCtrl',
