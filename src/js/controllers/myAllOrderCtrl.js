@@ -4,8 +4,12 @@ angular.module('yyzWebApp')
             $scope.contentView = true;
             $scope.searchView = false;
 
-            $scope.status = "";//订单搜索状态
-            $scope.activisstatus=0;//订单类型1 正常订单，其他为维权订单
+            //订单搜索状态
+            $scope.status = "";
+
+            //订单类型1 正常订单，其他为维权订单
+            $scope.activisstatus=0;
+
             $scope.$on('onselectUniqe', function ($event, res) {
                 $scope.status = res;
                 getData();
