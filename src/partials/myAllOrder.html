@@ -26,7 +26,7 @@
     <div class="orderItem" ng-repeat="item in items">
         <div class="top" ui-sref="orderDesc({id: item.Id})">
             <a href="">
-                <img alt="商品图片" ng-src="item.ListPicture"/>
+                <img alt="商品图片" ng-src="{{item.ListPicture}}"/>
             </a>
 
             <div class="fl">

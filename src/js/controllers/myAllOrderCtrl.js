@@ -9,7 +9,7 @@ angular.module('yyzWebApp')
             $scope.$on('onselectUniqe', function ($event, res) {
                 $scope.status = res;
                 getData();
-            })
+            });
             var params = {
                 godId: $scope.goid,
                 activistStatus:$scope.activisstatus,
