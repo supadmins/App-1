@@ -13,7 +13,10 @@ angular.module('yyzAServiceMod', [])
             },
             'shoporderlistbygodid': function (params) {
                 return $http.get(baseUrl + 'api/Order/ShopOrderListByGodId', {params: params});
-            }
+            },
+            'orderdetail': function (id) {
+            return $http.get(baseUrl + 'api/Order?id='+id);
+        }
         };
     }]);
 

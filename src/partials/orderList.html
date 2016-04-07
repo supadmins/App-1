@@ -1,30 +1,33 @@
 <link rel="stylesheet" href="css/orderList.css" type="text/css" inline />
 
 <div id="wrapper">
-    <div class="order" ng-repeat="item in [1, 2, 3]">
-        <div class="header" ui-sref="eshop({id:1})">
+    <div class="order" ng-repeat="item in items">
+        <div class="header" ui-sref="eshop({id:item.ShopId})">
             <a >
-                <img src="imgs/orderList/logo.png" alt=""/>
-                e生活店 (自营店铺)
+                <img src="imgs/orderList/logo.png" alt="" ng-src="{{item.ShopLogo}}}"/>
+                <span ng-bind="item.ShopName">e生活店</span>
+                <span ng-bind="item.Mode"> (自营店铺)</span>
                 <em class="arrowRight"></em>
             </a>
         </div>
-        <div class="content" ui-sref="orderDetail({id:1})">
+        <div class="content" ui-sref="orderDetail({{id:item.Id}})">
             <div class="left">
                 <p>
-                    白蜜柚（2个）等2种商品
+                    <span ng-bind="item.ProductListName">白蜜柚（2个）</span>等
+                    <span ng-bind="item.Quantity">2</span>种商品
                 </p>
 
                 <p>
-                    2015/12/24 16:42
+                    <span ng-bind="item.CreateTime|date:'yy-MM-dd mm:hh'"> 2015/12/24 16:42</span>
+
                 </p>
             </div>
             <div class="right">
                 <p>
-                    ￥17
+                    <span ng-bind="item.Amount|currency:'￥'">￥17</span>
                 </p>
 
-                <p>
+                <p ng-bind="item.OrderStatusEnum">
                     待支付
                 </p>
             </div>
@@ -53,12 +56,12 @@
             </a>
         </li>
         <li>
-            <a href="#/orderList" class="active">
+            <a ui-sref="orderList" class="active">
                 订单
             </a>
         </li>
         <li>
-            <a href="#/myYyz">
+            <a ui-sref="myYyz">
                 我的
             </a>
         </li>
