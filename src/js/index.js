@@ -5,7 +5,6 @@ angular.module('yyzWebApp', [
         $httpProvider.defaults.withCredentials = true;
 
         $httpProvider.interceptors.push('interceptor');
-
         //默认路由
         $urlRouterProvider.otherwise("/");
 

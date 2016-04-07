@@ -30,13 +30,16 @@ angular.module('yyzServiceMod', [])
             }
         };
     }])
-    .factory('interceptor', ['$q', function ($q) {
+    .factory('interceptor', ['$q', '$rootScope', function ($q, $rootScope) {
         return {
-            response: function (res) {
+            responseError : function (res) {
                 var deferred = $q.defer(),
                     httpCode = res.status;
 
                 if(httpCode == 401) {
+                    if(!$rootScope.redirectUrl) {
+                        $rootScope.redirectUrl = window.location.href;
+                    }
                     window.location.href = '#/login';
                 }
                 deferred.resolve(res);
@@ -45,6 +48,11 @@ angular.module('yyzServiceMod', [])
             }
         };
     }])
+    .factory('validator', function () {
+        return {
+            'phone': '电话号码格式不正确,请重新输入'
+        };
+    })
     .factory('productType', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
             'getTypeList': function () {
@@ -52,6 +60,17 @@ angular.module('yyzServiceMod', [])
             },
             'addType': function (params) {
                 return $http.post(baseUrl + 'api/ShopProductType', params);
+            }
+        };
+    }])
+    .factory('home', ['$http', 'baseUrl', function ($http, baseUrl) {
+        return {
+            getShopList: function (params) {
+                params = params || {};
+
+                return $http.get(baseUrl + 'api/Comm/NearShopList', {
+                    params: params
+                });
             }
         };
     }]);

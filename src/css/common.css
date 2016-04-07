@@ -123,3 +123,10 @@ em, i {
 .footer ul li a.active {
     color: #ff9d06;
 }
+
+.validator {
+    margin-top: 0.2rem;
+    margin-left: 0.26rem;
+    font-size: 0.24rem;
+    color: #ff2e4b;
+}

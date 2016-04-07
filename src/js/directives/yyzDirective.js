@@ -2,20 +2,20 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
     /**
      * yyzBanner指令依赖zepto swipeSlide插件 https://github.com/ximan/swipeSlide.git
      */
-    .directive('yyzBanner', ['$http', '$timeout', '$ocLazyLoad', function ($http, $timeout, $ocLazyLoad) {
+    .directive('yyzBanner', ['$http', '$timeout', '$ocLazyLoad', 'baseUrl', function ($http, $timeout, $ocLazyLoad, baseUrl) {
         return {
             restrict: 'E',
             scope: true,
             transclude: true,
             template: '<div class="slide" id="slide"><ul><li ng-repeat="banner in banners">'               +
-            '<a ng-href="{{banner.link}}"><img ng-src="{{banner.imgSrc}}" alt=""></a>'           +
+            '<a ng-href="{{banner.Url}}"><img ng-src="{{banner.FullPicture}}" alt=""></a>'                 +
             '</li></ul><div class="dot"><span ng-repeat="banner in banners"></span></div></div>',
             replace: true,
             link: function (scope, element, attrs) {
-                var apiUrl = attrs['api'];
+                var apiUrl = baseUrl + attrs['api'];
                 $http.get(apiUrl).success(function (data) {
-                    if(data.length > 0) {
-                        scope.banners = data;
+                    if(data.ResultStatus > 0) {
+                        scope.banners = data.ResultObject;
                     }
                 });
                 /*使用$timeout延迟 等待dom树结构生成->绑定DOM事件*/
@@ -58,7 +58,6 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                             }
                         });
                     });
-
             }
         }
     }])
@@ -231,7 +230,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
         return {
             restrict: 'A',
             scope: false,
-            link: function (scope, element, attrs) { alert(123);
+            link: function (scope, element, attrs) {
                 element.on('click', function (event) {
                     if(event.target.className.toString().indexOf('masker') > -1) {
                         scope.$emit('maskerClick');
@@ -239,7 +238,34 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                 })
             }
         };
-    });
+    })
+    .directive('yyzPos', ['$http', '$ocLazyLoad', 'baseUrl', '$rootScope', function ($http, $ocLazyLoad, baseUrl, $rootScope) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                $ocLazyLoad.load('lib/map/map.js')
+                    .then(function () {
+                        $rootScope.BMap = BMap;
+                        var geolocation = new BMap.Geolocation();
+                        geolocation.getCurrentPosition(function (r) {
+                            if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                                var posData = {
+                                    longitude: r.point.lng,
+                                    latitude: r.point.lat
+                                };
+                                scope.$emit('onpos', posData);
+                            }
+                            else {
+                                alert('获取位置信息失败:' + this.getStatus());
+                            }
+                        }, {
+                            enableHighAccuracy: true
+                        });
+                    });
+            }
+        };
+    }])
+    .value('baseUrl', 'http://112.74.126.176:8899/');
 
 
 

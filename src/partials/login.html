@@ -11,7 +11,7 @@
                 <img src="http://112.74.126.176:8899/api/Comm/GetImgCode" alt="验证图片" />
             </li>
             <li>
-                <input ng-minlength="13" type="text"  ng-model="code" name="code" placeholder="请输入短信验证码"/>
+                <input type="text"  ng-model="code" name="code" placeholder="请输入短信验证码"/>
                 <span class="sendCode" ng-click="getCode();">获取验证码</span>
             </li>
             <li ng-if="view1">
@@ -25,9 +25,7 @@
     </p>
 </form>
 
-<div class="validator" ng-repeat="(key,value) in form.$error" ng-bind="key">
-
-</div>
+<div class="validator" ng-repeat="(key,value) in form.$error" ng-bind="validator[key]"></div>
 
 <button class="bottom" ng-class="{'on': !disable}" ng-disabled="disable" ng-click="bind();">
     绑定
