@@ -1,7 +1,7 @@
 angular.module('yyzWebApp')
     .controller('deliverAddressCtrl', ['$scope', '$http', function ($scope, $http) {
-        $scope.view1 = true;
-        $scope.view2 = false;
+        $scope.view1 = false;
+        $scope.view2 = true;
         $scope.view3 = false;
 
         $scope.selectCity = function () {

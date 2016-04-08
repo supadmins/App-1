@@ -249,7 +249,6 @@ div.bottom {
     width: 25%;
     box-sizing: border-box;
     height: 100%;
-    padding: 0.28rem 0 0.24rem;
     position: relative;
 }
 
@@ -263,30 +262,12 @@ div.bottom {
 }
 
 .content1 ul.func li:nth-child(2) img {
+    width: 0.48rem;
+    height: 0.48rem;
     position: absolute;
     bottom: 0.6rem;
     left: 50%;
-    transform: translateX(-50%);
-}
-
-.content1 ul.func li:nth-child(2) h1.dfk img {
-    width: 0.43rem;
-    height: 0.37rem;
-}
-
-.content1 ul.func li:nth-child(2) h1.wfh img {
-    width: 0.42rem;
-    height: 0.42rem;
-}
-
-.content1 ul.func li:nth-child(2) h1.dfh img {
-    width: 0.48rem;
-    height: 0.48rem;
-}
-
-.content1 ul.func li:nth-child(2) h1.sh img {
-    width: 0.37rem;
-    height: 0.42rem;
+    margin-left: -0.24rem;
 }
 
 .content1 ul.money1 {
@@ -368,7 +349,7 @@ div.bottom {
 }
 
 /*footer*/
-.footer ul li a.active {
+.footer ul li.active {
     background: url('../imgs/home/footer_4_1.png') no-repeat;
     background-size: 0.39rem 0.33rem;
     background-position: center 0.18rem;

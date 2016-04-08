@@ -1,11 +1,12 @@
-<link rel="stylesheet" href="css/myYyz.css" type="text/css" inline />
+<link rel="stylesheet" href="css/myYyz.css" type="text/css" inline/>
 
-<div class="header" >
+<div class="header">
     <img src="imgs/myYyz/header.png" alt="" ui-sref="personalCenter"/>
 
     <p class="uname">廖桑桑</p>
 
     <p ng-if="customer" class="switch" ng-click="switch();">去卖家中心</p>
+
     <p ng-if="seller" class="switch" ng-click="switch();">去买家中心</p>
 </div>
 
@@ -13,20 +14,23 @@
     <ul class="basicInfo">
         <li>
             <p class="balance">
-                <span >0.00</span>元
+                <span>0.00</span>元
             </p>
+
             <p>我的余额</p>
         </li>
         <li>
             <p class="voucher">
                 <span>0</span>张
             </p>
+
             <p>我的代金券</p>
         </li>
         <li>
             <p class="integral">
                 <span>0</span>分
             </p>
+
             <p>我的积分</p>
         </li>
     </ul>
@@ -93,18 +97,22 @@
         <li>
             <h1 class="dfk">
                 <img src="imgs/myYyz/seller_1_1.png" alt=""/>
+
                 <p>待付款</p>
             </h1>
             <h1 class="wfh">
                 <img src="imgs/myYyz/seller_1_2.png" alt=""/>
+
                 <p>未发货</p>
             </h1>
             <h1 class="dfh">
                 <img src="imgs/myYyz/seller_1_3.png" alt=""/>
+
                 <p>待发货</p>
             </h1>
             <h1 class="sh">
                 <img src="imgs/myYyz/seller_1_4.png" alt=""/>
+
                 <p>售后</p>
             </h1>
         </li>
@@ -161,25 +169,17 @@
 
 <div class="footer">
     <ul>
-        <li>
-            <a href="#">
-                首页
-            </a>
+        <li ui-sref="index">
+            首页
         </li>
-        <li>
-            <a href="#">
-                e家店
-            </a>
+        <li ui-sref="eshopList">
+            e家店
         </li>
-        <li>
-            <a href="#/orderList">
-                订单
-            </a>
+        <li ui-sref="orderList">
+            订单
         </li>
-        <li>
-            <a href="#/myYyz" class="active">
-                我的
-            </a>
+        <li ui-sref="myYyz" class="active">
+            我的
         </li>
     </ul>
 </div>

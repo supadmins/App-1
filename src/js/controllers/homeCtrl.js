@@ -41,12 +41,14 @@ angular.module('yyzWebApp')
                 });
         });
 
-        $scope.$on('onDropload', function () {
+        $scope.$on('onDropload', function ($event, me) {
             if(params.latitude && params.longitude) {
                 home.getShopList(params)
                     .success(function (data) {
                         if(data.ResultStatus) {
                             $scope.scrollList = [].concat($scope.scrollList, data.ResultObject);
+                        }else {
+                            me.noData();
                         }
                     });
             }

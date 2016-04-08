@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="css/search.css" type="text/css" inline />
+
+<header class="ng-scope" yyz-pos>
+    <span class="cityName" ng-click="selectCity();">深圳市 <em class="arrowDown"></em></span>
+    <input class="searchBox" ng-model="keywords" type="search" placeholder="请输入你的送货地址">
+</header>
+
+<ul class="body">
+    <li ng-repeat="item in addressArr" ng-bind="item"></li>
+</ul>

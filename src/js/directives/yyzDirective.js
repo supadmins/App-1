@@ -14,7 +14,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             link: function (scope, element, attrs) {
                 var apiUrl = baseUrl + attrs['api'];
                 $http.get(apiUrl).success(function (data) {
-                    if(data.ResultStatus > 0) {
+                    if(data.ResultStatus) {
                         scope.banners = data.ResultObject;
                     }
                 });
@@ -50,11 +50,15 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             link: function (scope, element, attrs) {
                 $ocLazyLoad.load("lib/dropload/dist/dropload.min.js")
                     .then(function () {
-                        $('#' + attrs['id']).dropload({
+                        $(element[0]).dropload({
                             scrollArea: window,
-                            loadDownFn: function (me) {
-                                scope.$emit('onDropload');
+                            domDown: {
+                                domRefresh : '<div class="dropload-load"><div class="loading"></div>努力加载中...</div>'
+                            }
+                            ,loadDownFn: function (me) {
+                                me.lock('up');
                                 me.resetload();
+                                scope.$emit('onDropload', me);
                             }
                         });
                     });
@@ -262,7 +266,9 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             link: function (scope, element, attrs) {
                 $ocLazyLoad.load('lib/map/map.js')
                     .then(function () {
-                        $rootScope.BMap = BMap;
+                        if(!$rootScope.BMap) {
+                            $rootScope.BMap = BMap;
+                        }
                         var geolocation = new BMap.Geolocation();
                         geolocation.getCurrentPosition(function (r) {
                             if (this.getStatus() == BMAP_STATUS_SUCCESS) {
