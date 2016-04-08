@@ -4,6 +4,10 @@ html, body {
     overflow-x: hidden;
 }
 
+.tangram-suggestion-main {
+    display: none !important;
+}
+
 header {
     background: #ff9d06;
     height: 0.9rem;
@@ -34,7 +38,7 @@ header {
     right: 0;
 }
 
-.searchBox {
+#keywords {
     position: absolute;
     height: 0.6rem;
     top: 0.16rem;
@@ -43,7 +47,7 @@ header {
     outline: 0;
     font-size: 0.28rem;
     border-radius: 3px;
-    width: 5.2rem;
+    width: 5rem;
     background: #fff url('../imgs/home/search.png') no-repeat;
     background-size: 0.23rem 0.24rem;
     background-position: 0.18rem center;
@@ -61,7 +65,7 @@ ul.body li {
     border-bottom: 1px solid #dcdcdc;
     padding-left: 0.26rem;
     color: #333333;
-    font-size: 0.32rem;
+    font-size: 0.3rem;
 }
 
 
