@@ -74,8 +74,8 @@
                     无需物流则不用填写物流相关信息
                 </span>
                 <input ng-show="logistics" type="text" placeholder="请输入快递单号" ng-model="DeliveryNumber"/>
-                <select ng-show="logistics" name="company" id="company" ng-model="expressName" ng-options="o.id as o.name for o in express">
-                    <option value="">请选择物流公司</option>
+                <select ng-show="logistics" name="company" id="company" ng-model="expressName"
+                        ng-options="color.name as color.name for color in express">
                 </select>
             </div>
         </div>

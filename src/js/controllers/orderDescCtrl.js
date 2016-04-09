@@ -1,27 +1,28 @@
 angular.module('yyzWebApp')
-    .controller('orderDescCtrl', ['$scope','$state', '$stateParams','order',
-    function ($scope, $stateParams,order,$state) {
+    .controller('orderDescCtrl', ['$scope','$state','order', '$stateParams',
+    function ($scope, $state,order,$stateParams) {
         $scope.logistics = $scope.logisticsView = false;
         $scope.id=$stateParams.id;
         if(!$scope.id){
-            alert("²ÎÊı´íÎó");
-            $state.go(-1);
+            alert("å‚æ•°é”™è¯¯");
+            //$state.go(-1);
             return;
         }
         $scope.$on('onselectUniqe', function () {
             $scope.logistics = !$scope.logistics;
             $scope.$apply();
         });
-
+        //initData();
+        $scope.DeliveryNumber="";//ç‰©æµå•å·
+        $scope.expressName="åœ†é€šå¿«é€’";//é€‰ä¸­ç‰©æµåç§°
         $scope.express=[
-            {"id":"1","name":"Ô²Í¨¿ìµİ"},
-            {"id":"2","name":"µÂ°î¿ìµİ"},
-            {"id":"3","name":"ÓÅËÙ¿ìµİ"},
+            {"id":"1","name":"åœ†é€šå¿«é€’"},
+            {"id":"2","name":"å¾·é‚¦å¿«é€’"},
+            {"id":"3","name":"ä¼˜é€Ÿå¿«é€’"},
             {"id":"4","name":"EMS"}];
-        $scope.expressName="Ô²Í¨¿ìµİ";
-        $scope.DeliveryNumber="";
+
         function initData(){
-            order.($scope.id).success(function (data) {
+            order.orderdetail($scope.id).success(function (data) {
                 if (data.ResultStatus) {
                     $scope.items = data.ResultObject;
                 } else {
@@ -34,11 +35,11 @@ angular.module('yyzWebApp')
             DeliveryNumber:$scope.DeliveryNumber,
             DeliveryCompany:$scope.expressName
         };
-        //È·ÈÏ·¢»õ
+        //ç¡®è®¤å‘è´§
         $scope.ConfirmationDelivery=function(){
             order.ConfirmationDelivery(params).success(function(data){
                 if (data.ResultStatus) {
-                    alert("²Ù×÷³É¹¦");
+                    alert("æ“ä½œæˆåŠŸ");
                 } else {
                     alert(data.ResultMessage)
                 }
@@ -49,4 +50,8 @@ angular.module('yyzWebApp')
         $scope.cancel = function () {
             $scope.logisticsView = false;
         };
+
+        $scope.$watch('DeliveryNumber', function (value) {
+            alert(value);
+        });
     }]);
