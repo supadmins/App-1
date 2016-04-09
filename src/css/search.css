@@ -66,6 +66,9 @@ ul.body li {
     padding-left: 0.26rem;
     color: #333333;
     font-size: 0.3rem;
+    background: #fff url('../imgs/shopInfo/pos.png') no-repeat;
+    background-size: 0.3rem 0.33rem;
+    background-position: 6.8rem center;
 }
 
 
