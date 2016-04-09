@@ -1,5 +1,5 @@
 angular.module('yyzWebApp')
-    .controller('searchCtrl', ['$scope', 'addressHelper', '$rootScope', function ($scope, addressHelper, $rootScope) {
+    .controller('searchCtrl', ['$scope', 'addressHelper', '$rootScope', '$state', function ($scope, addressHelper, $rootScope, $state) {
         $scope.address = '正在定位当前位置';
         $scope.city = '定位中';
 
@@ -41,5 +41,10 @@ angular.module('yyzWebApp')
 
         $scope.selected = function (item) {
             addressHelper.searchViewValue = item;
+            var params = {};
+            if(addressHelper.originState == 'myAddress') {
+            }
+
+            $state.go(addressHelper.originState, params);
         };
     }]);
