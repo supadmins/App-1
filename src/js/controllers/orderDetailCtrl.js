@@ -4,6 +4,7 @@ angular.module('yyzWebApp')
 
             $scope.contentView = true;
             $scope.searchView = false;
+
             $scope.id=$stateParams.id;
             if(!$scope.id){
                 alert("参数错误");

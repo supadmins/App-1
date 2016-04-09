@@ -9,20 +9,19 @@
         <div class="content" ui-sref="orderStatus">
             <span>￥</span>
             <div class="left">
-                <p>
+                <p ng-bind="items.OrderFormStatus">
                     待支付
                 </p>
-
                 <p>
                     请在提交订单后十五分钟内完成支付
                 </p>
             </div>
             <div class="right">
-                <p>
+                <p ng-bind="items.c">
                     16:43
                 </p>
 
-                <p>
+                <p ui-sref="orderStatus({items.Id})">
                     订单状态
                     <em class="arrowRight"></em>
                 </p>
@@ -34,9 +33,9 @@
                 <span>立即支付</span>
             </div>
             <div ng-if="true">
-                <span ui-sref="eshop({id:1})">再来一单</span>
-                <span ui-sref="addEvaluate">评价</span>
-                <span ui-sref="returnGoods">退款退货</span>
+                <span ui-sref="eshop({id:items.Id})">再来一单</span>
+                <span ui-sref="addEvaluate({id:items.Id})">评价</span>
+                <span ui-sref="returnGoods({id:items.Id})">退款退货</span>
             </div>
         </div>
     </div>
@@ -45,33 +44,33 @@
         <p>订单明细</p>
         <div class="content">
             <div class="shopName">
-                <a ui-sref="eshop({id:1})">
-                    <img src="imgs/orderList/logo.png" alt=""/>
-                    e生活店  (自营店铺)
+                <a ui-sref="eshop({id:items.ShopId})">
+                    <img src="imgs/orderList/logo.png" alt="店铺Log" ng-src="{{items.Logo}}"/>
+                    <span ng-bind="items.ShopName">e生活店</span>  <span ng-bind="items.Mode">(自营店铺)</span>
                     <em class="arrowRight shop"></em>
                 </a>
             </div>
-            <div class="info">
-                <p>
-                    白蜜柚(2个)
-                    <span>￥8.8</span>
-                    <span>x1</span>
+            <div class="info" >
+                <p ng-repeat="item in items.OrderItemViewModelList">
+                    <span ng-bind="item.Name">白蜜柚(2个)</span>
+                    <span ng-bind="item.Price|currency:'￥'">￥8.8</span>
+                    x<span ng-bind="item.Quantity">2</span>
                 </p>
                 <p>
-                    包装费
-                    <span>￥0</span>
+                    运费
+                    <span ng-bind="items.IsShopFreeDeliveryFee?'0':items.DeliveryFee">￥0</span>
                 </p>
                 <p>
                     <span>
-                        商品金额 ￥8.8
+                        商品金额 <span ng-bind="items.Amount|currency:'￥'">￥8.8</span>
                     </span>
                 </p>
             </div>
             <div class="discount">
-                <p>
-                    立减优惠
+                <p ng-repeat="item in items.PayOrderFormViewModelList">
+                    <span ng-bind="item.Remark">立减优惠</span>
                     <span class="reduce">减</span>
-                    <span>- ￥2</span>
+                    -<span ng-bind="item.Amount|currency:'￥'">￥2</span>
                 </p>
                 <p>
                     优惠
@@ -79,9 +78,9 @@
                 </p>
             </div>
             <div class="counter">
-                总计 <span>￥6.8</span>
+                总计 <span ng-bind="items.PayAmount|currency:'￥'">￥6.8</span>
             </div>
-            <div class="bottom" ui-sref="eshop({id:1})">
+            <div class="bottom" ui-sref="eshop({id:items.ShopId})">
                 再来一单
             </div>
         </div>
@@ -91,26 +90,26 @@
         <p>其他信息</p>
         <ul>
             <li>
-                配 送 方: <span>小二专业配送</span>
+                配 送 方: <span ng-bind="items.DeliveryType">小二专业配送</span>
             </li>
             <li>
-                订 单 号: <span>14509465664701</span>
+                订 单 号: <span ng-bind="items.OrderFormNumber">14509465664701</span>
             </li>
             <li>
-                配送时间: <span>立即配送</span>
+                配送时间: <span ng-bind="items.ForecastPostTime|date:'yy-MM-dd mm:hh'">立即配送</span>
             </li>
             <li>
-                收货信息: <span>李威  男士  13689543120  威盛大厦4楼</span>
+                收货信息: <span><span ng-bind="items.ReceiverName">李威</span>  男士  <span ng-bind="items.ReceiverPhoneNumber">13689543120</span>  <span ng-bind="items.Address">威盛大厦4楼</span></span>
             </li>
             <li>
-                支付方式: <span>在线支付</span>
+                支付方式: <span ng-bind="items.PaymentType">在线支付</span>
             </li>
             <li>
-                备注信息: <span>无</span>
+                备注信息: <span ng-bind="items.CustomerServiceRemark">无</span>
             </li>
-            <li>
-                发票信息: <span>无</span>
-            </li>
+            <!--<li>-->
+                <!--发票信息: <span>无</span>-->
+            <!--</li>-->
         </ul>
     </div>
 </div>

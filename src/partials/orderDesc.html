@@ -1,58 +1,59 @@
 <link rel="stylesheet" href="css/orderDesc.css" type="text/css" inline />
 
 <header>
-    <p>订单状态: 订单关闭（标记退款）</p>
+    <p>订单状态: <span ng-bind="items.OrderFormStatus"></span>订单关闭（标记退款）</p>
 </header>
 
 <div class="reciver">
     <p>
-        收货人：名字
-        <span class="fr">1358880888</span>
+        收货人：<span ng-bind="items.ReceiverName">姓名</span>
+        <span class="fr" ng-bind="items.ReceiverPhoneNumber">1358880888</span>
     </p>
-    <p class="address">收货地址：广东省深圳市南山区科技园威盛科技大厦14A08号</p>
+    <p class="address">收货地址：<span ng-bind="items.Address">广东省深圳市南山区科技园威盛科技大厦14A08号</span></p>
 </div>
 
 <div class="goodsInfo">
-    <p>店铺：<span>名称</span></p>
+    <p>店铺：<span ng-bind="items.ShopName">名称</span></p>
     <div class="info">
-        <img src="imgs/other/goods1.png" alt=""/>
-        <div class="goodsName">
-            超级无敌巨酸爽的清新柠檬超级无
-            敌巨酸爽的清新柠檬
+        <img src="imgs/other/goods1.png" alt="" ng-src="{{items.Logo}}"/>
+        <div class="goodsName" ng-repeat="item in items.OrderItemViewModelList">
+            <span ng-bind="item.Name">
+                超级无敌巨酸爽的清新柠檬超级无
+                敌巨酸爽的清新柠檬</span>
         </div>
         <div>
-            <p>￥10.00</p>
-            <p>x2</p>
-            <span>退款中</span>
+            <p ng-bind="item.Price|currency:'￥'"> ￥8.8</p>
+            x<p ng-bind="item.Quantity">2</p>
+            <span ng-bind="items.OrderFormStatus">退款中</span>
         </div>
     </div>
     <div class="dispatch">
         <p>
             运费
-            <span class="fr">￥0.00</span>
+            <span class="fr" ng-bind="items.IsShopFreeDeliveryFee?'0':items.DeliveryFee">￥0.00</span>
         </p>
         <p>
             由卖家
-            <span>大boss</span>
-            单独配送
+            <span ng-bind="items.ShopName">大boss</span>
+            <span ng-bind="items.DeliveryType">单独配送</span>
         </p>
     </div>
-    <p class="remark">卖家留言：请尽快配送哦~</p>
+    <p class="remark">买家留言：<span ng-bind="items.GodRemark">请尽快配送哦~</span> </p>
     <p class="counter">
         合计
-        <span class="fr">￥10.00</span>
+        <span class="fr" ng-bind="items.Amount">￥10.00</span>
     </p>
 </div>
 
 <div class="orderNo">
     <div>
-        <p>￥10.00+￥0.00运费</p>
-        <p>实收：￥10.00</p>
+        <p><span ng-bind="items.Amount|currency:'￥'">￥0.00</span>+<span ng-bind="items.DeliveryFee|currency:'￥'">￥0.00</span>运费</p>
+        <p>实收：<span ng-bind="items.PayAmount|currency:'￥'">￥10.00</span></p>
     </div>
     <div>
-        <p>单号：E20160317153818002070943</p>
-        <p>2016-03-17  16:30:02</p>
-        <p>完成付款</p>
+        <p>单号：<span ng-bind="items.OrderFormNumber">E20160317153818002070943</span></p>
+        <p ng-bind="items.CreateTime|date:'yy-MM-dd mm:hh'">2016-03-17  16:30:02</p>
+        <p ng-bind="items.OrderFormStatus">完成付款</p>
     </div>
 </div>
 
@@ -65,26 +66,22 @@
     <div class="container">
         <div class="top" yyz-select-uniqe="span">
             <span>需要物流</span>
-            <span class="on">无需物流</span>
+            <span class="on" >无需物流</span>
         </div>
         <div class="body">
             <div>
                 <span class="tip" ng-show="!logistics">
                     无需物流则不用填写物流相关信息
                 </span>
-                <input ng-show="logistics" type="text" placeholder="请输入快递单号"/>
-                <select ng-show="logistics" name="company" id="company">
+                <input ng-show="logistics" type="text" placeholder="请输入快递单号" ng-model="DeliveryNumber"/>
+                <select ng-show="logistics" name="company" id="company" ng-model="expressName" ng-options="o.id as o.name for o in express">
                     <option value="">请选择物流公司</option>
-                    <option value="">全一快递</option>
-                    <option value="">德邦快递</option>
-                    <option value="">优速快递</option>
-                    <option value="">EMS</option>
                 </select>
             </div>
         </div>
         <div class="btn">
             <span ng-click="cancel();">取消</span>
-            <span>确定</span>
+            <span ng-click="ConfirmationDelivery();">确定</span>
         </div>
     </div>
 </div>

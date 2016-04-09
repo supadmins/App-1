@@ -10,7 +10,7 @@
                 <em class="arrowRight"></em>
             </a>
         </div>
-        <div class="content" ui-sref="orderDetail({{id:item.Id}})">
+        <div class="content" ui-sref="orderDetail({id:item.Id})">
             <div class="left">
                 <p>
                     <span ng-bind="item.ProductListName">白蜜柚（2个）</span>等
@@ -45,23 +45,23 @@
 
 <div class="footer">
     <ul>
-        <li>
-            <a href="#">
+        <li ui-sref="#">
+            <a >
                 首页
             </a>
         </li>
-        <li>
-            <a href="#">
+        <li ui-sref="#">
+            <a>
                 e家店
             </a>
         </li>
-        <li>
-            <a ui-sref="orderList" class="active">
+        <li ui-sref="orderList">
+            <a  class="active">
                 订单
             </a>
         </li>
-        <li>
-            <a ui-sref="myYyz">
+        <li ui-sref="myYyz">
+            <a >
                 我的
             </a>
         </li>

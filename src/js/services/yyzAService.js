@@ -11,11 +11,15 @@ angular.module('yyzAServiceMod', [])
             'shopgodinfobygodid': function (id) {
                 return $http.get(baseUrl + 'api/GodGroup/ShopGodInfoByGodId?godId='+id);
             },
+            'ConfirmationDelivery': function (params) {
+            return $http.post(baseUrl + 'api/Order/BusinessConfirmDelivery', params);
+            },
             'shoporderlistbygodid': function (params) {
                 return $http.get(baseUrl + 'api/Order/ShopOrderListByGodId', {params: params});
             },
             'orderdetail': function (id) {
             return $http.get(baseUrl + 'api/Order?id='+id);
+
         }
         };
     }]);
