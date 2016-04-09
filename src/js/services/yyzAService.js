@@ -19,8 +19,7 @@ angular.module('yyzAServiceMod', [])
             },
             'orderdetail': function (id) {
             return $http.get(baseUrl + 'api/Order?id='+id);
-
-        }
+            }
         };
     }]);
 

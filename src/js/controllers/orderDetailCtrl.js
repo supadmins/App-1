@@ -1,6 +1,6 @@
 angular.module('yyzWebApp')
-    .controller('orderDetailCtrl', ['$scope', '$http', 'baseUrl', 'order', '$location', '$stateParams', '$state',
-        function ($scope, $http, baseUrl, order, $location, $stateParams, $state) {
+    .controller('orderDetailCtrl', ['$scope', '$http', 'order', '$location', '$stateParams', '$state',
+        function ($scope, $http, order, $location, $stateParams, $state) {
 
             $scope.contentView = true;
             $scope.searchView = false;
