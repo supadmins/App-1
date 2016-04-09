@@ -1,6 +1,6 @@
 angular.module('yyzWebApp')
     .controller('homeCtrl', ['$scope', '$http', '$rootScope', 'home', function ($scope, $http, $rootScope, home) {
-        $scope.address = '一扬指e生活';
+        $scope.address = '正在定位当前位置';
         $scope.categoryInfo = $scope.sortInfo = $scope.filterInfo = false;
         var params = {
             longitude: '',
@@ -41,12 +41,14 @@ angular.module('yyzWebApp')
                 });
         });
 
-        $scope.$on('onDropload', function () {
+        $scope.$on('onDropload', function ($event, me) {
             if(params.latitude && params.longitude) {
                 home.getShopList(params)
                     .success(function (data) {
                         if(data.ResultStatus) {
                             $scope.scrollList = [].concat($scope.scrollList, data.ResultObject);
+                        }else {
+                            me.noData();
                         }
                     });
             }

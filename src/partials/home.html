@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="css/swipeSlide.css" type="text/css" inline />
-<link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline />
-<link rel="stylesheet" href="css/home.css" type="text/css" inline />
+<link rel="stylesheet" href="css/swipeSlide.css" type="text/css" inline/>
+<link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline/>
+<link rel="stylesheet" href="css/home.css" type="text/css" inline/>
 
 <div class="locationInfo">
     <p>
@@ -8,9 +8,10 @@
         <span id="pos" yyz-pos ng-bind="address"></span>
         <em></em>
     </p>
+
     <div class="search">
         <em></em>
-        <input type="search" placeholder="请输入商家或商品名称" />
+        <input type="search" placeholder="请输入商家或商品名称"/>
     </div>
 </div>
 
@@ -63,8 +64,9 @@
 </div>
 
 <yyz-dropload id="scroller">
-    <div class="business" >
+    <div class="business">
         <h2 class="title"><em></em>常用商家</h2>
+
         <div class="nav">
             <ul class="tabs">
                 <li ng-click="show('categoryInfo');">
@@ -162,6 +164,7 @@
                     <span>e小二</span>
                     <span>不限</span>
                 </p>
+
                 <div class="content">
                     <ul>
                         <li>
@@ -191,6 +194,7 @@
                     </ul>
                 </div>
                 <p class="title1">优惠活动</p>
+
                 <div class="active">
                     <ul>
                         <li>
@@ -228,8 +232,10 @@
             <div class="top" ui-sref="eshop">
                 <div class="left">
                     <a href="#/eshop"><img src="imgs/home/ejd.png" alt=""/></a>
+
                     <div class="content">
                         <p class="name">e家店</p>
+
                         <p class="grade">
                             <i class="star"></i>
                             <i class="star"></i>
@@ -238,6 +244,7 @@
                             <i></i>
                             <span>月售2300份</span>
                         </p>
+
                         <p class="limit">起送 ￥16 配送￥3</p>
                     </div>
                 </div>
@@ -246,7 +253,9 @@
                         <i></i>
                         <i></i>
                     </p>
+
                     <p>达达配送</p>
+
                     <p>30分钟</p>
                 </div>
             </div>
@@ -259,6 +268,7 @@
                         <em class="down1"></em>
                     </span>
                 </p>
+
                 <p>
                     <i>返</i>
                     下单满38元即可获得5元代金券，代金券可......
@@ -270,25 +280,17 @@
 
 <div class="footer">
     <ul>
-        <li>
-            <a ui-sref="home" class="active">
-                首页
-            </a>
+        <li ui-sref="index" class="active">
+            首页
         </li>
-        <li>
-            <a ui-sref="eshop">
-                e家店
-            </a>
+        <li ui-sref="eshopList">
+            e家店
         </li>
-        <li>
-            <a ui-sref="orderList">
-                订单
-            </a>
+        <li ui-sref="orderList">
+            订单
         </li>
-        <li>
-            <a ui-sref="myYyz">
-                我的
-            </a>
+        <li ui-sref="myYyz">
+            我的
         </li>
     </ul>
 </div>

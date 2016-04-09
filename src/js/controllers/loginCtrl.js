@@ -32,6 +32,8 @@ angular.module('yyzWebApp')
                         user.register(regParams)
                             .then(function (res) {
                                 if(res.data.ResultStatus) {
+                                    user.hasLogin = true;
+
                                     if($rootScope.redirectUrl) {
                                         window.location.href = $rootScope.redirectUrl;
                                     }else {
@@ -48,6 +50,8 @@ angular.module('yyzWebApp')
                         user.login(loginParams)
                             .then(function (res) {
                                 if(res.data.ResultStatus) {
+                                    user.hasLogin = true;
+
                                     if($rootScope.redirectUrl) {
                                         window.location.href = $rootScope.redirectUrl;
                                     }else {

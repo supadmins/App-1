@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="css/search.css" type="text/css" inline />
+
+<header yyz-pos>
+    <span class="cityName" ng-click="selectCity();">{{city}} <em class="arrowDown"></em></span>
+    <input id="keywords" ng-model="keyword" type="text" placeholder="请输入你的送货地址">
+</header>
+
+<ul class="body">
+    <li ng-bind="address" ng-click="selected();"></li>
+    <li ng-repeat="item in addressArr" ng-bind="item" ng-click="selected(item);"></li>
+</ul>

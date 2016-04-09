@@ -17,6 +17,7 @@ angular.module('yyzServiceMod', [])
     }])
     .factory('user', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
+            'hasLogin': false,
             'register': function (params) {
                 params = params || {};
                 return $http.post(baseUrl + 'api/God/Register', params);
@@ -63,6 +64,11 @@ angular.module('yyzServiceMod', [])
             }
         };
     }])
+    .factory('addressHelper', function () {
+        return {
+            'searchViewValue': ''
+        };
+    })
     .factory('home', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
             getShopList: function (params) {

@@ -189,6 +189,21 @@ angular.module('yyzWebApp', [
                     }]
                 }
             })
+            //e家店列表
+            .state('eshopList', {
+                url: "/eshopList",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'eshopListCtrl',
+                        templateUrl: 'partials/eshopList.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/eshopListCtrl.js');
+                    }]
+                }
+            })
             //店铺详情
             .state('shopDetail', {
                 url: "/shopDetail?id&pid",
@@ -275,11 +290,10 @@ angular.module('yyzWebApp', [
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load('js/controllers/orderDescCtrl.js');
+                        return $ocLazyLoad.load('js/controllers/orderRefundListCtrl.js');
                     }]
                 }
             })
-
             //商品退货
             .state('refunding', {
                 url: "/refunding?id",
@@ -577,6 +591,21 @@ angular.module('yyzWebApp', [
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                         return $ocLazyLoad.load('js/controllers/vouchSettingsCtrl.js');
+                    }]
+                }
+            })
+            //地址搜索
+            .state('search', {
+                url: "/search",
+                views: {
+                    "lazyLoadView": {
+                        controller: 'searchCtrl',
+                        templateUrl: 'partials/search.html'
+                    }
+                },
+                resolve: {
+                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load('js/controllers/searchCtrl.js');
                     }]
                 }
             })
