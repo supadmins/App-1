@@ -2,8 +2,8 @@
 
 <header>
     <em class="back"></em>
-    <span class="active">所有订单</span>
-    <span>维权订单</span>
+    <span class="active" data-key="">所有订单</span>
+    <span y data-key="10">维权订单</span>
     <em class="question"></em>
 </header>
 
@@ -28,14 +28,11 @@
             <a href="">
                 <img alt="商品图片" ng-src="{{item.ListPicture}}"/>
             </a>
-
             <div class="fl">
                 <p class="goodsName" ng-bind="item.ProductListName  | limitTo : 5">酸爽的清新柠檬</p>
-
                 <p class="uname" ng-bind="item.ReceiverName| limitTo : 5">暮然回首</p>
-
-                <p class="qty"><span ng-bind="item.Amount|currency:'￥'"></span> 共<span
-                        ng-bind="item.Quantity"></span>件</p>
+                <p class="qty"><span ng-bind="item.Amount|currency:'￥'"></span>
+                    共<span ng-bind="item.Quantity"></span>件</p>
             </div>
             <div class="fr">
                 <p class="deliver" ng-bind="item.OrderStatusEnum">等您发货</p>
