@@ -59,11 +59,18 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     }])
-    .directive('yyzScroll', ['$ocLazyLoad', function ($ocLazyLoad) {
+    .directive('yyzScroll', ['$window', function ($window) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-
+                var offset = parseInt(attrs.threshold) || 0,
+                    ele = element[0];
+                element.on('scroll', function () {
+                    console.log(123);
+                    if(ele.scrollTop + ele.offsetHeight >= ele.scrollHeight - offset) {
+                        scope.$apply(attrs.yyzScroll);
+                    }
+                });
             }
         };
     }])

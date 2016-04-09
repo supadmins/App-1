@@ -67,10 +67,8 @@ angular.module('yyzServiceMod', [])
     .factory('addressHelper', function () {
         return {
             'originState': '',
-            'viewName': '',
             'searchViewValue': '',
             'getPoint': function () {
-
             },
             'reset': function () {
                 this.originState = '';

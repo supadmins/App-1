@@ -2,6 +2,7 @@ angular.module('yyzWebApp')
     .controller('searchCtrl', ['$scope', 'addressHelper', '$rootScope', '$state', function ($scope, addressHelper, $rootScope, $state) {
         $scope.address = '正在定位当前位置';
         $scope.city = '定位中';
+        $scope.keyword = '';
 
         $scope.$on('onpos', function ($event, pos) {
             var BMap = $rootScope.BMap,

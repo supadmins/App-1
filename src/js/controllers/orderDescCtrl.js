@@ -38,6 +38,7 @@ angular.module('yyzWebApp')
         };
         //确认发货
         $scope.ConfirmationDelivery=function(){
+            console.log($scope.deliveryNumber, $scope.expressName);
             order.ConfirmationDelivery(params).success(function(data){
                 if (data.ResultStatus) {
                     alert("操作成功");
@@ -50,4 +51,13 @@ angular.module('yyzWebApp')
         $scope.cancel = function () {
             $scope.logisticsView = false;
         };
+
+        $scope.$watch('deliveryNumber', function (value) {
+            console.log($scope.deliveryNumber);
+            console.log(JSON.stringify(params));
+        });
+
+        $scope.$watch('expressName', function (value) {
+            console.log($scope.expressName);
+        });
     }]);

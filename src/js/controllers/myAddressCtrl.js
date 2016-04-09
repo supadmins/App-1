@@ -1,5 +1,5 @@
 angular.module('yyzWebApp')
-    .controller('myAddressCtrl', ['$scope', '$http', 'addressHelper', 'address', function ($scope, $http, addressHelper, address) {
+    .controller('myAddressCtrl', ['$scope', '$http', 'addressHelper', 'address', '$rootScope', function ($scope, $http, addressHelper, address, $rootScope) {
         $scope.title = '我的收货地址';
         $scope.fname = '新增地址';
         $scope.contentView = true;
