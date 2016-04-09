@@ -1,5 +1,5 @@
 angular.module('yyzWebApp')
-    .controller('searchCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
+    .controller('searchCtrl', ['$scope', 'addressHelper', '$rootScope', function ($scope, addressHelper, $rootScope) {
         $scope.address = '正在定位当前位置';
         $scope.city = '定位中';
 
@@ -13,6 +13,7 @@ angular.module('yyzWebApp')
                 var addComp = rs.addressComponents;
                 $scope.city = addComp.city;
                 $scope.address = '当前地址: ' + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+
                 $scope.$apply();
             });
         });
@@ -38,6 +39,8 @@ angular.module('yyzWebApp')
             }
         });
 
-        $scope.selected = function () {
+        $scope.selected = function (item) {
+            alert(item);
+            addressHelper.searchViewValue = item;
         };
     }]);
