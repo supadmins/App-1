@@ -40,7 +40,6 @@ angular.module('yyzWebApp')
         });
 
         $scope.selected = function (item) {
-            alert(item);
             addressHelper.searchViewValue = item;
         };
     }]);
