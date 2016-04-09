@@ -1,14 +1,11 @@
 angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
-    /**
-     * yyzBanner指令依赖zepto swipeSlide插件 https://github.com/ximan/swipeSlide.git
-     */
     .directive('yyzBanner', ['$http', '$timeout', '$ocLazyLoad', 'baseUrl', function ($http, $timeout, $ocLazyLoad, baseUrl) {
         return {
             restrict: 'E',
             scope: true,
             transclude: true,
             template: '<div class="slide" id="slide"><ul><li ng-repeat="banner in banners">'               +
-            '<a ng-href="{{banner.Url}}"><img ng-src="{{banner.FullPicture}}" alt=""></a>'                 +
+            '<a ng-href="{{banner.Url}}"><img ng-src="imgs/home/banner.png" alt=""></a>'                 +
             '</li></ul><div class="dot"><span ng-repeat="banner in banners"></span></div></div>',
             replace: true,
             link: function (scope, element, attrs) {
@@ -38,9 +35,6 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     }])
-    /**
-     * yyzBanner指令依赖dropload 插件 https://github.com/ximan/dropload.git
-     */
     .directive('yyzDropload', ['$http', '$ocLazyLoad', function ($http, $ocLazyLoad) {
         return {
             restrict: 'E',
@@ -64,6 +58,14 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                     });
             }
         }
+    }])
+    .directive('yyzScroll', ['$ocLazyLoad', function ($ocLazyLoad) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+
+            }
+        };
     }])
     .directive('yyzTimelimiter', ['$interval', function ($interval) {
         return {

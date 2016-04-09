@@ -1,6 +1,7 @@
 angular.module('yyzWebApp')
     .controller('orderDescCtrl', ['$scope','$state','order', '$stateParams',
     function ($scope, $state,order,$stateParams) {
+
         $scope.logistics = $scope.logisticsView = false;
         $scope.id=$stateParams.id;
         if(!$scope.id){
@@ -13,7 +14,7 @@ angular.module('yyzWebApp')
             $scope.$apply();
         });
         //initData();
-        $scope.DeliveryNumber="";//物流单号
+        $scope.deliveryNumber="";//物流单号
         $scope.expressName="圆通快递";//选中物流名称
         $scope.express=[
             {"id":"1","name":"圆通快递"},
@@ -29,10 +30,10 @@ angular.module('yyzWebApp')
                     alert(data.ResultMessage)
                 }
             });
-        };
+        }
         var params={
             Id:$scope.id,
-            DeliveryNumber:$scope.DeliveryNumber,
+            DeliveryNumber:$scope.deliveryNumber,
             DeliveryCompany:$scope.expressName
         };
         //确认发货
@@ -46,12 +47,7 @@ angular.module('yyzWebApp')
             });
         };
 
-
         $scope.cancel = function () {
             $scope.logisticsView = false;
         };
-
-        $scope.$watch('DeliveryNumber', function (value) {
-            alert(value);
-        });
     }]);

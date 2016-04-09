@@ -1,5 +1,5 @@
 angular.module('yyzWebApp')
-    .controller('myYyzCtrl', ['$scope', function ($scope) {
+    .controller('myYyzCtrl', ['$scope', '$state', function ($scope, $state) {
         $scope.customer = true;
         $scope.seller = false;
 

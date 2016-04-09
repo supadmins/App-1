@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline />
+<link rel="stylesheet" href="lib/dropload/dist/dropload.css" inline/>
 <link rel="stylesheet" href="css/eshopList.css" type="text/css" inline/>
 
 <div class="nav" yyz-pos>
@@ -163,13 +163,15 @@
     </div>
 </div>
 
-<yyz-dropload id="scroller">
-    <div class="listItem" ng-repeat="item in scrollList track by $index">
+<div id="scroller" yyz-scroll="scroller">
+    <div class="listItem" ng-repeat="item in scrollList">
         <div class="top" ui-sref="eshop">
             <div class="left">
                 <a href="#/eshop"><img src="imgs/home/ejd.png" alt=""/></a>
+
                 <div class="content">
                     <p class="name">e家店</p>
+
                     <p class="grade">
                         <i class="star"></i>
                         <i class="star"></i>
@@ -178,6 +180,7 @@
                         <i></i>
                         <span>月售2300份</span>
                     </p>
+
                     <p class="limit">起送 ￥16 配送￥3</p>
                 </div>
             </div>
@@ -186,7 +189,9 @@
                     <i></i>
                     <i></i>
                 </p>
+
                 <p>达达配送</p>
+
                 <p>30分钟</p>
             </div>
         </div>
@@ -194,18 +199,19 @@
             <p>
                 <i>领</i>
                 <span>进店可领取商家代金券一张</span>
-                    <span>
-                        3个活动
-                        <em class="down1"></em>
-                    </span>
+                <span>
+                    3个活动
+                    <em class="down1"></em>
+                </span>
             </p>
+
             <p>
                 <i>返</i>
                 下单满38元即可获得5元代金券，代金券可......
             </p>
         </div>
     </div>
-</yyz-dropload>
+</div>
 
 <div class="footer">
     <ul>

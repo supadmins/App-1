@@ -10,13 +10,13 @@
 
 <div class="body" ng-show="contentView">
     <ul>
-        <li ng-repeat="item in [1, 2, 3]" ng-click="editAddress();">
+        <li ng-repeat="item in items" ng-click="editAddress(item);">
             <p class="userInfo">
-                <span>sun先生</span>
-                <span>13689503122</span>
+                <span ng-bind="item.Receiver">{{item.Receiver}}先生</span>
+                <span>{{item.PhoneNumber}}</span>
             </p>
             <p class="address">
-                森那美大厦00
+                {{item.Address}}
             </p>
         </li>
     </ul>
@@ -26,7 +26,7 @@
     <div class="contacts">
         <p>联系人</p>
         <p class="name">
-            <input type="text" value="拉拉" placeholder="您的姓名"/>
+            <input type="text" ng-model="editModel.Receiver"  placeholder="您的姓名" />
         </p>
         <p class="sex">
             <em class="circle on"></em>
@@ -35,7 +35,7 @@
             <span>女士</span>
         </p>
     </div>
-    <div class="addressInfo">
+    <div class="addressInfo" ui-sref="search">
         收货地址
         <span class="province">广东省 </span>|
         <span class="city">深圳市</span>|
@@ -44,7 +44,7 @@
     </div>
     <div class="addressInfo">
         详细地址
-        <input type="text" value="威盛科技大厦13A08号" placeholder="请输入您的详细居住地址"/>
+        <input type="text" ng-model="item.name" value="威盛科技大厦13A08号" placeholder="请输入您的详细居住地址"/>
     </div>
     <div class="addressInfo">
         手机号码

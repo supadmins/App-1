@@ -62,7 +62,7 @@
     <span>取消发货</span>
 </div>
 
-<div class="masker" ng-if="logisticsView">
+<div class="masker" ng-show="logisticsView">
     <div class="container">
         <div class="top" yyz-select-uniqe="span">
             <span>需要物流</span>
@@ -73,7 +73,7 @@
                 <span class="tip" ng-show="!logistics">
                     无需物流则不用填写物流相关信息
                 </span>
-                <input ng-show="logistics" type="text" placeholder="请输入快递单号" ng-model="DeliveryNumber"/>
+                <input type="text" ng-model="deliveryNumber" ng-show="logistics"  placeholder="请输入快递单号" />
                 <select ng-show="logistics" name="company" id="company" ng-model="expressName"
                         ng-options="color.name as color.name for color in express">
                 </select>
