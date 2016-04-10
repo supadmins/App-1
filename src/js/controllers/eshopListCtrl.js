@@ -15,7 +15,8 @@ angular.module('yyzWebApp')
         $scope.$on('onpos', function ($event, pos) {
         });
 
-        $scope.addItems = function () {
-          alert('bottom');
-        };
+        $scope.$on('onDropload', function (me) {
+            $scope.scrollList.push(1);
+            $scope.$apply();
+        });
     }]);
