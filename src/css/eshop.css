@@ -26,6 +26,10 @@ em.arrowRight {
     background: #ff9d06;
     box-sizing: border-box;
     padding: 0.18rem 0.3rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
 }
 
 .header > div {
@@ -104,12 +108,17 @@ nav {
     background: #fff;
     height: 0.64rem;
     box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 1.5rem;
+    z-index: 999;
 }
 
 nav ul {
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -120,9 +129,9 @@ nav ul li {
     color: #333;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
         flex-grow: 1;
     text-align: center;
-    height: 0.64rem;
     line-height: 0.64rem;
     margin: 0 0.44rem;
 }
@@ -133,7 +142,12 @@ nav ul li.active {
 }
 
 .hotCategory {
-    margin-top: 0.16rem;
+    background: #f5f5f5;
+    padding-top: 0.16rem;
+    width: 100%;
+    position: fixed;
+    top: 2.14rem;
+    z-index: 999;
 }
 
 .hotCategory > p {
@@ -155,30 +169,30 @@ nav ul li.active {
     margin-right: 0.12rem;
 }
 
-.hotCategory .content {
+.wrapper .content {
     background: #f5f5f5;
-    position: absolute;
-    top: 2.98rem;
-    width: 100%;
-    bottom: 0.96rem;
-    overflow: scroll;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
 }
 
-.hotCategory .content .left {
-    border-right: 1px solid #dcdcdc;
+.wrapper .content .left {
     width: 1.62rem;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 0.98rem;
+    left: 0;
+    top: 2.98rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.hotCategory .content .left ul {
+.wrapper .content .left ul {
     font-size: 0.26rem;
     width: 1.62rem;
     box-sizing: border-box;
+    border-right: 1px solid #dcdcdc;
 }
 
-.hotCategory .content ul li {
+.wrapper .content ul li {
     height: 0.88rem;
     width: 100%;
     box-sizing: border-box;
@@ -187,13 +201,23 @@ nav ul li.active {
     text-align: center;
 }
 
-.hotCategory .content ul li.active {
-    background: #ff9d06;
-    color: #fff;
+.wrapper .content ul li.on {
+    background: #fff;
+    color: #ff9d06;
+    border: 1px solid #fff;
+    position: relative;
+    right: -1px;
 }
 
-.hotCategory .content > .right {
+.wrapper .content > .right {
     background: #fff;
+    position: absolute;
+    top: 2.98rem;
+    left: 1.62rem;
+    padding-bottom: 0.98rem;
+    bottom: 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .right .goods {
@@ -415,13 +439,11 @@ span.close em {
 
 span.close em:first-child {
     -webkit-transform: rotateZ(45deg);
-        -ms-transform: rotate(45deg);
             transform: rotateZ(45deg);
 }
 
 span.close em:last-child {
     -webkit-transform: rotateZ(-45deg);
-        -ms-transform: rotate(-45deg);
             transform: rotateZ(-45deg);
 }
 

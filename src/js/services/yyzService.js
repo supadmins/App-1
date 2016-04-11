@@ -1,7 +1,7 @@
 angular.module('yyzServiceMod', [])
     .factory('util', ['$http', '$location', 'baseUrl', function ($http, $location, baseUrl) {
         return {
-            'getCode': function (params) {
+            getCode: function (params) {
                 params = params || {};
                 var url = baseUrl;
 
@@ -17,16 +17,16 @@ angular.module('yyzServiceMod', [])
     }])
     .factory('user', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
-            'hasLogin': false,
-            'register': function (params) {
+            hasLogin: false,
+            register: function (params) {
                 params = params || {};
                 return $http.post(baseUrl + 'api/God/Register', params);
             },
-            'login': function (params) {
+            login: function (params) {
                 params = params || {};
                 return $http.post(baseUrl + 'api/God/Login', params);
             },
-            'logout': function () {
+            logout: function () {
                 return $http.post(baseUrl + 'api/God/Logout');
             }
         };
@@ -51,31 +51,43 @@ angular.module('yyzServiceMod', [])
     }])
     .factory('validator', function () {
         return {
-            'phone': '电话号码格式不正确,请重新输入'
+            phone: '电话号码格式不正确,请重新输入'
         };
     })
     .factory('productType', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
-            'getTypeList': function () {
+            getTypeList: function () {
                 return $http.get(baseUrl + 'api/ShopProductType');
             },
-            'addType': function (params) {
+            addType: function (params) {
                 return $http.post(baseUrl + 'api/ShopProductType', params);
             }
         };
     }])
     .factory('addressHelper', function () {
         return {
-            'originState': '',
-            'searchViewValue': '',
-            'getPoint': function () {
+            originState: '',
+            searchViewValue: '',
+            showView: '',
+            getPoint: function () {
             },
-            'reset': function () {
+            reset: function () {
                 this.originState = '';
                 this.searchViewValue = '';
             }
         };
     })
+    .factory('eshop', ['$http', 'baseUrl', function ($http, baseUrl) {
+        return {
+            getShopData: function (params) {
+                params = params || {};
+
+                return $http.get(baseUrl + 'api/Product/ShopProductTypeAndProduct', {
+                    params: params
+                });
+            }
+        };
+    }])
     .factory('home', ['$http', 'baseUrl', function ($http, baseUrl) {
         return {
             getShopList: function (params) {

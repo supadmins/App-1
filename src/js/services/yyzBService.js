@@ -8,7 +8,16 @@
                 return $http.get(baseUrl + 'api/GodAddress?Id=' + id);
             },
             'addAddress': function (params) {
-                return $http.post(baseUrl + 'api/GodAddress/ShopOrderListByGodId', params);
+                return $http.post(baseUrl + 'api/GodAddress', params);
+            },
+            'editAddress': function (params) {
+                return $http.put(baseUrl + 'api/GodAddress', params);
+            },
+            'deleteAddress': function (id) {
+                return $http.delete(baseUrl + 'api/GodAddress', {Id:id});
+            },
+            'setDefault': function (id) {
+                return $http.post(baseUrl + 'api/GodAddress/SetDefault', { Id: id })
             }
         };
     }]);

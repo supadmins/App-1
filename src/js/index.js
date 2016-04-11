@@ -2,6 +2,7 @@ angular.module('yyzWebApp', [
     'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'yyzAServiceMod',
     'yyzBServiceMod'])
     .run(['$rootScope', '$window', '$state', function ($rootScope, $window, $state) {
+        //注册路由变更事件
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             $window.scrollTo(0, 0);
 
@@ -10,10 +11,11 @@ angular.module('yyzWebApp', [
                 $rootScope.stateName = fromState.name;
                 $rootScope.stateParams = fromParams;
             }
-
-            $state.back = function () {
-                $state.go($rootScope.stateName, $rootScope.stateParams);
-            };
+            if(!$state.back) {
+                $state.back = function () {
+                    $state.go($rootScope.stateName, $rootScope.stateParams);
+                };
+            }
         });
     }])
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {

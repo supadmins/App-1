@@ -120,19 +120,6 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     })
-    .directive('yyzScrollSpy', function ($timeout) {
-        return {
-            link: function (scope, element, attrs) {
-                var scrollTop, timeout, index = 0;
-                element.on('scroll', function () {
-                    scrollTop = $(element[0]).scrollTop();
-                    var height = $(attrs['yyzScrollSpy']).height();
-                    index = Math.floor(scrollTop / height);
-                    scope.$emit('onScroll', index);
-                });
-            }
-        }
-    })
     .directive('yyzSelectMulti', function ($timeout) {
         return {
             restrict: 'A',
@@ -253,7 +240,30 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         };
     })
-    .directive('yyzPos', ['$http', '$ocLazyLoad', 'baseUrl', '$rootScope', function ($http, $ocLazyLoad, baseUrl, $rootScope) {
+    .directive('yyzScrollSpy', ['$location', '$anchorScroll', function ($location, $anchorScroll) {
+        return {
+            'restrict': 'A',
+            link: function (scope, element, attrs) {
+                $(element[0]).on('scroll', function () {
+                    var scrollTop = $(element[0]).scrollTop(),
+                        selector = attrs['yyzScrollSpy'],
+                        spyEle = $(selector).height(),
+                        index = Math.round(scrollTop / spyEle),
+                        parentEle = $(selector).eq(index).parent(),
+                        scopeObj = angular.element(parentEle[0]).scope(),
+                        category = scopeObj.item.ShopProductTypeName,
+                        id = scopeObj.item.Id;
+
+                    scope.$apply(function () {
+                        scope.category = category;
+                        $location.hash(id);
+                        $anchorScroll();
+                    });
+                });
+            }
+        };
+    }])
+    .directive('yyzPos', ['$ocLazyLoad', '$rootScope', function ($ocLazyLoad, $rootScope) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
