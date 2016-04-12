@@ -4,6 +4,8 @@ angular.module('yyzWebApp')
 
         $scope.id=$stateParams.id;
             $scope.score=5;
-            $scope.content="";
-            $scope.save=function(){};
+            $scope.remark="";
+            $scope.save=function(){
+
+            };
     }]);

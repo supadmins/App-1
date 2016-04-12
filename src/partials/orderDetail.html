@@ -6,33 +6,33 @@
             配送状态
             <div class="bar"></div>
         </div>
-        <div class="content" ui-sref="orderStatus">
+        <div class="content" ui-sref="orderStatus({id:items.Id})">
             <span>￥</span>
             <div class="left">
                 <p ng-bind="items.OrderFormStatus">
                     待支付
                 </p>
                 <p>
-                    请在提交订单后十五分钟内完成支付
+                    请在提交订单后<span ng-bind="items.PayLastMinute">15 </span>分钟内完成支付
                 </p>
             </div>
             <div class="right">
-                <p ng-bind="items.c">
+                <p ng-bind="items.CreateTime">
                     16:43
                 </p>
 
-                <p ui-sref="orderStatus({items.Id})">
+                <p>
                     订单状态
                     <em class="arrowRight"></em>
                 </p>
             </div>
         </div>
         <div class="bottom">
-            <div ng-if="false">
-                <span>取消订单</span>
-                <span>立即支付</span>
-            </div>
             <div ng-if="true">
+                <span ng-click="cancelOrder()">取消订单</span>
+                <span ng-click="payOrder()">立即支付</span>
+            </div>
+            <div ng-if="false">
                 <span ui-sref="eshop({id:items.Id})">再来一单</span>
                 <span ui-sref="addEvaluate({id:items.Id})">评价</span>
                 <span ui-sref="returnGoods({id:items.Id})">退款退货</span>
@@ -45,8 +45,8 @@
         <div class="content">
             <div class="shopName">
                 <a ui-sref="eshop({id:items.ShopId})">
-                    <img src="imgs/orderList/logo.png" alt="店铺Log" ng-src="{{items.Logo}}"/>
-                    <span ng-bind="items.ShopName">e生活店</span>  <span ng-bind="items.Mode">(自营店铺)</span>
+                    <img src="imgs/orderList/logo.png" alt="店铺Log" ng-src="{{items.ShopLogo}}"/>
+                    <span ng-bind="items.ShopName">e生活店</span>  <span ng-bind="items.ShopMode">(自营店铺)</span>
                     <em class="arrowRight shop"></em>
                 </a>
             </div>
@@ -62,7 +62,7 @@
                 </p>
                 <p>
                     <span>
-                        商品金额 <span ng-bind="items.Amount|currency:'￥'">￥8.8</span>
+                        商品金额 <span ng-bind="items.ProductTotalAmount|currency:'￥'">￥8.8</span>
                     </span>
                 </p>
             </div>
@@ -74,7 +74,7 @@
                 </p>
                 <p>
                     优惠
-                    <span>- ￥2</span>
+                    <span ng-bind="items.DiscountedAmount|currency:'￥'">- ￥2</span>
                 </p>
             </div>
             <div class="counter">
@@ -99,7 +99,8 @@
                 配送时间: <span ng-bind="items.ForecastPostTime|date:'yy-MM-dd mm:hh'">立即配送</span>
             </li>
             <li>
-                收货信息: <span><span ng-bind="items.ReceiverName">李威</span>  男士  <span ng-bind="items.ReceiverPhoneNumber">13689543120</span>  <span ng-bind="items.Address">威盛大厦4楼</span></span>
+                收货信息: <span><span ng-bind="items.ReceiverName">李威</span>  <span ng-bind="items.ReceiverSex?'男士':'女士'">男士</span>
+                <span ng-bind="items.ReceiverPhoneNumber">13689543120</span>  <span ng-bind="items.Address">威盛大厦4楼</span></span>
             </li>
             <li>
                 支付方式: <span ng-bind="items.PaymentType">在线支付</span>
