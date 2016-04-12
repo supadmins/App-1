@@ -3,8 +3,8 @@
 <div ng-init="view1=true;" ng-show="view1">
     <div class="imgArea">
         <ul>
-            <li ng-repeat="img in imgs">
-                <img ng-src="{{img}}" alt=""/>
+            <li ng-repeat="item in imgs track by $index">
+                <img ng-src="{{item.picture}}" alt=""/>
             </li>
         </ul>
         <div class="inc" yyz-upload="#file">
@@ -14,47 +14,63 @@
 
     <div class="desc">
         <ul>
-            <li>标题</li>
-            <li>市场价格</li>
-            <li>销售价格</li>
-            <li>库存</li>
+            <li>
+                标题
+                <input type="text" ng-model="name" placeholder="请输入商品名称"/>
+            </li>
+            <li ng-show="skuList.length==0">
+                市场价格
+                <input type="text" placeholder="请输入市场价格"/>
+            </li>
+            <li ng-show="skuList.length==0">
+                销售价格
+                <input type="text" placeholder="请输入销售价格"/>
+            </li>
+            <li ng-show="skuList.length==0">
+                库存
+                <input type="text" placeholder="请输入库存数量"/>
+            </li>
+            <li>
+                运费
+                <input type="text" placeholder="请输入运费数目"/>
+            </li>
         </ul>
     </div>
 
     <div class="specWrapper">
-        <div class="spec">
+        <div class="spec" ng-repeat="item in skuList track by $index">
             <div class="delete">
-                <em></em>
+                <em ng-click="remove($index);"></em>
                 <i></i>
             </div>
             <ul>
                 <li>规格</li>
                 <li>
                     <span>规格名称:</span>
-                    <input type="text"/>
+                    <input type="text" placeholder="请输入规格名称" />
                 </li>
                 <li>
                     <span>市场价格:</span>
-                    <input type="text"/>
+                    <input type="text" placeholder="请输入市场价格" />
                 </li>
                 <li>
                     <span>销售价格:</span>
-                    <input type="text"/>
+                    <input type="text" placeholder="请输入销售价格" />
                 </li>
                 <li>
                     <span>库存:</span>
-                    <input type="text"/>
+                    <input type="text" placeholder="请输入库存数目" />
                 </li>
             </ul>
         </div>
-        <div class="add">
+        <div class="add" ng-click="addSpec();">
             +添加商品规格
         </div>
         <div class="group" ng-click="doGroup();">
-            分组
+            分类
         </div>
         <div class="class">
-            <span>分类</span>
+            <span>品类</span>
             <select name="pname">
                 <option value="0">-请选择-</option>
             </select>
