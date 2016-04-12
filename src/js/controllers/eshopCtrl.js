@@ -72,7 +72,7 @@ angular.module('yyzWebApp')
             });
 
             $scope.$on('onDropload', function () {
-
+                $scope.commentList.push($scope.commentList[0]);
             });
     }]);
 

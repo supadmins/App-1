@@ -1,5 +1,5 @@
 angular.module('yyzWebApp', [
-    'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'yyzAServiceMod',
+    'ngTouch', 'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'yyzAServiceMod',
     'yyzBServiceMod'])
     .run(['$rootScope', '$window', '$state', 'navBar', function ($rootScope, $window, $state, navBar) {
         $rootScope.navBar = navBar.customer;

@@ -37,8 +37,8 @@
             },
             domDown : {                                                          // 下方DOM
                 domClass   : 'dropload-down',
-                domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
-                domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+                domRefresh : '<div class="dropload-load"><span class="loading"></span>努力加载中...</div>',
+                domLoad    : '<div class="dropload-load"><span class="loading"></span>努力加载中...</div>',
                 domNoData  : '<div class="dropload-noData">暂无数据</div>'
             },
             autoLoad : false,                                                     // 自动加载
@@ -74,7 +74,7 @@
             me._scrollContentHeight = me.$element[0].scrollHeight;
             me._scrollWindowHeight = me.$element.height();
         }
-        //fnAutoLoad(me);
+        fnAutoLoad(me);
 
         // 窗口调整
         $win.on('resize',function(){
@@ -199,7 +199,7 @@
     function fnAutoLoad(me){
         if(me.opts.autoLoad){
             if((me._scrollContentHeight - me._threshold) <= me._scrollWindowHeight){
-                //loadDown(me);
+                loadDown(me);
             }
         }
     }

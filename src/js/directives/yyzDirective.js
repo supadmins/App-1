@@ -35,7 +35,7 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
             }
         }
     }])
-    .directive('yyzDropload', ['$http', '$ocLazyLoad', function ($http, $ocLazyLoad) {
+    .directive('yyzDropload', ['$http', '$ocLazyLoad', '$timeout', function ($http, $ocLazyLoad, $timeout) {
         return {
             restrict: 'A',
             template: '<div ng-transclude></div>',
@@ -46,12 +46,12 @@ angular.module('yyzDirectiveMod', ['oc.lazyLoad'])
                     .then(function () {
                         $(element[0]).dropload({
                             scrollArea: window,
-                            domDown: {
-                                domRefresh : '<div class="dropload-load"><div class="loading"></div>努力加载中...</div>'
-                            },
+                            autoLoad: true,
                             loadDownFn: function (me) {
-                                scope.$emit('onDropload', me);
-                                me.resetload();
+                                $timeout(function () {
+                                    scope.$emit('onDropload', me);
+                                    me.resetload();
+                                }, 200);
                             }
                         });
                     });
