@@ -63,7 +63,7 @@
     </a>
 </div>
 
-<yyz-dropload id="scroller">
+<div yyz-dropload="loadMore" id="scroller">
     <div class="business">
         <h2 class="title"><em></em>常用商家</h2>
 
@@ -228,7 +228,7 @@
                 </div>
             </div>
         </div>
-        <div class="listItem" ng-repeat="item in scrollList">
+        <div class="listItem" ng-repeat="item in scrollList track by $index">
             <div class="top" ui-sref="eshop">
                 <div class="left">
                     <a href="#/eshop"><img src="imgs/home/ejd.png" alt=""/></a>
@@ -276,7 +276,7 @@
             </div>
         </div>
     </div>
-</yyz-dropload>
+</div>
 
 <div class="footer">
     <ul>

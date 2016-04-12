@@ -14,4 +14,9 @@ angular.module('yyzWebApp')
         //获取当前地址经纬度
         $scope.$on('onpos', function ($event, pos) {
         });
+
+        $scope.$on('onDropload', function (me) {
+            $scope.scrollList.push(1);
+            $scope.$apply();
+        });
     }]);

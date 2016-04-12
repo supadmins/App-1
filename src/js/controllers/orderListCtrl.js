@@ -17,7 +17,7 @@ angular.module('yyzWebApp')
                     if (data.ResultStatus) {
                         $scope.items = data.ResultObject;
                     } else {
-                        alert(data.ResultMessage)
+                        //alert(data.ResultMessage);
                     }
                 });
             }

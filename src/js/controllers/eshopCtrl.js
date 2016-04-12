@@ -1,51 +1,56 @@
 angular.module('yyzWebApp')
-    .controller('eshopCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
-        $scope.cartView = false;
-        $scope.vouchersView = false;
-        $scope.specView = false;
-        $scope.shopMessageView = false;
-        $scope.goods = [
-            1, 2, 3, 4, 5, 1, 2, 3, 4, 5,1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
-            1, 2, 3, 4, 5, 1, 2, 3, 4, 5,1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
-            1, 2, 3, 4, 5, 1, 2, 3, 4, 5,1, 2, 3, 4, 5, 1, 2, 3, 4, 5
-        ];
+    .controller('eshopCtrl', ['$scope', '$http', '$location', '$anchorScroll', 'eshop', '$stateParams',
+        function ($scope, $http, $location, $anchorScroll, eshop, $stateParams) {
+            $scope.cartView = $scope.vouchersView = $scope.specView = $scope.shopMessageView =false;
+            var params = {
+                shopId: $stateParams.id || 1
+            };
 
-        $scope.showCartInfo = function () {
-            $scope.cartView = !$scope.cartView;
-        };
+            eshop.getShopData(params).success(function (data) {
+                if(data.ResultStatus) {
+                    $scope.shopData = data.ResultObject;
+                    $scope.category = data.ResultObject[0].ShopProductTypeName;
+                }
+            });
 
-        $scope.$on('maskerClick', function () {
-            $scope.cartView = false;
-            $scope.$apply();
-        });
+            $scope.showCartInfo = function () {
+                $scope.cartView = !$scope.cartView;
+            };
 
-        $scope.showVouchers = function () {
-            $scope.cartView = false;
-            $scope.vouchersView = true;
-        };
+            $scope.$on('maskerClick', function () {
+                $scope.cartView = false;
+                $scope.$apply();
+            });
 
-        $scope.hideVouchers = function () {
-            $scope.vouchersView = false;
-        };
+            $scope.showVouchers = function () {
+                $scope.cartView = false;
+                $scope.vouchersView = true;
+            };
 
-        $scope.showSpec = function () {
-            $scope.specView = true;
-        };
+            $scope.hideVouchers = function () {
+                $scope.vouchersView = false;
+            };
 
-        $scope.hideSpec = function () {
-            $scope.specView = false;
-        };
+            $scope.showSpec = function () {
+                $scope.specView = true;
+            };
 
-        $scope.closeMessageView = function () {
-            $scope.shopMessageView = false;
-        };
+            $scope.hideSpec = function () {
+                $scope.specView = false;
+            };
 
-        $scope.showMessageView = function () {
-            $scope.shopMessageView = true;
-        };
+            $scope.closeMessageView = function () {
+                $scope.shopMessageView = false;
+            };
 
-        $scope.$on('onScroll', function (e, index) {
-        })
+            $scope.showMessageView = function () {
+                $scope.shopMessageView = true;
+            };
+
+            $scope.showGoods = function (item) {
+                $location.hash(item.ShopProductTypeName);
+                $anchorScroll();
+            };
     }]);
 
 

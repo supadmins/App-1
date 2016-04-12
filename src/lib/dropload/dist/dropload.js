@@ -1,9 +1,3 @@
-/**
- * dropload
- * 西门(http://ons.me/526.html)
- * 0.9.0(160215)
- */
-
 ;(function($){
     'use strict';
     var win = window;
@@ -205,7 +199,7 @@
     function fnAutoLoad(me){
         if(me.opts.autoLoad){
             if((me._scrollContentHeight - me._threshold) <= me._scrollWindowHeight){
-                loadDown(me);
+                //loadDown(me);
             }
         }
     }

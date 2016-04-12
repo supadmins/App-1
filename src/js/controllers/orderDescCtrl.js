@@ -31,7 +31,6 @@ angular.module('yyzWebApp')
                 }
             });
         }
-
         //确认发货
         $scope.confirm = function(){
             var params = {
@@ -48,7 +47,6 @@ angular.module('yyzWebApp')
                 }
             });
         };
-
         $scope.cancel = function () {
             $scope.logisticsView = false;
         };

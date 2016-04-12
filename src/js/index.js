@@ -1,6 +1,23 @@
 angular.module('yyzWebApp', [
     'ui.router', 'oc.lazyLoad', 'yyzDirectiveMod', 'yyzServiceMod', 'yyzAServiceMod',
-    'yyzBServiceMod', 'angularFileUpload'])
+    'yyzBServiceMod'])
+    .run(['$rootScope', '$window', '$state', function ($rootScope, $window, $state) {
+        //注册路由变更事件
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            $window.scrollTo(0, 0);
+
+            //在state上强制刷新页面
+            if(fromState.name !== '') {
+                $rootScope.stateName = fromState.name;
+                $rootScope.stateParams = fromParams;
+            }
+            if(!$state.back) {
+                $state.back = function () {
+                    $state.go($rootScope.stateName, $rootScope.stateParams);
+                };
+            }
+        });
+    }])
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.withCredentials = true;
 
@@ -34,7 +51,7 @@ angular.module('yyzWebApp', [
                     }
                 },
                 resolve: {
-                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    loadMyCtrl: ['$ocLazyLoad', 'user', function ($ocLazyLoad, user) {
                         return $ocLazyLoad.load('js/controllers/orderListCtrl.js');
                     }]
                 }

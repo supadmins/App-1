@@ -163,8 +163,8 @@
     </div>
 </div>
 
-<div id="scroller" yyz-scroll="scroller">
-    <div class="listItem" ng-repeat="item in scrollList">
+<div yyz-dropload="loadMore();" id="scroller">
+    <div class="listItem" ng-repeat="item in scrollList track by $index">
         <div class="top" ui-sref="eshop">
             <div class="left">
                 <a href="#/eshop"><img src="imgs/home/ejd.png" alt=""/></a>
@@ -199,10 +199,10 @@
             <p>
                 <i>领</i>
                 <span>进店可领取商家代金券一张</span>
-                <span>
-                    3个活动
-                    <em class="down1"></em>
-                </span>
+            <span>
+                3个活动
+                <em class="down1"></em>
+            </span>
             </p>
 
             <p>

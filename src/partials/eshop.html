@@ -16,7 +16,7 @@
         </div>
         <div class="bottom">
             <span ng-click="showMessageView();">进店可领取商家代金券一张</span>
-            <a href="#/shopInfo">
+            <a ui-state="shopInfo">
                 <em class="arrowRight"></em>
             </a>
         </div>
@@ -35,53 +35,38 @@
         <i></i>
         热销分类
     </p>
+    <img src="imgs/eshop/quang.png" ng-click="showVouchers();" class="quang" alt=""/>
+</div>
+
+<div class="wrapper">
     <div class="content">
         <div class="left">
             <ul>
-                <li class="active">蔬菜</li>
-                <li>水果</li>
-                <li>肉禽</li>
-                <li>干货</li>
-                <li>干果</li>
-                <li>蜂蜜</li>
-                <li>蔬菜</li>
-                <li>水果</li>
-                <li>肉禽</li>
-                <li>干货</li>
-                <li>干果</li>
-                <li>蜂蜜</li>
-                <li>蔬菜</li>
+                <li ng-class="{'on': item.ShopProductTypeName==category}" ng-repeat="item in shopData" ng-click="showGoods(item);">
+                    <a id="{{item.Id}}"></a>
+                    <span ng-bind="item.ShopProductTypeName"></span>
+                </li>
             </ul>
         </div>
         <div class="right" yyz-scroll-spy=".goods">
-            <div class="goods" ng-repeat="item in goods track by $index">
-                <img src="imgs/eshop/goods1.png" alt=""/>
-                <p class="name">清新柠檬-- {{$index}}</p>
-                <p class="desc">月售300份  好评186</p>
-                <div class="bottom">
-                    <span class="price">￥ 9</span>
-                    <div class="fr">
-                        <span class="circle">-</span>
-                        <span class="count">3</span>
-                        <span class="circle">+</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="goods" ng-repeat="item in [1, 2, 3]">
-                <img src="imgs/eshop/goods1.png" alt=""/>
-                <p class="name">清新柠檬</p>
-                <p class="desc">月售300份  好评186</p>
-                <div class="bottom1">
-                    <span class="price">￥ 9</span>
-                    <div class="fr">
-                        <span class="sku" ng-click="showSpec();">可选规格</span>
+            <div ng-repeat="item in shopData">
+                <div class="goods" ng-repeat="goods in item.SimpleProductViewModelList">
+                    <a id="{{item.ShopProductTypeName}}" ng-if="$index==0"></a>
+                    <img src="imgs/eshop/goods1.png" alt=""/>
+                    <p class="name" ng-bind="goods.Name"></p>
+                    <p class="desc">月售300份  好评186</p>
+                    <div class="bottom">
+                        <span class="price">￥ 9</span>
+                        <div class="fr">
+                            <span class="circle">-</span>
+                            <span class="count">3</span>
+                            <span class="circle">+</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <img src="imgs/eshop/quang.png" ng-click="showVouchers();" class="quang" alt=""/>
 </div>
 
 <footer>

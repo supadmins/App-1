@@ -41,10 +41,6 @@ angular.module('yyzWebApp')
 
         $scope.selected = function (item) {
             addressHelper.searchViewValue = item;
-            var params = {};
-            if(addressHelper.originState == 'myAddress') {
-            }
-
-            $state.go(addressHelper.originState, params);
+            $state.go('myAddress');
         };
     }]);
