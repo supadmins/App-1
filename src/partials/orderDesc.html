@@ -41,13 +41,13 @@
     <p class="remark">买家留言：<span ng-bind="items.GodRemark">请尽快配送哦~</span> </p>
     <p class="counter">
         合计
-        <span class="fr" ng-bind="items.Amount">￥10.00</span>
+        <span class="fr" ng-bind="items.Amount|currency:'￥'">￥10.00</span>
     </p>
 </div>
 
 <div class="orderNo">
     <div>
-        <p><span ng-bind="items.Amount|currency:'￥'">￥0.00</span>+<span ng-bind="items.DeliveryFee|currency:'￥'">￥0.00</span>运费</p>
+        <p><span ng-bind="items.ProductTotalAmount|currency:'￥'">￥0.00</span>+<span ng-bind="items.DeliveryFee|currency:'￥'">￥0.00</span>运费</p>
         <p>实收：<span ng-bind="items.PayAmount|currency:'￥'">￥10.00</span></p>
     </div>
     <div>
@@ -75,13 +75,13 @@
                 </span>
                 <input type="text" ng-model="deliveryNumber" ng-show="logistics"  placeholder="请输入快递单号" />
                 <select ng-show="logistics" name="company" id="company" ng-model="expressName"
-                        ng-options="color.name as color.name for color in express">
+                        ng-options="o.name as o.name for o in express">
                 </select>
             </div>
         </div>
         <div class="btn">
             <span ng-click="cancel();">取消</span>
-            <span ng-click="ConfirmationDelivery();">确定</span>
+            <span ng-click="confirm();">确定</span>
         </div>
     </div>
 </div>

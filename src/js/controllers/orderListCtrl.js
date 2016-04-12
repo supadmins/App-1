@@ -5,14 +5,14 @@ angular.module('yyzWebApp')
             $scope.contentView = true;
             $scope.searchView = false;
 
-            getData();
+            initData();
             var params = {
                 searchKey:"",
                 pageIndex: 1,
                 pageSize: 5
             };
 
-            function getData() {
+            function initData() {
                 order.godorderlist(params).success(function (data) {
                     if (data.ResultStatus) {
                         $scope.items = data.ResultObject;
@@ -21,7 +21,16 @@ angular.module('yyzWebApp')
                     }
                 });
             }
-
+            $scope.cancelOrder=function(id){
+                var params={id:id};
+                order.cancelOrder(params).success(function (data) {
+                    if (data.ResultStatus) {
+                        alert("操作成功");
+                    } else {
+                        alert(data.ResultMessage)
+                    }
+                });
+            };
             $scope.showContent = function () {
                 $scope.contentView = true;
                 $scope.searchView = false;

@@ -8,18 +8,25 @@ angular.module('yyzAServiceMod', [])
             'shoporderlist': function (params) {
                 return $http.get(baseUrl + 'api/Order/ShopOrderList', {params: params});
             },
-            'shopgodinfobygodid': function (id) {
-                return $http.get(baseUrl + 'api/GodGroup/ShopGodInfoByGodId?godId='+id);
+            'shopgodinfobygodid': function (params) {
+                return $http.get(baseUrl + 'api/GodGroup/ShopGodInfoByGodId?godId='+params);
             },
-            'ConfirmationDelivery': function (params) {
+            'confirmationdelivery': function (params) {
             return $http.post(baseUrl + 'api/Order/BusinessConfirmDelivery', params);
             },
             'shoporderlistbygodid': function (params) {
                 return $http.get(baseUrl + 'api/Order/ShopOrderListByGodId', {params: params});
             },
-            'orderdetail': function (id) {
-            return $http.get(baseUrl + 'api/Order?id='+id);
+            'orderdetail': function (params) {
+            return $http.get(baseUrl + 'api/Order?id='+params);
+            },
+            'cancelOrder': function (params) {
+                return $http.put(baseUrl + 'api/Order/GodCancelOrderForm',params);
+            },
+            'payOrder': function (params) {
+                return $http.put(baseUrl + 'api/Order/GodCancelOrderForm',params);
             }
+
         };
     }]);
 
