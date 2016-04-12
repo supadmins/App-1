@@ -28,7 +28,7 @@ a {
 .locationInfo p em:first-child {
     height: 0.29rem;
     width: 0.26rem;
-    background: url('imgs/home/pos.png') no-repeat;
+    background: url('../imgs/home/pos.png') no-repeat;
     background-size: 0.26rem 0.29rem;
     vertical-align: middle;
     padding: 0 0.05rem 0.05rem 0;
@@ -681,7 +681,7 @@ em.down1 {
     display: inline-block;
     height: 0.32rem;
     width: 0.32rem;
-    background: url(imgs/home/quan.png) no-repeat;
+    background: url(../imgs/home/quan.png) no-repeat;
     background-size: 100%;
     margin-right: 0.06rem;
 }
@@ -690,7 +690,7 @@ em.down1 {
     display: inline-block;
     height: 0.32rem;
     width: 0.32rem;
-    background: url(imgs/home/pay.png) no-repeat;
+    background: url(../imgs/home/pay.png) no-repeat;
     background-size: 100%;
 }
 

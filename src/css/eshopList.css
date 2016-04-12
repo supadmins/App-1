@@ -543,7 +543,7 @@ p.limit {
     display: inline-block;
     height: 0.32rem;
     width: 0.32rem;
-    background: url(imgs/home/quan.png) no-repeat;
+    background: url(../imgs/home/quan.png) no-repeat;
     background-size: 100%;
     margin-right: 0.06rem;
 }
@@ -552,7 +552,7 @@ p.limit {
     display: inline-block;
     height: 0.32rem;
     width: 0.32rem;
-    background: url(imgs/home/pay.png) no-repeat;
+    background: url(../imgs/home/pay.png) no-repeat;
     background-size: 100%;
 }
 
